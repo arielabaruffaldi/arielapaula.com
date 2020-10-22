@@ -37,17 +37,21 @@ const Nav = () => {
     return (
         <>
             {!isMobile ?
-                <nav className={styles.Nav}>
-                    <Link key={"logo"} text={"Logo"} href={"/"}></Link>
-                    <ul className={styles.LinksContainer}>
-                        {links.map((link, index) => (<li><Link key={index} text={link.text} href={link.href}></Link></li>))}
-                    </ul>
-                </nav> :
-                <Menu width={"100%"} >
-                    <ul className={styles.LinksContainer}>
-                        {links.map((link, index) => (<li><Link key={index} text={link.text} href={link.href} onClick={handleClick}></Link></li>))}
-                    </ul>
-                </Menu>
+                <header className={styles.Nav}>
+                    <nav>
+                        <Link key={"logo"} text={"Logo"} href={"/"}></Link>
+                        <ul className={styles.LinksContainer}>
+                            {links.map((link, index) => (<li><Link key={index} text={link.text} href={link.href}></Link></li>))}
+                        </ul>
+                    </nav>
+                </header> :
+                <header>
+                    <Menu width={"100%"}>
+                        <ul className={styles.LinksContainer}>
+                            {links.map((link, index) => (<li><Link key={index} text={link.text} href={link.href} onClick={handleClick}></Link></li>))}
+                        </ul>
+                    </Menu>
+                </header>
             }
 
         </>

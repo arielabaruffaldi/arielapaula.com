@@ -12,7 +12,8 @@
     "react-dom": "^17.0.1",
     "react-responsive": "^8.1.0",
     "react-router-dom": "^5.2.0",
-    "react-scripts": "3.4.4"
+    "react-scripts": "3.4.4",
+    "react-typed": "^1.2.0"
   },
   "scripts": {
     "start": "react-scripts start",

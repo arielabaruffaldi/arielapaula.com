@@ -1,8 +1,15 @@
-.Nav{
-    display: flex;
-    justify-content: space-between;
+.Nav {
     padding: 2em;
-    .LinksContainer{
+    position: fixed;
+    width: 100%;
+    background: white;
+    top: 0;
+    nav {
+        display: flex;
+        display: flex;
+        justify-content: space-between;
+    }
+    .LinksContainer {
         display: flex;
     }
 }
