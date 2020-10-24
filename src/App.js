@@ -8,6 +8,7 @@ import Home from "./pages/Home/Home";
 import Servicios from "./pages/Servicios/Servicios";
 import Contacto from "./pages/Contacto/Contacto";
 import Portfolio from "./pages/Portfolio/Portfolio";
+import Footer from './components/Footer/Footer';
 
 function App() {
   return (
@@ -27,6 +28,7 @@ function App() {
           <Contacto />
         </Route>
       </Switch>
+      <Footer></Footer>
     </BrowserRouter>
   );
 }

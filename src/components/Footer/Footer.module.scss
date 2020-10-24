@@ -1,0 +1,10 @@
+@import "./../../utils/variables.scss";
+
+.Footer{
+    background: $primary-bg;
+    min-height: 80vh;
+    color: white;
+    h3{
+        font-size: 8em;
+    }
+}

@@ -22,7 +22,13 @@
 }
 
 .ScrolledNav {
-    background: white;
-    color: $primary-bg;
+    background: $primary-bg;
+    transition: 300ms all;
+    top: 0px;
+    padding: 1.5em 2em;
+}
+
+.hiddenNav{
+    top: -100px;
     transition: 300ms all;
 }
