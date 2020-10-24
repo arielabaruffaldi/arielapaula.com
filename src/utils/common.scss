@@ -1,6 +1,9 @@
 @import './variables.scss';
+@import './mixins.scss';
+
 body {
     font-family: 'IBM Plex Sans', sans-serif;
+    cursor: none;
 }
 
 * {
@@ -8,5 +11,5 @@ body {
 }
 
 section{
-    padding: 8rem;
+    @include container();
 }

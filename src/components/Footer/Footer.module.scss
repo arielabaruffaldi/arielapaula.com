@@ -1,10 +1,49 @@
 @import "./../../utils/variables.scss";
+@import "./../../utils/mixins.scss";
 
-.Footer{
+.Footer {
     background: $primary-bg;
     min-height: 80vh;
     color: white;
-    h3{
-        font-size: 8em;
+    @include container();
+    div {
+        h3 {
+            font-size: 5em;
+            line-height: 1;
+            margin: 0;
+            margin-bottom: 1em;
+            color: $primary-color;
+        }
+        > a {
+            font-size: 2.5em;
+            border-bottom: 2px solid white;
+        }
+    }
+    .footerSocial {
+        border-top: 1px solid $secondary-color;
+        margin-top: 4em;
+        padding: 4em 0;
+        ul {
+            display: flex;
+            color: $secondary-color;
+            li a {
+                padding: 0;
+                padding-right: 2em;
+            }
+        }
+    }
+    .footerLegales{
+        display: flex;
+        justify-content: space-between;
+        color: $secondary-color;
+        span{
+            font-size: .9em;
+        }
+        h5{
+            margin: 0;
+            a{
+                color: $primary-color;
+            }
+        }
     }
 }

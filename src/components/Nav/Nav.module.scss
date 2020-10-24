@@ -6,7 +6,7 @@
     width: 100%;
     color: white;
     top: 0;
-    transition: 300ms all;
+    transition: all .5s;
 
     nav {
         display: flex;
@@ -23,12 +23,12 @@
 
 .ScrolledNav {
     background: $primary-bg;
-    transition: 300ms all;
+    transition: all .5s;
     top: 0px;
     padding: 1.5em 2em;
 }
 
 .hiddenNav{
     top: -100px;
-    transition: 300ms all;
+    transition: all .5s;
 }

@@ -9,10 +9,12 @@ import Servicios from "./pages/Servicios/Servicios";
 import Contacto from "./pages/Contacto/Contacto";
 import Portfolio from "./pages/Portfolio/Portfolio";
 import Footer from './components/Footer/Footer';
+import Cursor from './components/Cursor/Cursor';
 
 function App() {
   return (
     <BrowserRouter>
+      <Cursor></Cursor>
       <Nav />
       <Switch>
         <Route exact path="/">

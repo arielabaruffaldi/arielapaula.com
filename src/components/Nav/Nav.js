@@ -39,8 +39,6 @@ const Nav = () => {
         };
     });
 
-    console.log(scrollingUp)
-
     return (
         <>
             {!isMobile &&
