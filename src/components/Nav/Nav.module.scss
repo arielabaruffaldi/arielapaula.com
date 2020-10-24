@@ -1,9 +1,13 @@
+@import './../../utils/variables.scss';
+
 .Nav {
-    padding: 2em;
+    padding: 4em 2em;
     position: fixed;
     width: 100%;
-    background: white;
+    color: white;
     top: 0;
+    transition: 300ms all;
+
     nav {
         display: flex;
         display: flex;
@@ -11,5 +15,14 @@
     }
     .LinksContainer {
         display: flex;
+        li{
+            font-weight: 900;
+        }
     }
+}
+
+.ScrolledNav {
+    background: white;
+    color: $primary-bg;
+    transition: 300ms all;
 }

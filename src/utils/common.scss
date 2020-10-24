@@ -1,7 +1,12 @@
+@import './variables.scss';
 body {
-    --main-bg-color: #343434;
+    font-family: 'IBM Plex Sans', sans-serif;
 }
 
 * {
     box-sizing: border-box;
+}
+
+section{
+    padding: 8rem;
 }

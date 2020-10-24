@@ -1,7 +1,24 @@
-.Home{
-    background: var(--main-bg-color);
+@import "./../../utils/variables.scss";
+.Home {
+    background: $primary-bg;
     min-height: 100vh;
     display: flex;
     align-items: center;
     color: white;
+
+    h1 {
+        font-size: 6em;
+        color: white;
+        line-height: 1;
+        font-weight: $font-bold;
+        display: block;
+        margin: .5em 0;
+        width: 80%;
+        >span {
+            color: $primary-color;
+            &:first-child{
+                display: block;
+            }
+        }
+    }
 }
