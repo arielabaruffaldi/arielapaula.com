@@ -2,9 +2,10 @@
 
 .Subtitle{
     font-weight: $font-bold;
+    font-family: $secondary-font;
     display: flex;
     align-items: center;
-    font-size: 1.2em;
+    font-size: .9em;
     transform: translateY(50%);
     color: $primary-color;
     span{

@@ -7,15 +7,16 @@
     color: white;
 
     h1 {
-        font-size: 6em;
+        font-size: 5.5em;
         color: white;
-        line-height: 1;
-        font-weight: $font-bold;
+        font-weight: 300;
         display: block;
         margin: .5em 0;
         width: 80%;
         >span {
             color: $primary-color;
+            font-weight: 700;
+            font-family: $secondary-font;
             &:first-child{
                 display: block;
             }

@@ -1,7 +1,11 @@
+import SwiperCore, { Navigation, Pagination, Scrollbar, Mousewheel } from 'swiper';
+
 import React, { useState } from 'react';
 import styles from './PortfolioCarrousel.module.scss'
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/swiper.scss';
+
+SwiperCore.use([Navigation, Pagination, Scrollbar, Mousewheel]);
 
 
 const PortfolioCarrousel = ({ trabajos }) => {
@@ -14,6 +18,8 @@ const PortfolioCarrousel = ({ trabajos }) => {
                 slidesPerView={3}
                 onSlideChange={(slide) => setItemId(slide.activeIndex)}
                 centeredSlides={true}
+                mousewheel={{ forceToAxis: true, sensitivity: 0.5 }}
+                forceToAxis={true}
             /* onSwiper={(swiper) => console.log(swiper)} */
             >
                 {trabajos.map((trabajo, index) => {
@@ -38,7 +44,7 @@ const PortfolioCarrousel = ({ trabajos }) => {
                 })}
                 <div style={{ backgroundImage: `url(${trabajos[itemId].foto})` }} className={styles.divBg}></div>
             </Swiper>
-        </section>
+        </section >
     )
 }
 

@@ -55,7 +55,7 @@ const Home = () => {
             </div>
         </section>
         <section>
-        <Subtitle text="ultimos proyectos" secondaryText="somos un estudio blabla"></Subtitle>
+        <Subtitle text="ultimos proyectos"></Subtitle>
         <PortfolioCarrousel trabajos={trabajos}></PortfolioCarrousel>
         </section>
         </>

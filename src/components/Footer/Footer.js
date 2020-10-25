@@ -1,6 +1,8 @@
 import React from 'react';
 import styles from './Footer.module.scss';
-import Link from '../Link/Link'
+import Link from '../Link/Link';
+import Subtitle from "./../../components/Subtitle/Subtitle"
+
 
 const links = [
     { text: "Facebook", href: "/" },
@@ -12,8 +14,9 @@ const links = [
 const Footer = () => {
     return (
         <footer className={styles.Footer}>
-            <div>
-                <h3>Comentanos tu próximo proyecto</h3>
+            <Subtitle text="contactanos"></Subtitle>
+            <div className={styles.footerMail}>
+                {/* <h3>Contactanos</h3> */}
                 <a href="">info@empresa.com</a>
             </div>
             <nav className={styles.footerSocial}>

@@ -3,26 +3,29 @@
 
 .Footer {
     background: $primary-bg;
-    min-height: 80vh;
+    min-height: 60vh;
     color: white;
     @include container();
+    .footerMail{
+        margin-top: 2em;
+    }
     div {
         h3 {
             font-size: 5em;
             line-height: 1;
             margin: 0;
-            margin-bottom: 1em;
-            color: $primary-color;
+            margin-bottom: .5em;
+            color: $secondary-color;
         }
         > a {
-            font-size: 2.5em;
-            border-bottom: 2px solid white;
+            font-size: 3.5em;
+            //border-bottom: 2px solid white;
         }
     }
     .footerSocial {
         border-top: 1px solid $secondary-color;
-        margin-top: 4em;
-        padding: 4em 0;
+        margin-top: 3em;
+        padding: 3em 0;
         ul {
             display: flex;
             color: $secondary-color;
@@ -36,6 +39,7 @@
         display: flex;
         justify-content: space-between;
         color: $secondary-color;
+        margin-top: 2em;
         span{
             font-size: .9em;
         }
