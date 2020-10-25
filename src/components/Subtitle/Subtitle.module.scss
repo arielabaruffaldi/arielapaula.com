@@ -6,6 +6,7 @@
     align-items: center;
     font-size: 1.2em;
     transform: translateY(50%);
+    color: $primary-color;
     span{
         color: $secondary-color;
         &:after{

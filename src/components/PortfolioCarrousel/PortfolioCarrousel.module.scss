@@ -1,0 +1,30 @@
+.PortfolioCarrousel {
+    margin: 6em 0;
+    .divBg {
+        position: absolute;
+        top: 0;
+        width: 70%;
+        height: 100%;
+        background-size: cover;
+        background-position: center;
+        overflow: hidden;
+        transition: all 1s;
+        z-index: -999;
+        transform: translateX(20%);
+    }
+    padding: 0;
+    .swiperContainer {
+        height: 80vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        h2 {
+            font-size: 7em;
+            -webkit-text-stroke: 1px white; /* width and color */
+            color: transparent;
+            &.titleActive {
+                color: white;
+            }
+        }
+    }
+}
