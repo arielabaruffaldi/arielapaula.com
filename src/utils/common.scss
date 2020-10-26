@@ -13,4 +13,5 @@ body {
 
 section{
     @include container();
+    background: $primary-bg;
 }

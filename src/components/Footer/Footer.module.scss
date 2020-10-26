@@ -6,6 +6,9 @@
     min-height: 60vh;
     color: white;
     @include container();
+    position: sticky;
+    bottom: 0;
+    z-index: -99999;
     .footerMail{
         margin-top: 2em;
     }
