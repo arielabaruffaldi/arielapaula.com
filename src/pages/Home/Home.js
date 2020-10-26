@@ -40,7 +40,7 @@ const Home = () => {
         <section className={style.Home}>
             <div>
                 <h1>
-                    {`Diseño y desarrollo de `}
+                    {`Desarrollamos `}
                     <Typed
                         strings={[
                             'Aplicaciones',

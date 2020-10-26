@@ -5,18 +5,17 @@
     display: flex;
     align-items: center;
     color: white;
-
+    >div{
+        width: 100%;
+    }
     h1 {
-        font-size: 5.5em;
+        font-size: 5em;
         color: white;
-        font-weight: 300;
+        font-weight: $font-bold;
         display: block;
         margin: .5em 0;
         width: 80%;
         >span {
-            color: $primary-color;
-            font-weight: 700;
-            font-family: $secondary-font;
             &:first-child{
                 display: block;
             }

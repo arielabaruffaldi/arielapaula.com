@@ -14,19 +14,20 @@ const links = [
 const Footer = () => {
     return (
         <footer className={styles.Footer}>
-            <Subtitle text="contactanos"></Subtitle>
+            {/*  <Subtitle text="contactanos"></Subtitle> */}
             <div className={styles.footerMail}>
                 {/* <h3>Contactanos</h3> */}
                 <a href="">info@empresa.com</a>
             </div>
-            <nav className={styles.footerSocial}>
-                <ul className={styles.LinksContainer}>
-                    {links.map((link, index) => (<li><Link key={index} text={link.text} href={link.href}></Link></li>))}
-                </ul>
-            </nav>
-            <div className={styles.footerLegales}>
-                <span>Todos los derechos reservados.</span>
-                <h5>desarrollado por <a href="">marca</a></h5>
+            <div className={styles.endFooter}>
+                <nav className={styles.footerSocial}>
+                    <ul className={styles.LinksContainer}>
+                        {links.map((link, index) => (<li><Link key={index} text={link.text} href={link.href}></Link></li>))}
+                    </ul>
+                </nav>
+                <div className={styles.footerLegales}>
+                    <h5>desarrollado por <a href="">marca</a></h5>
+                </div>
             </div>
         </footer>
     )
