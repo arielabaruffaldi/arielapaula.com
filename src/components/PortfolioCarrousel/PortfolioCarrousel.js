@@ -8,11 +8,12 @@ import 'swiper/swiper.scss';
 SwiperCore.use([Navigation, Pagination, Scrollbar, Mousewheel]);
 
 
-const PortfolioCarrousel = ({ trabajos }) => {
+const PortfolioCarrousel = ({ trabajos, color }) => {
     const [itemId, setItemId] = useState(0)
-
     return (
-        <section className={styles.PortfolioCarrousel}>
+        <div className={
+            `${styles.PortfolioCarrousel} ${color ? styles[color] : ""}`
+        }>
             <Swiper
                 spaceBetween={50}
                 slidesPerView={3}
@@ -44,7 +45,7 @@ const PortfolioCarrousel = ({ trabajos }) => {
                 })}
                 <div style={{ backgroundImage: `url(${trabajos[itemId].foto})` }} className={styles.divBg}></div>
             </Swiper>
-        </section >
+        </div >
     )
 }
 

@@ -1,0 +1,15 @@
+@import './../../utils/variables.scss';
+@import './../../utils/mixins.scss';
+
+.ParagraphSection{
+    color: white;
+    width: 80%;
+    font-size: 1.6em;
+    margin: 0;
+    &.primary{
+        color: $primary-color;
+    }
+    &.hasPadding{
+        @include container()
+    }
+}

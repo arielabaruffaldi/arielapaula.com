@@ -14,7 +14,6 @@ const links = [
 const Footer = () => {
     return (
         <footer className={styles.Footer}>
-            {/*  <Subtitle text="contactanos"></Subtitle> */}
             <div className={styles.footerMail}>
                 {/* <h3>Contactanos</h3> */}
                 <a href="">info@empresa.com</a>

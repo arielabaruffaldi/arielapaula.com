@@ -2,16 +2,17 @@
 @import './mixins.scss';
 
 body {
-    font-family: 'IBM Plex Sans', sans-serif;
+    font-family: $primary-font;
     cursor: none;
     background: $primary-bg;
+    width: 100%;
+    overflow-x: hidden;
 }
 
 * {
     box-sizing: border-box;
 }
 
-section{
-    @include container();
-    background: $primary-bg;
+img{
+    width: 100%;
 }

@@ -1,3 +1,6 @@
+@import "./../../utils/variables.scss";
+@import "./../../utils/mixins.scss";
+
 .PortfolioCarrousel {
     margin: 6em 0;
     .divBg {
@@ -26,5 +29,19 @@
                 color: white;
             }
         }
+    }
+    &.light {
+        background: $primary-light-bg;
+        .swiperContainer {
+            h2 {
+                -webkit-text-stroke: 1px $primary-bg; /* width and color */
+                &.titleActive {
+                    color: $primary-bg;
+                }
+            }
+        }
+    }
+    &.dark {
+        background: $primary-bg;
     }
 }

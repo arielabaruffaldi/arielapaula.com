@@ -1,0 +1,9 @@
+.PortfolioGaleria{
+    padding: 3em;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 8em 1em;
+    justify-content: center;
+    align-items: center;
+    justify-items: self-end;
+}

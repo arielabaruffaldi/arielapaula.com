@@ -1,0 +1,16 @@
+@import "./../../utils/variables.scss";
+@import "./../../utils/mixins.scss";
+
+.SectionWrapper {
+    background: $primary-bg;
+    min-height: 100vh;
+    &.hasPadding {
+        @include container();
+    }
+    &.dark{
+        background: $primary-bg;
+    }
+    &.light{
+        background: $primary-light-bg;
+    }
+}

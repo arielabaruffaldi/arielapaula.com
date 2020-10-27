@@ -1,4 +1,5 @@
 @import "./../../utils/variables.scss";
+@import "./../../utils/mixins.scss";
 
 .Subtitle{
     font-weight: $font-bold;
@@ -23,5 +24,8 @@
         background: $primary-color;
         width: 30px;
         margin: 0 .5em;
+    }
+    &.hasPadding{
+        @include container()
     }
 }

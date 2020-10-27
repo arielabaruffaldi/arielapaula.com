@@ -2,9 +2,9 @@
 @import "./../../utils/mixins.scss";
 
 .Footer {
-    background: $primary-color;
-    min-height: 100vh;
-    color: black;
+    background: $primary-light-bg;
+    min-height: 80vh;
+    color: $primary-bg;
     @include container();
     position: sticky;
     bottom: 0;
@@ -23,11 +23,11 @@
             line-height: 1;
             margin: 0;
             margin-bottom: 0.5em;
-            color: black;
+            color: white;
         }
         > a {
-            font-size: 5.5em;
-            font-weight: 700;
+            font-size: 6em;
+            font-weight: 300;
             //border-bottom: 2px solid white;
         }
     }
@@ -43,7 +43,7 @@
             padding: 3em 0;
             ul {
                 display: flex;
-                color: black;
+                color: $secondary-color;
                 li a {
                     padding: 0;
                     padding-right: 2em;
@@ -53,7 +53,7 @@
         .footerLegales {
             display: flex;
             justify-content: space-between;
-            color: black;
+            color: $secondary-color;
             margin-top: 2em;
            
             h5 {

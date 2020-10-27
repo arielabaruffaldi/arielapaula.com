@@ -3,41 +3,19 @@ import Subtitle from "./../../components/Subtitle/Subtitle"
 import styles from "./Portfolio.module.scss";
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/swiper.scss';
-import PortfolioCarrousel from '../../components/PortfolioCarrousel/PortfolioCarrousel';
+import PortfolioGaleria from '../../components/PortfolioGaleria/PortfolioGaleria';
+import ParagraphSection from "./../../components/ParagraphSection/ParagraphSection"
 
-const trabajos = [
-    {
-        title: "uno",
-        foto: "assets/1.jpg",
-        href: "",
-    },
-    {
-        title: "dos",
-        foto: "assets/2.jpg",
-        href: "",
-    },
-    {
-        title: "tres",
-        foto: "assets/3.jpg",
-        href: "",
-    },
-    {
-        title: "cuatro",
-        foto: "assets/1.jpg",
-        href: "",
-    },
-    {
-        title: "cinco",
-        foto: "assets/2.jpg",
-        href: "",
-    }
-]
 const Portfolio = () => {
     return (
-        <section className={styles.Portfolio}>
-            <Subtitle text="ultimos proyectos" secondaryText="somos un estudio blabla" etiqueta="h1"></Subtitle>
-            <PortfolioCarrousel trabajos={trabajos}></PortfolioCarrousel>
-        </section>
+        <>
+            <section className={styles.Portfolio}>
+                <Subtitle text="ultimos proyectos" secondaryText="somos un estudio blabla" etiqueta="h1"></Subtitle>
+                <ParagraphSection hasPadding className={styles.Paragraph}>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic</ParagraphSection>
+            </section>
+
+            <PortfolioGaleria></PortfolioGaleria>
+        </>
     )
 }
 
