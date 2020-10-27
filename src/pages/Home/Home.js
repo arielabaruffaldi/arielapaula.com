@@ -5,7 +5,6 @@ import Subtitle from "./../../components/Subtitle/Subtitle"
 import Flecha from './../../components/Flecha/Flecha';
 import PortfolioCarrousel from './../../components/PortfolioCarrousel/PortfolioCarrousel';
 import { ultimosTrabajos } from "./../../utils/trabajos";
-import FullPageText from '../../components/FullPageText/FullPageText';
 import SectionWrapper from '../../components/SectionWrapper/SectionWrapper';
 
 const Home = () => {
@@ -29,7 +28,7 @@ const Home = () => {
                 </div>
             </SectionWrapper>
             <SectionWrapper color="dark" className={style.SectionWrapperCarrousel}>
-                <Subtitle hasPadding text="ultimos proyectos"></Subtitle>
+                <Subtitle hasPadding text="ultimos proyectos" secondaryText="somos un estudio blabla" ></Subtitle>
                 <PortfolioCarrousel trabajos={ultimosTrabajos} color="dark" />
             </SectionWrapper>
         </>

@@ -1,3 +1,5 @@
+@import "./../../utils/variables.scss";
+@import "./../../utils/mixins.scss";
 .PortfolioGaleria{
     padding: 3em;
     display: grid;
@@ -6,4 +8,5 @@
     justify-content: center;
     align-items: center;
     justify-items: self-end;
+    background: $primary-bg;
 }

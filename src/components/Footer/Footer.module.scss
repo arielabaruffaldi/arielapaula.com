@@ -2,9 +2,9 @@
 @import "./../../utils/mixins.scss";
 
 .Footer {
-    background: $primary-light-bg;
+    background: $primary-bg;
     min-height: 80vh;
-    color: $primary-bg;
+    color: $primary-light-bg;
     @include container();
     position: sticky;
     bottom: 0;

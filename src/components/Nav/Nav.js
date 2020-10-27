@@ -44,8 +44,9 @@ const Nav = () => {
             {!isMobile &&
                 <header className={`${styles.Nav} ${!scrollingUp && scrollPosition > 50 ? styles.hiddenNav : ""} ${scrollingUp && scrollPosition > 50 ? styles.ScrolledNav : ""}`}>
                     <nav>
-                        <Link key={"logo"} href={"/"}>
-                            <img src="./logo.svg" alt="logo" />
+                        <Link key={"logo"} href={"/"} classes={styles.Logo}>
+                            ++logo
+                            {/* <img src="./logo.svg" alt="logo" /> */}
                         </Link>
                         <ul className={styles.LinksContainer}>
                             {links.map((link, index) => (<li><Link key={index} text={link.text} href={link.href}></Link></li>))}

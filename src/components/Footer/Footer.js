@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
 import styles from './Footer.module.scss';
 import Link from '../Link/Link';
 import Subtitle from "./../../components/Subtitle/Subtitle"
@@ -11,9 +11,24 @@ const links = [
     { text: "Behance", href: "/" }
 ]
 
+
+
+
+
 const Footer = () => {
+    const onScroll = () => {
+        //console.log(document.getElementById('footer'))
+
+    }
+    useEffect(() => {
+        window.addEventListener('scroll', onScroll);
+        return () => document.removeEventListener("scroll", onScroll);
+    })
     return (
-        <footer className={styles.Footer}>
+        <footer className={styles.Footer} id="footer" partialVisibility
+            onChange={(isVisible) => {
+                console.log("holis")
+            }}>
             <div className={styles.footerMail}>
                 {/* <h3>Contactanos</h3> */}
                 <a href="">info@empresa.com</a>
