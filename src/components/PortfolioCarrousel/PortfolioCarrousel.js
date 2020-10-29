@@ -43,7 +43,7 @@ const PortfolioCarrousel = ({ trabajos, color }) => {
                         </>
                     )
                 })}
-                <div style={{ backgroundImage: `url(${trabajos[itemId].foto})` }} className={styles.divBg}></div>
+                <div style={{ backgroundImage: `url(${trabajos[itemId].thumb})` }} className={styles.divBg}></div>
             </Swiper>
         </div >
     )

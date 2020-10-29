@@ -1,19 +1,19 @@
 import React from 'react';
-import { trabajos } from "./../../utils/trabajos";
 import PortfolioCard from './PortfolioCard/PortfolioCard';
 import styles from "./PortfolioGaleria.module.scss"
-const PortfolioGaleria = () => {
+const PortfolioGaleria = ({ trabajos }) => {
     return (
         <section className={styles.PortfolioGaleria}>
             {
-                trabajos.map((trabajo, index) =>
-                    <PortfolioCard
-                        title={trabajo.title}
-                        key={index}
-                        type={trabajo.type}
-                        foto={trabajo.foto}
-                    />
-                )
+                trabajos.map((trabajo, index) => {
+                        return (<PortfolioCard
+                            title={trabajo.title}
+                            key={index}
+                            type={trabajo.type}
+                            foto={trabajo.thumb}
+                         href={`portfolio/${trabajo.id}`}
+                        />)
+                })
             }
         </section>
     )

@@ -8,6 +8,7 @@ import Home from "./pages/Home/Home";
 import Servicios from "./pages/Servicios/Servicios";
 import Contacto from "./pages/Contacto/Contacto";
 import Portfolio from "./pages/Portfolio/Portfolio";
+import PortfolioDetalle from "./pages/PortfolioDetalle/PortfolioDetalle";
 import Footer from './components/Footer/Footer';
 import Cursor from './components/Cursor/Cursor';
 
@@ -25,6 +26,9 @@ function App() {
         </Route>
         <Route exact path="/portfolio">
           <Portfolio />
+        </Route>
+        <Route exact path="/portfolio/:id">
+          <PortfolioDetalle />
         </Route>
         <Route exact path="/contacto">
           <Contacto />

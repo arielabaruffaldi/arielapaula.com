@@ -28,7 +28,7 @@ const Home = () => {
                 </div>
             </SectionWrapper>
             <SectionWrapper color="dark" className={style.SectionWrapperCarrousel}>
-                <Subtitle hasPadding text="ultimos proyectos" secondaryText="somos un estudio blabla" ></Subtitle>
+                <Subtitle hasPadding text="ultimos proyectos" secondaryText="somos un estudio blabla" priority={2} ></Subtitle>
                 <PortfolioCarrousel trabajos={ultimosTrabajos} color="dark" />
             </SectionWrapper>
         </>

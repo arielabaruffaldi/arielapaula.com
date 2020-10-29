@@ -1,0 +1,39 @@
+@import "./../../utils/variables.scss";
+@import "./../../utils/mixins.scss";
+
+.PortfolioDetalle {
+    background-color: $primary-bg;
+    .PortfolioHeader {
+        display: grid;
+        grid-template-areas: "overlap";
+        aside {
+            grid-area: overlap;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            align-items: flex-start;
+            margin-bottom: 1em;
+            @include container();
+            padding-bottom: 7em;
+            color: $primary-light-bg;
+            h1,
+            h2 {
+                z-index: 999;
+            }
+            a{
+                z-index: 999;
+                color: $primary-light-bg;
+            }
+        }
+        .fotoPortada {
+            grid-area: overlap;
+            height: 100vh;
+            background-position: center center;
+            background-size: cover;
+            background-attachment: fixed;
+            clip-path: inset(0 0 0 17%);
+            filter: brightness(0.4);
+        }
+    }
+}

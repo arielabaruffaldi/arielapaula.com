@@ -2,32 +2,32 @@ export const ultimosTrabajos = [
     {
         title: "uno",
         type: "desarrollo web",
-        foto: "assets/1.jpg",
-        href: "",
+        thumb: "assets/1.jpg",
+        url: "",
     },
     {
         title: "dos",
         type: "desarrollo web",
-        foto: "assets/2.jpg",
-        href: "",
+        thumb: "assets/2.jpg",
+        url: "",
     },
     {
         title: "tres",
         type: "desarrollo web",
-        foto: "assets/3.jpg",
-        href: "",
+        thumb: "assets/3.jpg",
+        url: "",
     },
     {
         title: "cuatro",
         type: "desarrollo web",
-        foto: "assets/1.jpg",
-        href: "",
+        thumb: "assets/1.jpg",
+        url: "",
     },
     {
         title: "cinco",
         type: "desarrollo web",
-        foto: "assets/2.jpg",
-        href: "",
+        thumb: "assets/2.jpg",
+        url: "",
     }
 ]
 
@@ -35,74 +35,80 @@ export const trabajos = [
     {
         title: "uno",
         type: "desarrollo web",
-        foto: "assets/portfolio/1.png",
-        href: "",
+        thumb: "assets/portfolio/1.png",
+        url: "https://bennettfeely.com/clippy/",
+        fotos: [
+            "../assets/portfolio/1/portada.jpg",
+            "../assets/portfolio/1/1.jpg",
+            "../assets/portfolio/1/2.jpg",
+            "../assets/portfolio/1/3.jpg",
+        ],
+        id: 1
     },
     {
         title: "dos",
         type: "desarrollo web",
-        foto: "assets/portfolio/2.png",
-        href: "",
+        thumb: "assets/portfolio/1.png",
+        url: "https://bennettfeely.com/clippy/",
+        fotos: [
+            "../assets/portfolio/1/portada.jpg",
+            "../assets/portfolio/1/1.jpg",
+            "../assets/portfolio/1/2.jpg",
+            "../assets/portfolio/1/3.jpg",
+        ],
+        id: 2
     },
     {
         title: "tres",
         type: "desarrollo web",
-        foto: "assets/portfolio/3.png",
-        href: "",
+        thumb: "assets/portfolio/1.png",
+        url: "https://bennettfeely.com/clippy/",
+        fotos: [
+            "../assets/portfolio/1/portada.jpg",
+            "../assets/portfolio/1/1.jpg",
+            "../assets/portfolio/1/2.jpg",
+            "../assets/portfolio/1/3.jpg",
+        ],
+        id: 3
     },
     {
         title: "cuatro",
         type: "desarrollo web",
-        foto: "assets/portfolio/4.png",
-        href: "",
+        thumb: "assets/portfolio/1.png",
+        url: "https://bennettfeely.com/clippy/",
+        fotos: [
+            "../assets/portfolio/1/portada.jpg",
+            "../assets/portfolio/1/1.jpg",
+            "../assets/portfolio/1/2.jpg",
+            "../assets/portfolio/1/3.jpg",
+        ],
+        id: 4
     },
     {
         title: "cinco",
         type: "desarrollo web",
-        foto: "assets/portfolio/5.png",
-        href: "",
+        thumb: "assets/portfolio/1.png",
+        url: "https://bennettfeely.com/clippy/",
+        fotos: [
+            "../assets/portfolio/1/portada.jpg",
+            "../assets/portfolio/1/1.jpg",
+            "../assets/portfolio/1/2.jpg",
+            "../assets/portfolio/1/3.jpg",
+        ],
+        id: 5
     },
     {
         title: "seis",
         type: "desarrollo web",
-        foto: "assets/portfolio/6.png",
-        href: "",
+        thumb: "assets/portfolio/1.png",
+        url: "https://bennettfeely.com/clippy/",
+        fotos: [
+            "../assets/portfolio/1/portada.jpg",
+            "../assets/portfolio/1/1.jpg",
+            "../assets/portfolio/1/2.jpg",
+            "../assets/portfolio/1/3.jpg",
+        ],
+        id: 6
     },
-    {
-        title: "uno",
-        type: "desarrollo web",
-        foto: "assets/portfolio/1.png",
-        href: "",
-    },
-    {
-        title: "dos",
-        type: "desarrollo web",
-        foto: "assets/portfolio/2.png",
-        href: "",
-    },
-    {
-        title: "tres",
-        type: "desarrollo web",
-        foto: "assets/portfolio/3.png",
-        href: "",
-    },
-    {
-        title: "cuatro",
-        type: "desarrollo web",
-        foto: "assets/portfolio/4.png",
-        href: "",
-    },
-    {
-        title: "cinco",
-        type: "desarrollo web",
-        foto: "assets/portfolio/5.png",
-        href: "",
-    },
-    {
-        title: "seis",
-        type: "desarrollo web",
-        foto: "assets/portfolio/6.png",
-        href: "",
-    },
-    
+
 ]
