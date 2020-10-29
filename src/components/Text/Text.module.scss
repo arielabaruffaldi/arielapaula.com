@@ -1,4 +1,6 @@
 @import "./../../utils/variables.scss";
+@import "./../../utils/mixins.scss";
+
 
 .TextPrimary {
     font-size: 76px;
@@ -23,6 +25,9 @@
     }
     &.gray{
         color: $primary-light-bg;
+    }
+    &.hasPadding{
+      @include container()
     }
   }
   

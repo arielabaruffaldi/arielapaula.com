@@ -11,14 +11,15 @@ const TextPrimary = ({
   weight = "",
   color = "white",
   opacity = 1,
-  align = "center",
+  align = "left",
+  hasPadding,
   ...props
 }) => {
   let CustomTag = priority ? `h${priority}` : tag;
   return (
     <CustomTag
-      className={`${styles.TextPrimary} ${styles[color]} ${styles[weight]} ${customStyle || ""}`}
-      style={{ fontSize: `${size}em`, opacity: opacity || 1, textAlign: align }}
+      className={`${styles.TextPrimary} ${styles[color]} ${styles[weight]} ${customStyle || ""} ${hasPadding ? styles.hasPadding : ""}`}
+      style={{ fontSize: `${size}em`, opacity: opacity || 1, textAlign: align }} 
       {...props}
     >
       {children}

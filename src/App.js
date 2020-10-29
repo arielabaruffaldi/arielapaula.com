@@ -11,12 +11,14 @@ import Portfolio from "./pages/Portfolio/Portfolio";
 import PortfolioDetalle from "./pages/PortfolioDetalle/PortfolioDetalle";
 import Footer from './components/Footer/Footer';
 import Cursor from './components/Cursor/Cursor';
+import ScrollTop from './components/ScrollTop/ScrollTop';
 
 function App() {
   return (
     <BrowserRouter>
       <Cursor></Cursor>
       <Nav />
+      <ScrollTop></ScrollTop>
       <Switch>
         <Route exact path="/">
           <Home />
