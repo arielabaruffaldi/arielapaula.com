@@ -1,7 +1,6 @@
-import React, { useState } from 'react';
+import React from 'react';
 import Subtitle from "./../../components/Subtitle/Subtitle"
 import styles from "./Portfolio.module.scss";
-import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/swiper.scss';
 import PortfolioGaleria from '../../components/PortfolioGaleria/PortfolioGaleria';
 import ParagraphSection from "./../../components/ParagraphSection/ParagraphSection"

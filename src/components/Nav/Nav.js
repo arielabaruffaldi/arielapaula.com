@@ -16,15 +16,10 @@ const Nav = () => {
 
     const [scrollPosition, setSrollPosition] = useState(0);
     const [scrollingUp, setScrollingUp] = useState(false);
-    const [click, setClick] = useState(false);
 
     const isMobile = useMediaQuery({
         query: '(max-width: 660px)'
     })
-
-    const handleClick = () => {
-        setClick(true)
-    }
 
     const handleScroll = () => {
         const position = window.pageYOffset;
@@ -49,7 +44,7 @@ const Nav = () => {
                             {/* <img src="./logo.svg" alt="logo" /> */}
                         </Link>
                         <ul className={styles.LinksContainer}>
-                            {links.map((link, index) => (<li><Link key={index} text={link.text} href={link.href}></Link></li>))}
+                            {links.map((link, index) => (<li key={index}><Link  text={link.text} href={link.href}></Link></li>))}
                         </ul>
                     </nav>
                 </header>}
@@ -58,7 +53,7 @@ const Nav = () => {
                 <header>
                     <Menu width={"100%"}>
                         <ul className={styles.LinksContainer}>
-                            {links.map((link, index) => (<li><Link key={index} text={link.text} href={link.href} onClick={handleClick}></Link></li>))}
+                            {links.map((link, index) => (<li key={index}><Link text={link.text} href={link.href} ></Link></li>))}
                         </ul>
                     </Menu>
                 </header>

@@ -26,7 +26,7 @@ const PortfolioCarrousel = ({ trabajos, color }) => {
                 {trabajos.map((trabajo, index) => {
                     return (
                         <>
-                            <SwiperSlide key={index} >
+                            <SwiperSlide key={index}>
                                 {({ isActive }) => (
                                     <>
                                         <div className={styles.swiperContainer}>
