@@ -1,10 +1,10 @@
-@import './../../utils/variables.scss';
+@import "./../../utils/variables.scss";
 
-.ButtonContainer {
+.Button {
     position: relative;
     width: fit-content;
-    font-size: .8em;
-    border-bottom: 1px solid ;
+    line-height: 1.7em;
+    border-bottom: 0.5px solid;
     &:hover {
         .circle {
             animation: slide 1s forwards;
@@ -20,10 +20,27 @@
         border-radius: 20px;
         animation: slideOut 1s forwards;
         pointer-events: none;
-        opacity: .5;
+        opacity: 0.5;
     }
 }
-
+.gray{
+    color: $secondary-color;
+    .circle{
+        background: $primary-semilight-bg;
+    }
+}
+.black{
+    color: $primary-bg;
+    .circle{
+        background: $primary-bg;
+    }
+}
+.white{
+    color: $primary-light-bg;
+    .circle{
+        background: $primary-semilight-bg;
+    }
+}
 @keyframes slide {
     0% {
         width: 25%;
@@ -36,7 +53,7 @@
     100% {
         width: 40px;
         right: 0;
-        left: 100%;
+        left: 70%;
     }
 }
 

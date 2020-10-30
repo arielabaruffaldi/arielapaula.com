@@ -12,29 +12,32 @@ import PortfolioDetalle from "./pages/PortfolioDetalle/PortfolioDetalle";
 import Footer from './components/Footer/Footer';
 import Cursor from './components/Cursor/Cursor';
 import ScrollTop from './components/ScrollTop/ScrollTop';
+import Container from './components/Container/Container';
 
 function App() {
   return (
     <BrowserRouter>
-      <Cursor></Cursor>
+      {/* <Cursor></Cursor> */}
       <Nav />
       <ScrollTop></ScrollTop>
       <Switch>
-        <Route exact path="/">
-          <Home />
-        </Route>
-        <Route exact path="/servicios">
-          <Servicios />
-        </Route>
-        <Route exact path="/portfolio">
-          <Portfolio />
-        </Route>
-        <Route exact path="/portfolio/:id">
-          <PortfolioDetalle />
-        </Route>
-        <Route exact path="/contacto">
-          <Contacto />
-        </Route>
+        <Container>
+          <Route exact path="/">
+            <Home />
+          </Route>
+          <Route exact path="/servicios">
+            <Servicios />
+          </Route>
+          <Route exact path="/portfolio">
+            <Portfolio />
+          </Route>
+          <Route exact path="/portfolio/:id">
+            <PortfolioDetalle />
+          </Route>
+          <Route exact path="/contacto">
+            <Contacto />
+          </Route>
+        </Container>
       </Switch>
       <Footer></Footer>
     </BrowserRouter>

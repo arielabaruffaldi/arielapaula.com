@@ -2,7 +2,7 @@
 @import "./../../utils/mixins.scss";
 
 .PortfolioGaleria{
-    padding: 3em;
+    padding: 4em 3em 8em 3em;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-gap: 8em 1em;

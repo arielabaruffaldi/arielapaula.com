@@ -1,18 +1,30 @@
-@import './variables.scss';
-@import './mixins.scss';
+@import "./variables.scss";
+@import "./mixins.scss";
 
 body {
     font-family: $primary-font;
-    cursor: none;
+    //cursor: none;
     background: $primary-bg;
     width: 100%;
     overflow-x: hidden;
+    padding-bottom: 100vh;
 }
 
 * {
     box-sizing: border-box;
+    padding: 0;
+    margin: 0;
 }
 
-img{
+img {
     width: 100%;
+}
+button {
+    font-family: inherit;
+    background: transparent;
+    border: none;
+    color: inherit;
+    &:focus {
+        outline: 0;
+    }
 }

@@ -5,11 +5,13 @@ import styles from "./PortfolioDetalle.module.scss";
 import Text from "./../../components/Text/Text";
 import Subtitle from "./../../components/Subtitle/Subtitle"
 import ParagraphSection from '../../components/ParagraphSection/ParagraphSection';
+import OnVisible from "react-on-visible";
+import { Parallax } from 'react-scroll-parallax';
 
 const PortfolioDetalle = () => {
     const idToShow = useParams().id;
     const trabajo = trabajos.filter(item => item.id == idToShow);
-    console.log(trabajo)
+
     return (
         <section className={styles.PortfolioDetalle}>
             <div className={styles.PortfolioHeader}>
@@ -25,9 +27,14 @@ const PortfolioDetalle = () => {
             {trabajo[0].url && <Text color="white" tag="p" weight="regular" size={.9} hasPadding>Url: <a href={`${trabajo[0].url}`}>{`${trabajo[0].url}`}</a></Text>}
 
             {trabajo[0].fotos.map((src, index) => {
-                console.log(src)
+                let parallaxAxis = index % 2 === 0 ? ["-100px", "100px"] : ["100px", "-100px"]
                 return (
-                    <img key={index} alt={"fotos portfolio"} src={src} />
+                    <>
+                        <Parallax y={parallaxAxis} className={styles.Container}>
+                            <img key={index} alt={"fotos portfolio"} src={src} />
+                        </Parallax>
+                        {/* <img key={index} alt={"fotos portfolio"} src={src} /> */}
+                    </>
                 )
             })}
         </section>

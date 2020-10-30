@@ -12,9 +12,11 @@
     "react-burger-menu": "^2.9.0",
     "react-dom": "^17.0.1",
     "react-icons": "^3.11.0",
+    "react-on-visible": "^1.6.0",
     "react-responsive": "^8.1.0",
     "react-router-dom": "^5.2.0",
     "react-scripts": "3.4.4",
+    "react-scroll-parallax": "^2.3.4",
     "react-typed": "^1.2.0",
     "swiper": "^6.3.4"
   },

@@ -52,9 +52,6 @@ export const trabajos = [
         url: "https://bennettfeely.com/clippy/",
         fotos: [
             "../assets/portfolio/1/portada.jpg",
-            "../assets/portfolio/1/1.jpg",
-            "../assets/portfolio/1/2.jpg",
-            "../assets/portfolio/1/3.jpg",
         ],
         id: 2
     },
@@ -92,8 +89,6 @@ export const trabajos = [
         fotos: [
             "../assets/portfolio/1/portada.jpg",
             "../assets/portfolio/1/1.jpg",
-            "../assets/portfolio/1/2.jpg",
-            "../assets/portfolio/1/3.jpg",
         ],
         id: 5
     },
@@ -104,9 +99,6 @@ export const trabajos = [
         url: "https://bennettfeely.com/clippy/",
         fotos: [
             "../assets/portfolio/1/portada.jpg",
-            "../assets/portfolio/1/1.jpg",
-            "../assets/portfolio/1/2.jpg",
-            "../assets/portfolio/1/3.jpg",
         ],
         id: 6
     },
