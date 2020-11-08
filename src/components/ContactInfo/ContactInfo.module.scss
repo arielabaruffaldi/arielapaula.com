@@ -1,0 +1,15 @@
+.ContactInfo {
+    border-left: 1px solid black;
+    height: fit-content;
+    padding-left: 2em;
+    > div {
+        margin-bottom: 1em;
+        p {
+            margin-bottom: 0.3rem;
+        }
+    }
+    address{
+        font-style: normal;
+        line-height: 1.8;
+    }
+}

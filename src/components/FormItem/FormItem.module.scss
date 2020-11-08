@@ -1,23 +1,33 @@
 @import "./../../utils/variables.scss";
 
-.FormItem{
+.FormItem {
     display: flex;
     flex-direction: column;
-    label{
-        margin-bottom: .5rem;
+    &:last-child{
+        margin-left: 1em;
+    }
+    label {
+        margin-bottom: 0.5rem;
     }
     textarea {
         font-size: 4em;
         font-weight: 300;
-        border: none;
-        resize: none;
         font-size: 48px;
         line-height: 48px;
-        background: transparent;
+        height: 50vh;
         width: 100%;
+    }
+    textarea,
+    input {
         font-family: $primary-font;
-        &::placeholder{
+        border: none;
+        resize: none;
+        background: transparent;
+        &::placeholder {
             color: black;
         }
+    }
+    input {
+        font-size: 1.7em;
     }
 }

@@ -1,5 +1,18 @@
 @import "./../../utils/variables.scss";
 
 .Form {
-    padding-top: 3em;
+    width: 70%;
+    .errorMessage{
+        color: $primary-color;
+        padding: 1em 0;
+    }
+    .formRow{
+        display: flex;
+        >div{
+            width: 50%;
+        }
+    }
+    button{
+        margin-top: 4rem;
+    }
 }

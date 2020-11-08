@@ -12,6 +12,7 @@ const Button = ({ href, text, color = "white", children, classes, onClick, size 
             }
             style={{ fontSize: `${size}em`, fontWeight: weight }}
             onClick={onClick}
+            {...props}
         >
             {text && text}
             {children}

@@ -1,6 +1,7 @@
 import React from 'react';
 import Text from "./../../components/Text/Text";
-import styles from "./FormItem.module.scss"
+import styles from "./FormItem.module.scss";
+
 const FormItem = ({ label, tag, registrar, placeholder, children, ...props }) => {
     const CustomInput = tag;
     return (

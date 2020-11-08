@@ -6,5 +6,6 @@
     min-height: 100vh;
     background: $primary-light-bg;
     @include container();
-    padding-top: 8em;
+    padding-top: 10rem;
+    display: flex;
 }
