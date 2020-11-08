@@ -37,11 +37,28 @@ export const trabajos = [
         type: "desarrollo web",
         thumb: "assets/portfolio/1.png",
         url: "https://bennettfeely.com/clippy/",
+        portada: "../assets/portfolio/1/portada.jpg",
         fotos: [
-            "../assets/portfolio/1/portada.jpg",
-            "../assets/portfolio/1/1.jpg",
-            "../assets/portfolio/1/2.jpg",
-            "../assets/portfolio/1/3.jpg",
+            {
+                src: "../assets/portfolio/1/1.png",
+                isFullScreen: false
+            },
+            {
+                src: "../assets/portfolio/1/2.jpg",
+                isFullScreen: false
+            },
+            {
+                src: "../assets/portfolio/1/3.jpg",
+                isFullScreen: false
+            },
+            {
+                src: "../assets/portfolio/1/4.png",
+                isFullScreen: false
+            },
+            {
+                src: "../assets/portfolio/1/5.jpg",
+                isFullScreen: true
+            },
         ],
         id: 1
     },

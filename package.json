@@ -11,6 +11,7 @@
     "react": "^17.0.1",
     "react-burger-menu": "^2.9.0",
     "react-dom": "^17.0.1",
+    "react-hook-form": "^6.11.0",
     "react-icons": "^3.11.0",
     "react-on-visible": "^1.6.0",
     "react-responsive": "^8.1.0",

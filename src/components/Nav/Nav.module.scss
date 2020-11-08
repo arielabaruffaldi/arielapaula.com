@@ -23,6 +23,9 @@
             font-weight: 500;
         }
     }
+    &.blackNav{
+        color: $primary-bg;
+    }
 }
 
 .ScrolledNav {
@@ -30,6 +33,9 @@
     transition: all .5s;
     top: 0px;
     padding: 1.5em 2em;
+    &.blackNav{
+        background: $primary-light-bg;
+    }
 }
 
 .hiddenNav{

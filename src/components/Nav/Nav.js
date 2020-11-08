@@ -4,6 +4,7 @@ import styles from './Nav.module.scss';
 import { useMediaQuery } from 'react-responsive'
 import { slide as Menu } from 'react-burger-menu';
 import './NavMobile.scss';
+import { useLocation } from "react-router-dom";
 
 
 const links = [
@@ -13,7 +14,8 @@ const links = [
 ]
 
 const Nav = () => {
-
+    const location = useLocation()
+    console.log(location.pathname)
     const [scrollPosition, setSrollPosition] = useState(0);
     const [scrollingUp, setScrollingUp] = useState(false);
 
@@ -37,7 +39,7 @@ const Nav = () => {
     return (
         <>
             {!isMobile &&
-                <header className={`${styles.Nav} ${!scrollingUp && scrollPosition > 50 ? styles.hiddenNav : ""} ${scrollingUp && scrollPosition > 50 ? styles.ScrolledNav : ""}`}>
+                <header className={`${styles.Nav} ${!scrollingUp && scrollPosition > 50 ? styles.hiddenNav : ""} ${scrollingUp && scrollPosition > 50 ? styles.ScrolledNav : ""} ${location.pathname === "/contacto" && styles.blackNav}`}>
                     <nav>
                         <Link key={"logo"} href={"/"} classes={styles.Logo}>
                             ++logo

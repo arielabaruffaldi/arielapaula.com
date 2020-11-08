@@ -1,0 +1,10 @@
+@import "./../../utils/variables.scss";
+@import "./../../utils/mixins.scss";
+
+
+.Contacto{
+    min-height: 100vh;
+    background: $primary-light-bg;
+    @include container();
+    padding-top: 8em;
+}

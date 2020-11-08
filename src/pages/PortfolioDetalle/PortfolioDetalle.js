@@ -6,7 +6,7 @@ import Text from "./../../components/Text/Text";
 import Subtitle from "./../../components/Subtitle/Subtitle"
 import ParagraphSection from '../../components/ParagraphSection/ParagraphSection';
 import OnVisible from "react-on-visible";
-import { Parallax } from 'react-scroll-parallax';
+import { Parallax, ParallaxBanner } from 'react-scroll-parallax';
 
 const PortfolioDetalle = () => {
     const idToShow = useParams().id;
@@ -15,28 +15,59 @@ const PortfolioDetalle = () => {
     return (
         <section className={styles.PortfolioDetalle}>
             <div className={styles.PortfolioHeader}>
-                <div className={styles.fotoPortada} style={{ backgroundImage: `url(${trabajo[0].fotos[0]})` }}></div>
+                <div className={styles.fotoPortada} style={{ backgroundImage: `url(${trabajo[0].portada})` }}></div>
                 <aside>
                     <Text color="gray" priority={2} weight="regular" size={1}>{trabajo[0].type}</Text>
                     <Text color="gray" priority={1} weight="light" size={6}>{trabajo[0].title}</Text>
                 </aside>
             </div>
-            <Subtitle hasPadding text={trabajo[0].title} secondaryText={trabajo[0].type} priority={1}></Subtitle>
 
-            <ParagraphSection width={"60%"} size={1} hasPadding className={styles.Paragraph} color={"gray"}>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic</ParagraphSection>
-            {trabajo[0].url && <Text color="white" tag="p" weight="regular" size={.9} hasPadding>Url: <a href={`${trabajo[0].url}`}>{`${trabajo[0].url}`}</a></Text>}
+            <Parallax y={["-50px", "50px"]} className={styles.Container}>
+                <Subtitle hasPadding text={trabajo[0].title} secondaryText={trabajo[0].type} priority={1}></Subtitle>
+            </Parallax>
 
-            {trabajo[0].fotos.map((src, index) => {
-                let parallaxAxis = index % 2 === 0 ? ["-100px", "100px"] : ["100px", "-100px"]
-                return (
-                    <>
-                        <Parallax y={parallaxAxis} className={styles.Container}>
-                            <img key={index} alt={"fotos portfolio"} src={src} />
-                        </Parallax>
-                        {/* <img key={index} alt={"fotos portfolio"} src={src} /> */}
-                    </>
-                )
-            })}
+            <Parallax y={["-50px", "70px"]} className={styles.Container}>
+                <ParagraphSection width={"60%"} size={1} hasPadding className={styles.Paragraph} color={"gray"}>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic</ParagraphSection>
+            </Parallax>
+
+            {trabajo[0].url &&
+                <Parallax y={["-50px", "20px"]} className={styles.Container}>
+                    <Text color="white" tag="p" weight="regular" size={.9} hasPadding>Url:
+                    <a href={`${trabajo[0].url}`}>{`${trabajo[0].url}`}</a>
+                    </Text>
+                </Parallax>
+
+            }
+            <section className={styles.PortfolioDetalleGaleria}>
+                {trabajo[0].fotos.map((foto, index) => {
+                    let parallaxAxis = index % 2 === 0 ? ["-80px", "80px"] : ["80px", "-80px"];
+                    console.log(foto)
+                    return (
+                        <>
+                            {!foto.isFullScreen ?
+                                <Parallax y={parallaxAxis} className={styles.Container}>
+                                    <img key={index} alt={"fotos portfolio"} src={foto.src} />
+                                </Parallax>
+                                :
+                                <ParallaxBanner
+                                    className={styles.ContainerFullScreen}
+                                    layers={[
+                                        {
+                                            image: foto.src,
+                                            amount: 0.2,
+                                        }
+                                    ]}
+                                    style={{
+                                        height: '100vh',
+                                    }}
+                                >
+                                    <h1>Banner Children</h1>
+                                </ParallaxBanner>
+                            }
+                        </>
+                    )
+                })}
+            </section>
         </section>
     )
 }

@@ -17,7 +17,7 @@ import Container from './components/Container/Container';
 function App() {
   return (
     <BrowserRouter>
-      {/* <Cursor></Cursor> */}
+      {/* <Cursor/> */}
       <Nav />
       <ScrollTop></ScrollTop>
       <Switch>
