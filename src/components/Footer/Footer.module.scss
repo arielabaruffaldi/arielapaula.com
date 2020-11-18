@@ -12,7 +12,7 @@
     background: $primary-light-bg;
     transition: all 0.5s;
     text-align: center;
-    min-height: 90vh;
+    min-height: 100vh;
     div {
         h3 {
             font-size: 5em;
@@ -23,7 +23,7 @@
         }
         > a {
             font-size: 6em;
-            font-weight: 300;
+            font-weight: 100;
             //border-bottom: 2px solid white;
         }
     }

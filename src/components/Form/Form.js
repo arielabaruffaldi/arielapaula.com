@@ -47,12 +47,13 @@ const Form = () => {
                             },
                         })}
                         label={"Dejanos tu email"}
-                    />
+                   >
                     {errors.email && (
                         <p role="alert" className={styles.errorMessage}>
                             {errors.email.message}
                         </p>
                     )}
+                    </FormItem>
                     <FormItem
                         tag="input"
                         name="phone"
@@ -69,14 +70,16 @@ const Form = () => {
                             },
                         })}
                         label={"Dejanos tu celular"}
-                    />
-                    {errors.phone && (
-                        <p role="alert" className={styles.errorMessage}>
-                            {errors.phone.message}
-                        </p>
-                    )}
+                    >
+                        {errors.phone && (
+                            <p role="alert" className={styles.errorMessage}>
+                                {errors.phone.message}
+                            </p>
+                        )}
+                    </FormItem>
+
                 </div>
-                <Button size={1} tag={"button"} color="grey" weight={500}>enviar formulario</Button>
+                <Button size={1} tag={"button"} color="grey" weight={500} onClick={handleSubmit(onSubmit)}>enviar formulario</Button>
             </form>
         </>
     )

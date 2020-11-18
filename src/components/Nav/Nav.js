@@ -55,7 +55,7 @@ const Nav = () => {
                 <header>
                     <Menu width={"100%"}>
                         <ul className={styles.LinksContainer}>
-                            {links.map((link, index) => (<li key={index}><Link text={link.text} href={link.href} ></Link></li>))}
+                            {links.map((link, index) => (<li key={index}><Link text={link.text} href={link.href} size={.8}></Link></li>))}
                         </ul>
                     </Menu>
                 </header>

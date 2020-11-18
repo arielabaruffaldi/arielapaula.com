@@ -23,10 +23,13 @@
         justify-content: center;
         h2 {
             font-size: 7em;
-            -webkit-text-stroke: 1px white; /* width and color */
-            color: transparent;
+            color: white;
+            opacity: 0.3;
+            //-webkit-text-stroke: 1px white; /* width and color */
+            //color: transparent;
             &.titleActive {
                 color: white;
+                opacity: 1;
             }
         }
     }
