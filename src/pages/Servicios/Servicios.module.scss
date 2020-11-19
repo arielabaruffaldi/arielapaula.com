@@ -1,0 +1,25 @@
+@import "./../../utils/variables.scss";
+@import "./../../utils/mixins.scss";
+.Servicios {
+    min-height: 100vh;
+    background: $primary-light-bg;
+    padding-top: 10rem;
+    display: flex;
+    div {
+        width: 60%;
+        h1.title {
+            font-weight: 900;
+            font-size: 3rem;
+            padding-bottom: 0;
+        }
+        p.subtitle{
+            line-height: 1.5;
+            font-size: 300;   
+            color: $secondary-color;
+            padding-top: 1.5em;
+        }
+    }
+    > img {
+        width: 40%;
+    }
+}

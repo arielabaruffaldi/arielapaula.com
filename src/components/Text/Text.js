@@ -13,12 +13,13 @@ const TextPrimary = ({
   opacity = 1,
   align = "left",
   hasPadding,
+  classes,
   ...props
 }) => {
   let CustomTag = priority ? `h${priority}` : tag;
   return (
     <CustomTag
-      className={`${styles.TextPrimary} ${styles[color]} ${styles[weight]} ${customStyle || ""} ${hasPadding ? styles.hasPadding : ""}`}
+      className={`${styles.TextPrimary} ${styles[color]} ${styles[weight]} ${customStyle || ""} ${hasPadding ? styles.hasPadding : ""} ${classes && classes}`}
       style={{ fontSize: `${size}em`, opacity: opacity || 1, textAlign: align }} 
       {...props}
     >

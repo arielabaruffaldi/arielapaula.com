@@ -36,10 +36,12 @@ const Nav = () => {
         };
     });
 
+    const blackNav = location.pathname === "/contacto" || location.pathname === "/servicios"? styles.blackNav : "";
+
     return (
         <>
             {!isMobile &&
-                <header className={`${styles.Nav} ${!scrollingUp && scrollPosition > 50 ? styles.hiddenNav : ""} ${scrollingUp && scrollPosition > 50 ? styles.ScrolledNav : ""} ${location.pathname === "/contacto" && styles.blackNav}`}>
+                <header className={`${styles.Nav} ${!scrollingUp && scrollPosition > 50 ? styles.hiddenNav : ""} ${scrollingUp && scrollPosition > 50 ? styles.ScrolledNav : ""} ${blackNav}`}>
                     <nav>
                         <Link key={"logo"} href={"/"} classes={styles.Logo}>
                             ++logo

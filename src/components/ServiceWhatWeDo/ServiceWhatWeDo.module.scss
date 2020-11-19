@@ -1,0 +1,7 @@
+@import "./../../utils/variables.scss";
+@import "./../../utils/mixins.scss";
+.WhatWeDo {
+    min-height: 100vh;
+    background: $primary-light-bg;
+    padding-top: 5em;
+}
