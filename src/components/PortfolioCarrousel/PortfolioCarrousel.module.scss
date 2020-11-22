@@ -24,9 +24,9 @@
         h2 {
             font-size: 7em;
             color: white;
-            opacity: 0.3;
-            //-webkit-text-stroke: 1px white; /* width and color */
-            //color: transparent;
+            opacity: 0.5;
+            -webkit-text-stroke: 1px white; /* width and color */
+            color: transparent;
             &.titleActive {
                 color: white;
                 opacity: 1;
