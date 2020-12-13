@@ -4,7 +4,7 @@ import styles from "./ServiceWhatWeDo.module.scss";
 
 const servicios = [
     {
-        icon: "./test.jpg",
+        icon: '"./test.jpg"',
         title: "Research",
         listItems: ["Qualitative and quantitative user research", "Qualitative and quantitative user research", "Qualitative and quantitative user research"]
     },

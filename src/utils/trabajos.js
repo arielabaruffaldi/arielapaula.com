@@ -6,7 +6,7 @@ export const ultimosTrabajos = [
         url: "",
     },
     {
-        title: "dos",
+        title: "pantit",
         type: "desarrollo web",
         thumb: "assets/2.jpg",
         url: "",
@@ -33,42 +33,47 @@ export const ultimosTrabajos = [
 
 export const trabajos = [
     {
-        title: "uno",
+        title: "plantit",
         type: "desarrollo web",
-        thumb: "assets/portfolio/1.png",
+        thumb: "assets/portfolio/plantit/1.png",
         url: "https://bennettfeely.com/clippy/",
-        portada: "../assets/portfolio/1/portada.jpg",
+        portada: "../assets/portfolio/plantit/portada.jpg",
         fotos: [
             {
-                src: "../assets/portfolio/1/1.png",
-                isFullScreen: false
+                src: "../assets/portfolio/plantit/1.png",
+                isFullScreen: false,
+                noParallax: true
             },
             {
-                src: "../assets/portfolio/1/2.jpg",
-                isFullScreen: false
+                src: "../assets/portfolio/plantit/5.png",
+                isFullScreen: true,
+                noParallax: false
             },
             {
-                src: "../assets/portfolio/1/3.jpg",
-                isFullScreen: false
+                src: "../assets/portfolio/plantit/3.png",
+                isFullScreen: false,
+                noParallax: true
             },
             {
-                src: "../assets/portfolio/1/4.png",
-                isFullScreen: false
+                src: "../assets/portfolio/plantit/4.png",
+                isFullScreen: false,
+                noParallax: false
             },
             {
-                src: "../assets/portfolio/1/5.jpg",
-                isFullScreen: true
+                src: "../assets/portfolio/plantit/2.png",
+                isFullScreen: false,
+                noParallax: false
             },
         ],
         id: 1
     },
     {
-        title: "dos",
+        title: "plantit",
         type: "desarrollo web",
-        thumb: "assets/portfolio/1.png",
+        thumb: "assets/portfolio/plantit/plantit.jpg",
         url: "https://bennettfeely.com/clippy/",
         fotos: [
-            "../assets/portfolio/1/portada.jpg",
+            "../assets/portfolio/plantit/plantit.jpg",
         ],
         id: 2
     },

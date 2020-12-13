@@ -5,7 +5,7 @@ import { useMediaQuery } from 'react-responsive'
 import { slide as Menu } from 'react-burger-menu';
 import './NavMobile.scss';
 import { useLocation } from "react-router-dom";
-
+/* import {ReactComponent as Logo} from './../../logo.svg'; */
 
 const links = [
     { text: "servicios", href: "/servicios" },
@@ -44,8 +44,8 @@ const Nav = () => {
                 <header className={`${styles.Nav} ${!scrollingUp && scrollPosition > 50 ? styles.hiddenNav : ""} ${scrollingUp && scrollPosition > 50 ? styles.ScrolledNav : ""} ${blackNav}`}>
                     <nav>
                         <Link key={"logo"} href={"/"} classes={styles.Logo}>
-                            ++logo
-                            {/* <img src="./logo.svg" alt="logo" /> */}
+                            ab.
+                           {/*  <Logo/> */}
                         </Link>
                         <ul className={styles.LinksContainer}>
                             {links.map((link, index) => (<li key={index}><Link  text={link.text} href={link.href}></Link></li>))}

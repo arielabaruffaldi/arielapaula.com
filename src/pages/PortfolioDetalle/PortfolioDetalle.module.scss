@@ -39,14 +39,19 @@
         color: white;
         font-weight: 500;
     }
-    .PortfolioDetalleGaleria{
+    .PortfolioDetalleGaleria {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
-        .Container{
-            &FullScreen{
+        .Container {
+            &FullScreen {
                 grid-area: 3 / 1 / 4 / 3;
                 margin: 4em 0;
             }
         }
+    }
+    .noParallax {
+        grid-column-start: 1;
+        grid-column-end: 3;
+        margin: 7rem;
     }
 }

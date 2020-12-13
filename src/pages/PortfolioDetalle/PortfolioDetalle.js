@@ -41,11 +41,11 @@ const PortfolioDetalle = () => {
             <section className={styles.PortfolioDetalleGaleria}>
                 {trabajo[0].fotos.map((foto, index) => {
                     let parallaxAxis = index % 2 === 0 ? ["-80px", "80px"] : ["80px", "-80px"];
-                    console.log(foto)
+                    let noParallaxClass = foto.noParallax ? styles.noParallax : ''
                     return (
                         <>
-                            {!foto.isFullScreen ?
-                                <Parallax y={parallaxAxis} className={styles.Container}>
+                            {!foto.isFullScreen && !foto.isFullScreen ?
+                                <Parallax y={parallaxAxis} className={`${styles.Container} ${noParallaxClass}`}>
                                     <img key={index} alt={"fotos portfolio"} src={foto.src} />
                                 </Parallax>
                                 :
