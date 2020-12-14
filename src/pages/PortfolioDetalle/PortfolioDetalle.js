@@ -40,29 +40,36 @@ const PortfolioDetalle = () => {
             }
             <section className={styles.PortfolioDetalleGaleria}>
                 {trabajo[0].fotos.map((foto, index) => {
-                    let parallaxAxis = index % 2 === 0 ? ["-80px", "80px"] : ["80px", "-80px"];
-                    let noParallaxClass = foto.noParallax ? styles.noParallax : ''
+                    let parallaxAxis = index % 2 === 0 ? ["-80px", "30px"] : ["80px", "-80px"];
                     return (
                         <>
-                            {!foto.isFullScreen && !foto.isFullScreen ?
-                                <Parallax y={parallaxAxis} className={`${styles.Container} ${noParallaxClass}`}>
-                                    <img key={index} alt={"fotos portfolio"} src={foto.src} />
-                                </Parallax>
+                            {!foto.isFullScreen ?
+                                <>
+                                    <Parallax y={parallaxAxis} className={`${styles.Container}`}>
+                                        <img key={index} alt={"fotos portfolio"} src={foto.src} />
+                                    </Parallax>
+                                </>
                                 :
-                                <ParallaxBanner
-                                    className={styles.ContainerFullScreen}
-                                    layers={[
-                                        {
-                                            image: foto.src,
-                                            amount: 0.2,
-                                        }
-                                    ]}
-                                    style={{
-                                        height: '100vh',
-                                    }}
-                                >
-                                    <h1>Banner Children</h1>
-                                </ParallaxBanner>
+                                !foto.noParallax ?
+                                    <>
+                                        <ParallaxBanner
+                                            className={styles.ContainerFullScreen}
+                                            layers={[
+                                                {
+                                                    image: foto.src,
+                                                    amount: 0.2,
+                                                }
+                                            ]}
+                                            style={{
+                                                height: '100vh',
+                                            }}
+                                        >
+                                        </ParallaxBanner>
+                                    </>
+                                    :
+                                    <div className={styles.noParallax}>
+                                        <img key={index} alt={"fotos portfolio"} src={foto.src}  />
+                                    </div>
                             }
                         </>
                     )

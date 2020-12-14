@@ -43,15 +43,16 @@
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         .Container {
+            margin: 4rem;
             &FullScreen {
                 grid-area: 3 / 1 / 4 / 3;
-                margin: 4em 0;
+                margin: 4rem 0;
             }
         }
     }
     .noParallax {
         grid-column-start: 1;
         grid-column-end: 3;
-        margin: 7rem;
+        margin: 7rem 4rem;
     }
 }

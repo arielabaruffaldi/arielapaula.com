@@ -15,7 +15,6 @@ const links = [
 
 const Nav = () => {
     const location = useLocation()
-    console.log(location.pathname)
     const [scrollPosition, setSrollPosition] = useState(0);
     const [scrollingUp, setScrollingUp] = useState(false);
 

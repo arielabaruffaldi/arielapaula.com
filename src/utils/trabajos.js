@@ -41,17 +41,7 @@ export const trabajos = [
         fotos: [
             {
                 src: "../assets/portfolio/plantit/1.png",
-                isFullScreen: false,
-                noParallax: true
-            },
-            {
-                src: "../assets/portfolio/plantit/5.png",
                 isFullScreen: true,
-                noParallax: false
-            },
-            {
-                src: "../assets/portfolio/plantit/3.png",
-                isFullScreen: false,
                 noParallax: true
             },
             {
@@ -63,6 +53,16 @@ export const trabajos = [
                 src: "../assets/portfolio/plantit/2.png",
                 isFullScreen: false,
                 noParallax: false
+            },
+            {
+                src: "../assets/portfolio/plantit/5.png",
+                isFullScreen: true,
+                noParallax: false
+            },
+            {
+                src: "../assets/portfolio/plantit/3.png",
+                isFullScreen: true,
+                noParallax: true
             },
         ],
         id: 1
