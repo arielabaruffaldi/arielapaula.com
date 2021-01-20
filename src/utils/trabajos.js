@@ -33,34 +33,36 @@ export const ultimosTrabajos = [
 
 export const trabajos = [
     {
+
         title: "plantit",
         type: "desarrollo web",
-        thumb: "assets/portfolio/plantit/1.png",
+        thumb: "3.png",
+        path: "assets/portfolio/plantit",
         url: "https://bennettfeely.com/clippy/",
-        portada: "../assets/portfolio/plantit/portada.jpg",
+        portada: "portada.jpg",
         fotos: [
             {
-                src: "../assets/portfolio/plantit/1.png",
+                src: "1.png",
                 isFullScreen: true,
                 noParallax: true
             },
             {
-                src: "../assets/portfolio/plantit/4.png",
+                src: "4.png",
                 isFullScreen: false,
                 noParallax: false
             },
             {
-                src: "../assets/portfolio/plantit/2.png",
+                src: "2.png",
                 isFullScreen: false,
                 noParallax: false
             },
             {
-                src: "../assets/portfolio/plantit/5.png",
+                src: "5.png",
                 isFullScreen: true,
                 noParallax: false
             },
             {
-                src: "../assets/portfolio/plantit/3.png",
+                src: "3.png",
                 isFullScreen: true,
                 noParallax: true
             },
@@ -68,25 +70,49 @@ export const trabajos = [
         id: 1
     },
     {
-        title: "plantit",
-        type: "desarrollo web",
-        thumb: "assets/portfolio/plantit/plantit.jpg",
-        url: "https://bennettfeely.com/clippy/",
+        title: "Ensamble Gráfico",
+        type: "diseño y desarrollo web",
+        thumb: "ensamble.png",
+        path: "assets/portfolio/ensamble",
+        url: "http://ensamblegrafico.com.ar/",
+        portada: "portada.png",
         fotos: [
-            "../assets/portfolio/plantit/plantit.jpg",
+            {
+                src: "1.png",
+                isFullScreen: true,
+                noParallax: true
+            },
+            {
+                src: "2.png",
+                isFullScreen: true,
+                noParallax: true
+            },
+            {
+                src: "portada.png",
+                isFullScreen: true,
+                noParallax: true
+            },
         ],
         id: 2
     },
     {
-        title: "tres",
+        title: "xborderpack",
         type: "desarrollo web",
-        thumb: "assets/portfolio/1.png",
-        url: "https://bennettfeely.com/clippy/",
+        thumb: "xborderpack.png",
+        path: "assets/portfolio/xborderpack",
+        url: "http://www.xborderpack.com/",
+        portada: "portada.png",
         fotos: [
-            "../assets/portfolio/1/portada.jpg",
-            "../assets/portfolio/1/1.jpg",
-            "../assets/portfolio/1/2.jpg",
-            "../assets/portfolio/1/3.jpg",
+            {
+                src: "1.png",
+                isFullScreen: true,
+                noParallax: true
+            },
+            {
+                src: "2.png",
+                isFullScreen: true,
+                noParallax: true
+            },
         ],
         id: 3
     },

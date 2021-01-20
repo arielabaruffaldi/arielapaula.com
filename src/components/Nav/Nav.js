@@ -9,7 +9,7 @@ import { useLocation } from "react-router-dom";
 
 const links = [
     { text: "servicios", href: "/servicios" },
-    { text: "portfolio", href: "/portfolio" },
+    { text: "proyectos", href: "/proyectos" },
     { text: "contacto", href: "/contacto" }
 ]
 

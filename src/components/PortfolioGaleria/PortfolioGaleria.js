@@ -12,8 +12,8 @@ const PortfolioGaleria = ({ trabajos }) => {
                         title={trabajo.title}
                         key={index}
                         type={trabajo.type}
-                        foto={trabajo.thumb}
-                        href={`portfolio/${trabajo.id}`}
+                        foto={`${trabajo.path}/${trabajo.thumb}`}
+                        href={`proyectos/${trabajo.id}`}
                         index = {index}
                         trabajo = {trabajo}
                     />)

@@ -15,7 +15,7 @@ const PortfolioDetalle = () => {
     return (
         <section className={styles.PortfolioDetalle}>
             <div className={styles.PortfolioHeader}>
-                <div className={styles.fotoPortada} style={{ backgroundImage: `url(${trabajo[0].portada})` }}></div>
+                <div className={styles.fotoPortada} style={{ backgroundImage: `url(../${trabajo[0].path}/${trabajo[0].portada})` }}></div>
                 <aside>
                     <Text color="gray" priority={2} weight="regular" size={1}>{trabajo[0].type}</Text>
                     <Text color="gray" priority={1} weight="light" size={6}>{trabajo[0].title}</Text>
@@ -32,8 +32,7 @@ const PortfolioDetalle = () => {
 
             {trabajo[0].url &&
                 <Parallax y={["-50px", "20px"]} className={styles.Container}>
-                    <Text color="white" tag="p" weight="regular" size={.9} hasPadding>Url:
-                    <a href={`${trabajo[0].url}`}>{`${trabajo[0].url}`}</a>
+                    <Text color="white" tag="p" weight="regular" size={.9} hasPadding><a href={`${trabajo[0].url}`}>{`${trabajo[0].url}`}</a>
                     </Text>
                 </Parallax>
 
@@ -46,7 +45,7 @@ const PortfolioDetalle = () => {
                             {!foto.isFullScreen ?
                                 <>
                                     <Parallax y={parallaxAxis} className={`${styles.Container}`}>
-                                        <img key={index} alt={"fotos portfolio"} src={foto.src} />
+                                        <img key={index} alt={"fotos portfolio"} src={`../${trabajo[0].path}/${foto.src}`} />
                                     </Parallax>
                                 </>
                                 :
@@ -56,7 +55,7 @@ const PortfolioDetalle = () => {
                                             className={styles.ContainerFullScreen}
                                             layers={[
                                                 {
-                                                    image: foto.src,
+                                                    image: `../${trabajo[0].path}/${foto.src}`,
                                                     amount: 0.2,
                                                 }
                                             ]}
@@ -68,7 +67,7 @@ const PortfolioDetalle = () => {
                                     </>
                                     :
                                     <div className={styles.noParallax}>
-                                        <img key={index} alt={"fotos portfolio"} src={foto.src}  />
+                                        <img key={index} alt={"fotos portfolio"} src={`../${trabajo[0].path}/${foto.src}`} />
                                     </div>
                             }
                         </>
