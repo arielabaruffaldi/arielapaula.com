@@ -104,15 +104,25 @@ export const trabajos = [
         portada: "portada.png",
         fotos: [
             {
-                src: "1.png",
+                src: "3.png",
                 isFullScreen: true,
                 noParallax: true
             },
             {
-                src: "2.png",
+                src: "xborderpack.png",
                 isFullScreen: true,
                 noParallax: true
             },
+            {
+                src: "2.gif",
+                isFullScreen: true,
+                noParallax: true
+            },
+            {
+                src: "portada.png",
+                isFullScreen: true,
+                noParallax: true
+            }
         ],
         id: 3
     },
