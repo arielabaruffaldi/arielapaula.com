@@ -4,10 +4,11 @@ import Link from '../Link/Link';
 import Button from '../../components/Button/Button';
 
 const links = [
-    { text: "Facebook", href: "/" },
-    { text: "Instagram", href: "/" },
-    { text: "Linkedin", href: "/" },
-    { text: "Behance", href: "/" }
+    /* { text: "Facebook", href: "/" }, */
+   /*  { text: "Instagram", href: "/" }, */
+    { text: "Linkedin", href: "https://www.linkedin.com/in/arielabaruffaldi/" },
+    { text: "Behance", href: "https://www.behance.net/arielapaula"},
+    { text: "GitHub", href: "https://github.com/arielapaula"}
 ]
 const Footer = () => {
     const onScroll = () => {
@@ -22,7 +23,7 @@ const Footer = () => {
         <footer className={styles.Footer} id="footer">
                 <div className={styles.footerMail}>
                     {/* <h3>Contactanos</h3> */}
-                    <a href="">info@empresa.com</a>
+                    <a href="">baruffaldiariela@gmail.com</a>
                 </div>
             <div className={styles.endFooter}>
                 <nav className={styles.footerSocial}>
@@ -31,7 +32,7 @@ const Footer = () => {
                     </ul>
                 </nav>
                 <div className={styles.footerLegales}>
-                    <Button color="gray" size={.8} weight={500} tag={"a"} href="#">desarrollado por  marca</Button>
+                    <Button color="gray" size={.8} weight={500} tag={"a"} href="#">desarrollado por Ariela Baruffaldi</Button>
                 </div>
             </div>
         </footer>

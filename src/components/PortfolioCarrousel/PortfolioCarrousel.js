@@ -15,12 +15,19 @@ const PortfolioCarrousel = ({ trabajos, color }) => {
             `${styles.PortfolioCarrousel} ${color ? styles[color] : ""}`
         }>
             <Swiper
-                spaceBetween={50}
-                slidesPerView={3}
+                spaceBetween={0}
+                slidesPerView={1}
                 onSlideChange={(slide) => setItemId(slide.activeIndex)}
                 centeredSlides={true}
                 mousewheel={{ forceToAxis: true, sensitivity: 0.5 }}
                 forceToAxis={true}
+                breakpoints={{
+                    768: {
+                        slidesPerView: 3,
+                        spaceBetween: 50
+
+                    }
+                }}
             /* onSwiper={(swiper) => console.log(swiper)} */
             >
                 {trabajos.map((trabajo, index) => {

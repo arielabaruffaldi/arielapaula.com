@@ -1,11 +1,13 @@
 @import "./../../utils/variables.scss";
+@import "./../../utils/media.scss";
+
 .Home {
     background: $primary-bg;
     min-height: 100vh;
     display: flex;
     align-items: center;
     color: white;
-    >div{
+    > div {
         width: 100%;
     }
     h1 {
@@ -13,16 +15,22 @@
         color: white;
         font-weight: 600;
         display: block;
-        margin: .5em 0;
+        margin: 0.5em 0;
         width: 80%;
-        >span {
-            &:first-child{
+        > span {
+            &:first-child {
                 display: block;
             }
+        }
+        @include respond(phone) {
+            font-size: 2.5rem;
+            margin: 0;
+            margin-bottom: 4rem;
+            width: 100%;
         }
     }
 }
 
-.SectionWrapperCarrousel{
+.SectionWrapperCarrousel {
     padding-bottom: 6em;
 }

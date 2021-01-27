@@ -1,5 +1,6 @@
 @import "./../../utils/variables.scss";
 @import "./../../utils/mixins.scss";
+@import "./../../utils/media.scss";
 
 .Footer {
     position: fixed;
@@ -25,6 +26,9 @@
             font-size: 6em;
             font-weight: 100;
             //border-bottom: 2px solid white;
+            @include respond(phone) {
+                font-size: 1.5rem;
+            }
         }
     }
     .endFooter {
@@ -45,16 +49,30 @@
                     padding-right: 2em;
                 }
             }
+            @include respond(phone) {
+                margin-top: 0;
+            }
         }
         .footerLegales {
             display: flex;
             justify-content: space-between;
             color: $secondary-color;
             margin-top: 2em;
-
             h5 {
                 margin: 0;
             }
+            @include respond(phone) {
+                margin-top: 0;
+            }
+        }
+    }
+    @include respond(phone) {
+        min-height: 50vh;
+        flex-direction: column;
+        .endFooter{
+            flex-direction: column;
+            position: initial;
+            align-items: center;
         }
     }
 }

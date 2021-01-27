@@ -15,7 +15,7 @@ const Home = () => {
                 <div>
                     <Parallax y={["-60px", "30px"]}>
                         <h1>
-                            {`Desarrollamos `}
+                            {`Desarrollo de `}
                             <Typed
                                 strings={[
                                     'Aplicaciones',

@@ -10,7 +10,7 @@ const Form = () => {
     const { register, handleSubmit, watch, errors } = useForm();
     const onSubmit = data => console.log(data);
     const [valueTextarea, setValueTextarea] = useState("");
-    const strings = ['Buenos días,', 'Buenas noches,'];
+    const strings = ['Buenas noches,', 'Buenos días,'];
     return (
         <>
             <form onSubmit={handleSubmit(onSubmit)} className={styles.Form}>

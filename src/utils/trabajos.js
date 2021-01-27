@@ -79,18 +79,23 @@ export const trabajos = [
         fotos: [
             {
                 src: "1.png",
-                isFullScreen: true,
+                isFullScreen: false,
                 noParallax: true
             },
             {
                 src: "2.png",
+                isFullScreen: false,
+                noParallax: true
+            },
+            {
+                src: "ensamble.png",
                 isFullScreen: true,
                 noParallax: true
             },
             {
                 src: "portada.png",
                 isFullScreen: true,
-                noParallax: true
+                noParallax: false
             },
         ],
         id: 2
@@ -127,38 +132,132 @@ export const trabajos = [
         id: 3
     },
     {
-        title: "cuatro",
+        title: "crowdvac",
         type: "desarrollo web",
-        thumb: "assets/portfolio/1.png",
-        url: "https://bennettfeely.com/clippy/",
+        thumb: "crowdvac.png",
+        path: "assets/portfolio/crowdvac",
+        portada: "portada.png",
         fotos: [
-            "../assets/portfolio/1/portada.jpg",
-            "../assets/portfolio/1/1.jpg",
-            "../assets/portfolio/1/2.jpg",
-            "../assets/portfolio/1/3.jpg",
-        ],
-        id: 4
-    },
-    {
-        title: "cinco",
-        type: "desarrollo web",
-        thumb: "assets/portfolio/1.png",
-        url: "https://bennettfeely.com/clippy/",
-        fotos: [
-            "../assets/portfolio/1/portada.jpg",
-            "../assets/portfolio/1/1.jpg",
+            {
+                src: "1.png",
+                isFullScreen: true,
+                noParallax: true
+            },
+            {
+                src: "crowdvac.gif",
+                isFullScreen: true,
+                noParallax: true
+            },
+            {
+                src: "2.png",
+                isFullScreen: true,
+                noParallax: true
+            },
+            {
+                src: "portada.png",
+                isFullScreen: true,
+                noParallax: true
+            }
         ],
         id: 5
     },
     {
-        title: "seis",
+        title: "Cipriani",
         type: "desarrollo web",
-        thumb: "assets/portfolio/1.png",
-        url: "https://bennettfeely.com/clippy/",
+        thumb: "cipriani.png",
+        path: "assets/portfolio/cipriani",
+        portada: "portada.png",
+        url: "http://www.soleorona.com/cipriani/",
         fotos: [
-            "../assets/portfolio/1/portada.jpg",
+            {
+                src: "1.png",
+                isFullScreen: true,
+                noParallax: true
+            },
+            {
+                src: "cipriani.gif",
+                isFullScreen: true,
+                noParallax: true
+            },
+            {
+                src: "portada.png",
+                isFullScreen: true,
+                noParallax: true
+            }
         ],
         id: 6
     },
+    {
+        title: "Ariela",
+        type: "desarrollo y diseño web",
+        thumb: "ariela_old.png",
+        path: "assets/portfolio/ariela_old",
+        portada: "portada.png",
+        url: "http://arielapaula.com/old_web",
+        paragraph: "Diseño y desarrollo anterior de mi página, decidí actualizarla para poder implementar nuevas tecnologías y poder actualizar el diseño también",
+        fotos: [
+            {
+                src: "1.jpg",
+                isFullScreen: true,
+                noParallax: true,
+                noPadding: true
+            },
+            {
+                src: "2.gif",
+                isFullScreen: true,
+                noParallax: true,
+                noPadding: true
+            },
+            {
+                src: "3.jpg",
+                isFullScreen: true,
+                noParallax: true,
+                noPadding: true
 
+            },
+            {
+                src: "4.gif",
+                isFullScreen: true,
+                noParallax: true,
+                noPadding: true
+
+            },
+            {
+                src: "5.jpg",
+                isFullScreen: true,
+                noParallax: true,
+                noPadding: true
+
+            },
+            {
+                src: "6.gif",
+                isFullScreen: true,
+                noParallax: true,
+                noPadding: true
+
+            },
+            {
+                src: "7.jpg",
+                isFullScreen: true,
+                noParallax: true,
+                noPadding: true
+
+            },
+            {
+                src: "8.gif",
+                isFullScreen: true,
+                noParallax: true,
+                noPadding: true
+
+            }, 
+            {
+                src: "9.jpg",
+                isFullScreen: true,
+                noParallax: true,
+                noPadding: true
+
+            }
+        ],
+        id: 7
+    },
 ]

@@ -27,9 +27,9 @@ const PortfolioDetalle = () => {
             </Parallax>
 
             <Parallax y={["-50px", "70px"]} className={styles.Container}>
-                <ParagraphSection width={"60%"} size={1} hasPadding className={styles.Paragraph} color={"gray"}>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic</ParagraphSection>
+                <ParagraphSection width={"60%"} size={1} hasPadding className={styles.Paragraph} color={"gray"}>{trabajo[0].paragraph}</ParagraphSection>
             </Parallax>
-
+{console.log(trabajo[0])}
             {trabajo[0].url &&
                 <Parallax y={["-50px", "20px"]} className={styles.Container}>
                     <Text color="white" tag="p" weight="regular" size={.9} hasPadding><a href={`${trabajo[0].url}`}>{`${trabajo[0].url}`}</a>
@@ -66,7 +66,7 @@ const PortfolioDetalle = () => {
                                         </ParallaxBanner>
                                     </>
                                     :
-                                    <div className={styles.noParallax}>
+                                    <div className={`${styles.noParallax} ${styles.noPadding}`}>
                                         <img key={index} alt={"fotos portfolio"} src={`../${trabajo[0].path}/${foto.src}`} />
                                     </div>
                             }
