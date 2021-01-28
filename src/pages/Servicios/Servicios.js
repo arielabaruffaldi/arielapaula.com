@@ -2,18 +2,25 @@ import React from 'react';
 import ServiceWhatWeDo from '../../components/ServiceWhatWeDo/ServiceWhatWeDo';
 import Text from "./../../components/Text/Text";
 import styles from "./Servicios.module.scss";
+import { Parallax } from 'react-scroll-parallax';
+import Subtitle from "./../../components/Subtitle/Subtitle"
+import ParagraphSection from "./../../components/ParagraphSection/ParagraphSection";
+
+
 
 const Servicios = () => {
+
     return (
         <>
-        {/* <section className={styles.Servicios}>
-            <div>
-                <Text priority={1} color="black" hasPadding classes={styles.title}>Trabajamos como una extensión de tu equipo</Text>
-                <Text tag="p" color="black" hasPadding classes={styles.subtitle}>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book</Text>
-            </div>
-            <img src="./assets/servicios.png"></img>
-        </section> */}
-        <ServiceWhatWeDo></ServiceWhatWeDo>
+            <section className={styles.Servicios}>
+                <Parallax y={[-40, 10]}>
+                    <Subtitle hasPadding text="Servicios" secondaryText="Ariela Baruffaldi" priority={1}></Subtitle>
+                </Parallax>
+                <Parallax y={[140, -100]}>
+                    <ParagraphSection color="black" hasPadding customClass={styles.ServiciosParagraph}>Maquetado, diseño y desarrollo de sitios web desde cero enfocados en una interfaz cómoda de navegar e intuitiva. </ParagraphSection>
+                </Parallax>
+            </section>
+            <ServiceWhatWeDo></ServiceWhatWeDo>
         </>
     )
 }

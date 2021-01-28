@@ -1,10 +1,15 @@
 @import "./../../utils/variables.scss";
+@import "./../../utils/media.scss";
 
 .FormItem {
     display: flex;
     flex-direction: column;
-    &:last-child{
+    &:last-child {
         margin-left: 1em;
+        @include respond(phone) {
+            margin-left: 0;
+            margin-top: 1rem;
+        }
     }
     label {
         margin-bottom: 0.5rem;
@@ -12,10 +17,14 @@
     textarea {
         font-size: 4em;
         font-weight: 300;
-        font-size: 48px;
+        font-size: 3rem;
         line-height: 48px;
         height: 50vh;
         width: 100%;
+        @include respond(phone) {
+            height: 30vh;
+            font-size: 2rem;
+        }
     }
     textarea,
     input {

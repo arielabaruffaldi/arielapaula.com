@@ -1,5 +1,6 @@
 @import "./../../utils/variables.scss";
 @import "./../../utils/mixins.scss";
+@import "./../../utils/media.scss";
 
 .PortfolioDetalle {
     background-color: $primary-bg;
@@ -23,6 +24,16 @@
             h2 {
                 z-index: 999;
             }
+            .PortfolioTitle {
+                font-size: 6rem;
+            }
+            @include respond(phone) {
+                justify-content: center;
+                .PortfolioTitle {
+                    font-size: 3rem;
+                    margin-top: 1rem;
+                }
+            }
         }
         .fotoPortada {
             grid-area: overlap;
@@ -32,6 +43,9 @@
             background-attachment: fixed;
             clip-path: inset(0 0 0 17%);
             filter: brightness(0.4);
+            @include respond(phone) {
+                clip-path: none;
+            }
         }
     }
     a {
@@ -48,13 +62,30 @@
                 grid-area: 3 / 1 / 4 / 3;
                 margin: 4rem 0;
             }
+            @include respond(phone) {
+                margin: 0rem;
+            }
+        }
+        @include respond(phone) {
+            margin-top: 3rem;
         }
     }
     .noParallax {
         grid-column-start: 1;
         grid-column-end: 3;
     }
-    .noPadding{
+    .noPadding {
         margin: 0;
+        @include respond(phone) {
+            margin-bottom: 3rem;
+        }
+    }
+    .ContainerFullScreenMobile {
+        background-position: center center;
+        width: 100vw;
+        background-size: cover;
+        background-repeat: no-repeat;
+        height: 40vh;
+        margin: 3rem 0;
     }
 }

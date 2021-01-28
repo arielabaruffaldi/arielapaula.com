@@ -1,33 +1,39 @@
 export const ultimosTrabajos = [
     {
-        title: "uno",
-        type: "desarrollo web",
-        thumb: "assets/1.jpg",
-        url: "",
+        title: "ensamble",
+        type: "diseño y desarrollo web",
+        thumb: "assets/portfolio/carruselHome/ensamble.png",
+        url: "/proyectos/2",
     },
     {
-        title: "pantit",
-        type: "desarrollo web",
-        thumb: "assets/2.jpg",
-        url: "",
+        title: "plantit",
+        type: "diseño y desarrollo web",
+        thumb: "assets/portfolio/carruselHome/plantit.png",
+        url: "/proyectos/1",
     },
     {
-        title: "tres",
+        title: "crowdvac",
         type: "desarrollo web",
-        thumb: "assets/3.jpg",
-        url: "",
+        thumb: "assets/portfolio/carruselHome/crowdvac.png",
+        url: "/proyectos/5",
     },
     {
-        title: "cuatro",
-        type: "desarrollo web",
-        thumb: "assets/1.jpg",
-        url: "",
+        title: "xborder",
+        type: "diseño y desarrollo web",
+        thumb: "assets/portfolio/carruselHome/xborderpack.png",
+        url: "/proyectos/3",
     },
     {
-        title: "cinco",
-        type: "desarrollo web",
-        thumb: "assets/2.jpg",
-        url: "",
+        title: "cipriani",
+        type: "diseño y desarrollo web",
+        thumb: "assets/portfolio/carruselHome/cipriani.png",
+        url: "/proyectos/6",
+    },
+    {
+        title: "ariela",
+        type: "diseño y desarrollo web",
+        thumb: "assets/portfolio/carruselHome/ariela.png",
+        url: "/proyectos/7",
     }
 ]
 
@@ -38,7 +44,6 @@ export const trabajos = [
         type: "desarrollo web",
         thumb: "3.png",
         path: "assets/portfolio/plantit",
-        url: "https://bennettfeely.com/clippy/",
         portada: "portada.jpg",
         fotos: [
             {

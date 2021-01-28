@@ -1,34 +1,37 @@
-@import './../../utils/variables.scss';
-@import './../../utils/mixins.scss';
+@import "./../../utils/variables.scss";
+@import "./../../utils/mixins.scss";
 
-.ParagraphSection{
+.ParagraphSection {
+  color: white;
+  width: 80%;
+  font-size: 1.6em;
+  margin: 0;
+  line-height: 1.5;
+  &.primary {
+    color: $primary-color;
+  }
+  &.black {
+    color: #1b1b1b;
+  }
+  &.hasPadding {
+    @include container();
+  }
+  &.bold {
+    font-weight: 700;
+  }
+  &.semibold {
+    font-weight: 600;
+  }
+  &.regular {
+    font-weight: 300;
+  }
+  &.light {
+    font-weight: 100;
+  }
+  &.white {
     color: white;
-    width: 80%;
-    font-size: 1.6em;
-    margin: 0;
-    line-height: 1.5;
-    &.primary{
-        color: $primary-color;
-    }
-    &.hasPadding{
-        @include container()
-    }
-    &.bold {
-        font-weight: 700;
-      }
-      &.semibold {
-        font-weight: 600;
-      }
-      &.regular {
-        font-weight: 300;
-      }
-      &.light {
-        font-weight: 100;
-      }
-      &.white{
-          color: white;
-      }
-      &.gray{
-          color: $primary-light-bg;
-      }
+  }
+  &.gray {
+    color: $primary-light-bg;
+  }
 }

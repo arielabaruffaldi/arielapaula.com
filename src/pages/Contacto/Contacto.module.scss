@@ -1,5 +1,6 @@
 @import "./../../utils/variables.scss";
 @import "./../../utils/mixins.scss";
+@import "./../../utils/media.scss";
 
 
 .Contacto{
@@ -8,4 +9,7 @@
     @include container();
     padding-top: 10rem;
     display: flex;
+    @include respond(phone){
+        flex-direction: column;
+    }
 }

@@ -9,6 +9,19 @@ body {
     overflow-x: hidden;
     padding-bottom: 100vh;
     color: #3e3d3d;
+    @include respond(phone) {
+        padding-bottom: 49vh;
+    }
+}
+
+html {
+    font-size: 125%;
+    box-sizing: border-box;
+    @include respond(phone) {
+        font-size: 120%; /* 
+        width: 100vw;
+        overflow: hidden; */
+    }
 }
 
 * {
@@ -30,6 +43,6 @@ button {
     }
 }
 
-.activeCategory{
+.activeCategory {
     font-weight: 900;
 }

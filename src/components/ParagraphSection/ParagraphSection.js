@@ -8,13 +8,14 @@ const ParagraphSection = ({
     children,
     size,
     align = "left",
-    width = "100%"
+    width = "100%",
+    customClass
 }) => {
     return (
         <p className={
-            `${styles.ParagraphSection} ${hasPadding ? styles.hasPadding : ""} ${classes ? classes : ""} ${styles[color]}`
+            `${styles.ParagraphSection} ${hasPadding ? styles.hasPadding : ""} ${classes ? classes : ""} ${styles[color]} ${customClass ? customClass : ""}`
         }
-            style={{ fontSize: `${size}em`, textAlign: align, width: width }}>
+            style={{ fontSize: `${size}rem`, textAlign: align, width: width }}>
             {children}
         </p>
     )

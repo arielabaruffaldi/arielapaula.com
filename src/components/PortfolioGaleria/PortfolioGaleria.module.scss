@@ -1,7 +1,8 @@
 @import "./../../utils/variables.scss";
 @import "./../../utils/mixins.scss";
+@import "./../../utils/media.scss";
 
-.PortfolioGaleria{
+.PortfolioGaleria {
     padding: 4em 3em 8em 3em;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -10,4 +11,8 @@
     align-items: center;
     justify-items: self-end;
     background: $primary-bg;
+    @include respond(phone) {
+        grid-template-columns: repeat(1, 1fr);
+        grid-gap: 0;
+    }
 }

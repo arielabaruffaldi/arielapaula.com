@@ -19,6 +19,9 @@
             width: 100%;
             transform: translateX(0%);
         }
+        &:after {
+            background-color: rgba(0, 0, 0, 0.315);
+        }
     }
     padding: 0;
     .swiperContainer {
@@ -35,6 +38,17 @@
             &.titleActive {
                 color: white;
                 opacity: 1;
+            }
+        }
+        @include respond(phone) {
+            height: 60vh;
+            h2{
+                font-size: 2rem;
+            }
+        }
+        @include respond(sm) {
+            h2{
+                font-size: 1.5rem;
             }
         }
     }

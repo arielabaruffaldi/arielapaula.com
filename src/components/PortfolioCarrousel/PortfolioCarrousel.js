@@ -15,16 +15,16 @@ const PortfolioCarrousel = ({ trabajos, color }) => {
             `${styles.PortfolioCarrousel} ${color ? styles[color] : ""}`
         }>
             <Swiper
-                spaceBetween={0}
-                slidesPerView={1}
+                spaceBetween={140}
+                slidesPerView={3}
                 onSlideChange={(slide) => setItemId(slide.activeIndex)}
-                centeredSlides={true}
                 mousewheel={{ forceToAxis: true, sensitivity: 0.5 }}
                 forceToAxis={true}
+                centeredSlides={true}
                 breakpoints={{
                     768: {
                         slidesPerView: 3,
-                        spaceBetween: 50
+                        spaceBetween: 190
 
                     }
                 }}
@@ -36,14 +36,16 @@ const PortfolioCarrousel = ({ trabajos, color }) => {
                             <SwiperSlide key={index}>
                                 {({ isActive }) => (
                                     <>
-                                        <div className={styles.swiperContainer}>
-                                            {isActive ?
-                                                <>
-                                                    <h2 className={styles.titleActive}>{trabajo.title}</h2>
-                                                </> :
-                                                <h2>{trabajo.title}</h2>
-                                            }
-                                        </div>
+                                        <a href={`${trabajo.url}`}>
+                                            <div className={styles.swiperContainer}>
+                                                {isActive ?
+                                                    <>
+                                                        <h2 className={styles.titleActive}>{trabajo.title}</h2>
+                                                    </> :
+                                                    <h2>{trabajo.title}</h2>
+                                                }
+                                            </div>
+                                        </a>
                                     </>
                                 )}
                             </SwiperSlide>

@@ -5,7 +5,7 @@
       }
     }
     @if $breakpoint == sm {
-      @media only screen and (max-width: 450px) {
+      @media only screen and (max-width: 320px) {
         @content;
       }
     }

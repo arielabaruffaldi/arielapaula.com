@@ -1,5 +1,7 @@
 @import "./../../utils/variables.scss";
 @import "./../../utils/mixins.scss";
+@import "./../../utils/media.scss";
+
 .dash-portfolio {
     background-color: white;
     margin: 40px 0
@@ -14,7 +16,7 @@
     justify-content: space-around;
     align-items: center;
     min-height: 100%;
-    margin: 30% 0;
+    margin: 15% 0;
 }
 
 .servicios-separador .dash {
@@ -35,7 +37,7 @@
     justify-content: center;
     align-content: center;
     width: 45%;
-    margin-right: 1rem;
+    margin-right: 2rem;
 }
 
 .footer-container {
@@ -55,9 +57,9 @@
 .servicios-separador h5 {
     font-size: 3em;
     font-weight: 500;
-    margin: 15px 0 0 0;
-    letter-spacing: 0.12em;
-    line-height: 1.2em
+    line-height: 1.2em;
+    margin: 0;
+    margin-bottom: 1rem;
 }
 
 .servicios-item-wrapper div h5 {
@@ -166,6 +168,9 @@
         margin: 18% 0;
     }
 }
+.servicios-item-wrapper div p{
+    margin: 0;
+}
 
 @media (max-width:570px) {
     .servicios-item-wrapper {
@@ -207,8 +212,7 @@
     }
     .servicios-item-wrapper div h5 {
         width: 100%;
-        font-size: 2.4em;
-        margin: 4% 0;
+        font-size: 2em;
     }
     .servicios-descripcion {
         margin: 4% 0;
@@ -240,14 +244,17 @@
 .servicios{
     background-color: white;
     padding: 3rem 6rem;
-}
-.servicios-items{
-    margin-top: .5rem;
-    line-height: 1.5;
+    @include respond(phone){
+        padding: 0;
+    }
 }
 .flex-reverse .text-service{
     margin-right: 0;
-    margin-left: 1rem;
+    margin-left: 2rem;
+}
+
+.servicios-descripcion, .servicios-items li{
+    line-height: 1.5;
 }
 
 @media (max-width:350px) {

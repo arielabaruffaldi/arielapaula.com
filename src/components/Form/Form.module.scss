@@ -1,4 +1,5 @@
 @import "./../../utils/variables.scss";
+@import "./../../utils/media.scss";
 
 .Form {
     width: 70%;
@@ -11,8 +12,18 @@
         >div{
             width: 50%;
         }
+        @include respond(phone){
+            flex-direction: column;
+           >div{
+               width: 100%;
+           } 
+        }
     }
     button{
         margin-top: 4rem;
+    }
+    @include respond(phone){
+        width: 100%;
+        margin: 4rem 0;
     }
 }

@@ -20,7 +20,7 @@ const TextPrimary = ({
   return (
     <CustomTag
       className={`${styles.TextPrimary} ${styles[color]} ${styles[weight]} ${customStyle || ""} ${hasPadding ? styles.hasPadding : ""} ${classes && classes}`}
-      style={{ fontSize: `${size}em`, opacity: opacity || 1, textAlign: align }} 
+      style={{ fontSize: `${size}rem`, opacity: opacity || 1, textAlign: align }} 
       {...props}
     >
       {children}

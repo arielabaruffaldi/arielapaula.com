@@ -1,12 +1,16 @@
 @import "./../../utils/variables.scss";
 @import "./../../utils/mixins.scss";
+@import "./../../utils/media.scss";
 .Servicios {
     min-height: 100vh;
     background: $primary-light-bg;
-    padding-top: 10rem;
+    padding-top: 2rem;
     display: flex;
+    flex-direction: column;
+    @include respond(phone){
+        min-height: 80vh;
+    }
     div {
-        width: 60%;
         h1.title {
             font-weight: 900;
             font-size: 3rem;
@@ -21,5 +25,11 @@
     }
     > img {
         width: 40%;
+    }
+    .ServiciosParagraph{
+        font-size: 3rem;
+        @include respond(phone){
+            font-size: 1.8rem;
+        }
     }
 }

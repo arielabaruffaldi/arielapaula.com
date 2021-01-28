@@ -5,31 +5,43 @@ import styles from "./PortfolioDetalle.module.scss";
 import Text from "./../../components/Text/Text";
 import Subtitle from "./../../components/Subtitle/Subtitle"
 import ParagraphSection from '../../components/ParagraphSection/ParagraphSection';
-import OnVisible from "react-on-visible";
 import { Parallax, ParallaxBanner } from 'react-scroll-parallax';
+import { useMediaQuery } from 'react-responsive'
 
 const PortfolioDetalle = () => {
     const idToShow = useParams().id;
     const trabajo = trabajos.filter(item => item.id == idToShow);
-
+    const isMobile = useMediaQuery({
+        query: '(max-width: 660px)'
+    })
     return (
         <section className={styles.PortfolioDetalle}>
             <div className={styles.PortfolioHeader}>
                 <div className={styles.fotoPortada} style={{ backgroundImage: `url(../${trabajo[0].path}/${trabajo[0].portada})` }}></div>
                 <aside>
                     <Text color="gray" priority={2} weight="regular" size={1}>{trabajo[0].type}</Text>
-                    <Text color="gray" priority={1} weight="light" size={6}>{trabajo[0].title}</Text>
+                    <Text color="gray" priority={1} weight="light" customStyle={styles.PortfolioTitle}>{trabajo[0].title}</Text>
                 </aside>
             </div>
 
-            <Parallax y={["-50px", "50px"]} className={styles.Container}>
-                <Subtitle hasPadding text={trabajo[0].title} secondaryText={trabajo[0].type} priority={1}></Subtitle>
-            </Parallax>
+            {!isMobile ?
+                <>
+                    <Parallax y={["-50px", "50px"]} className={styles.Container}>
+                        <Subtitle hasPadding text={trabajo[0].title} secondaryText={trabajo[0].type} priority={1}></Subtitle>
+                    </Parallax>
 
-            <Parallax y={["-50px", "70px"]} className={styles.Container}>
-                <ParagraphSection width={"60%"} size={1} hasPadding className={styles.Paragraph} color={"gray"}>{trabajo[0].paragraph}</ParagraphSection>
-            </Parallax>
-{console.log(trabajo[0])}
+                    <Parallax y={["-50px", "70px"]} className={styles.Container}>
+                        <ParagraphSection width={"60%"} size={1} hasPadding className={styles.Paragraph} color={"gray"}>{trabajo[0].paragraph}</ParagraphSection>
+                    </Parallax>
+                </>
+                :
+                <>
+                    <Subtitle hasPadding text={trabajo[0].title} secondaryText={trabajo[0].type} priority={1}></Subtitle>
+                    <ParagraphSection width={"60%"} size={1} hasPadding className={styles.Paragraph} color={"gray"}>{trabajo[0].paragraph}</ParagraphSection>
+                </>
+            }
+
+
             {trabajo[0].url &&
                 <Parallax y={["-50px", "20px"]} className={styles.Container}>
                     <Text color="white" tag="p" weight="regular" size={.9} hasPadding><a href={`${trabajo[0].url}`}>{`${trabajo[0].url}`}</a>
@@ -44,26 +56,37 @@ const PortfolioDetalle = () => {
                         <>
                             {!foto.isFullScreen ?
                                 <>
-                                    <Parallax y={parallaxAxis} className={`${styles.Container}`}>
+                                    {!isMobile ?
+                                        <Parallax y={parallaxAxis} className={`${styles.Container}`}>
+                                            <img key={index} alt={"fotos portfolio"} src={`../${trabajo[0].path}/${foto.src}`} />
+                                        </Parallax>
+                                        :
                                         <img key={index} alt={"fotos portfolio"} src={`../${trabajo[0].path}/${foto.src}`} />
-                                    </Parallax>
+                                    }
+
                                 </>
                                 :
                                 !foto.noParallax ?
                                     <>
-                                        <ParallaxBanner
-                                            className={styles.ContainerFullScreen}
-                                            layers={[
-                                                {
-                                                    image: `../${trabajo[0].path}/${foto.src}`,
-                                                    amount: 0.2,
-                                                }
-                                            ]}
-                                            style={{
-                                                height: '100vh',
-                                            }}
-                                        >
-                                        </ParallaxBanner>
+                                        {!isMobile ?
+                                            <ParallaxBanner
+                                                className={styles.ContainerFullScreen}
+                                                layers={[
+                                                    {
+                                                        image: `../${trabajo[0].path}/${foto.src}`,
+                                                        amount: 0.2,
+                                                    }
+                                                ]}
+                                                style={{
+                                                    height: '100vh',
+                                                }}
+                                            >
+                                            </ParallaxBanner>
+                                            :
+                                            <div className={styles.ContainerFullScreenMobile} style={{ backgroundImage: `url(../${trabajo[0].path}/${foto.src})` }}>
+
+                                            </div>
+                                        }
                                     </>
                                     :
                                     <div className={`${styles.noParallax} ${styles.noPadding}`}>

@@ -1,4 +1,6 @@
 @import "./../../utils/variables.scss";
+@import "./../../utils/media.scss";
+@import "./../../utils/mixins.scss";
 
 .Nav {
     padding: 4em 2em;
@@ -37,111 +39,15 @@
     transition: all 0.5s;
     top: 0px;
     padding: 1.5em 2em;
+    @include respond(phone) {
+        padding: 0.4em 0.7em;
+    }
     &.blackNav {
         background: $primary-light-bg;
     }
 }
 
-.hiddenNav {
+.hiddenNav:not(.isMobile) {
     top: -100px;
     transition: all 0.5s;
-}
-
-.isMobile {
-    padding: 1rem;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 15;
-    transition: all 0.5s;
-    background-color: #1b1b1b;
-    &.hiddenNav {
-        top: -100px;
-        transition: all 0.5s;
-    }
-    .Logo {
-        font-size: 2rem;
-        color: white;
-    }
-    .NavWrapper {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        .toggleNav {
-            position: relative;
-            vertical-align: middle;
-            display: inline-block;
-            width: 30px;
-            height: 19px;
-            pointer-events: auto;
-            cursor: pointer;
-            width: 26px;
-            height: 17px;
-            span {
-                height: 2px;
-                position: absolute;
-                top: 0;
-                left: 0;
-                right: 0;
-                margin: 0 auto;
-                width: 100%;
-                transition: all 0.3s;
-                background: white;
-                &:nth-child(2) {
-                    top: 7px;
-                }
-                &:nth-child(3) {
-                    top: 14px;
-                }
-            }
-        }
-    }
-    .NavLinks {
-        opacity: 0;
-        background: #1b1b1b;
-        top: -200px;
-        position: fixed;
-        width: 100%;
-        height: 0;
-        left: 0;
-        z-index: -1;
-        .LinksContainer {
-            font-size: 2.5rem;
-            font-weight: 800;
-            margin-top: 5rem;
-            padding: 0 1rem;
-            > li {
-                padding: 0.6rem 0;
-            }
-        }
-    }
-    &.IsOpen {
-        background: white;
-        .NavLinks {
-            opacity: 1;
-            background: white;
-            height: 100vh;
-            animation: bar 800ms ease;
-            -webkit-animation: bar 800ms ease;
-            top: 0;
-        }
-        .Logo {
-            color: #1b1b1b;
-        }
-        .toggleNav {
-            span {
-                background: #1b1b1b;
-            }
-        }
-    }
-}
-
-@keyframes bar {
-    0% {
-        top: -200px;
-    }
-    100% {
-        top: 0;
-    }
 }

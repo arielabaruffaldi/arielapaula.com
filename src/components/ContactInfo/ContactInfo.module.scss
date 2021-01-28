@@ -1,3 +1,5 @@
+@import "./../../utils/media.scss";
+
 .ContactInfo {
     border-left: 1.5px solid black;
     height: fit-content;
@@ -10,5 +12,8 @@
     }
     address{
         line-height: 1.8;
+    }
+    @include respond(phone){
+        display: none;
     }
 }
