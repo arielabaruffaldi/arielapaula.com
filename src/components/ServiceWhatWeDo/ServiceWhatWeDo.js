@@ -36,7 +36,7 @@ const ServiceWhatWeDo = () => {
             <div className="servicios-item-wrapper">
                 {!isMobile ?
                     <>
-                        <Parallax y={["-50px", "20px"]}>
+                        <Parallax y={["-50px", "20px"]} >
                             <div className="text-service-parallax text-service">
                                 <div className="servicios-separador parallaxAll" data-parallax="0.01">
                                     <h5 className="font3">Desarrollo WEB</h5>
@@ -51,10 +51,12 @@ const ServiceWhatWeDo = () => {
                             </div>
                         </Parallax>
 
-                        <Parallax y={["50px", "-40px"]}>
+                        <Parallax y={["50px", "-40px"]} className="serviceWrapper">
                             <div className="img-service right">
-                                <span className="rotated-letter" data-parallax="-0.08">W</span>
-                                <img src="assets/portfolio/ariela_old/portada.png" alt="branding" className="parallaxAll" data-parallax="0.06" />
+                                <Parallax y={["-50px", "100px"]}>
+                                    <span className="rotated-letter" >W</span>
+                                </Parallax>
+                                <img src="assets/portfolio/carruselHome/xborderpack.png" alt="branding" className="parallaxAll" data-parallax="0.06" />
                             </div>
                         </Parallax> </> :
                     <>
@@ -72,7 +74,7 @@ const ServiceWhatWeDo = () => {
                         </div>
                         <div className="img-service right">
                             <span className="rotated-letter" data-parallax="-0.08">W</span>
-                            <img src="assets/portfolio/ariela_old/portada.png" alt="branding" className="parallaxAll" data-parallax="0.06" />
+                            <img src="assets/portfolio/carruselHome/xborderpack.png" alt="branding" className="parallaxAll" data-parallax="0.06" />
                         </div>
                     </>
                 }
@@ -82,7 +84,7 @@ const ServiceWhatWeDo = () => {
             <div className="servicios-item-wrapper flex-reverse">
                 {!isMobile ?
                     <>
-                        <Parallax y={["-80px", "80px"]}>
+                        <Parallax y={["-20px", "20px"]}>
                             <div className="text-service-parallax text-service">
                                 <div className="servicios-separador parallaxAll" data-parallax="0.01">
                                     <h5 className="font3">E-commerce</h5>
@@ -95,10 +97,12 @@ const ServiceWhatWeDo = () => {
                                 </ul>
                             </div>
                         </Parallax>
-                        <Parallax y={["90px", "-60px"]}>
+                        <Parallax y={["10px", "-10px"]} className="serviceWrapper">
                             <div className="img-service left">
-                                <span className="rotated-letter" data-parallax="0.14">E</span>
-                                <img src="assets/portfolio/plantit/portada.jpg" alt="branding" className="parallaxAll" data-parallax="0.06" />
+                                <Parallax y={["-50px", "100px"]}>
+                                    <span className="rotated-letter" >E</span>
+                                </Parallax>
+                                <img src="assets/portfolio/carruselHome/ariela.png" alt="branding" className="parallaxAll" data-parallax="0.06" />
                             </div>
                         </Parallax>
                     </> :

@@ -5,6 +5,7 @@
     width: fit-content;
     line-height: 1.7em;
     border-bottom: 0.5px solid;
+    font-size: 1rem;
     &:hover {
         .circle {
             animation: slide 1s forwards;
@@ -15,8 +16,8 @@
         height: 40px;
         position: absolute;
         left: 0;
-        top: -10px;
-        background: #ebe3e4;
+        transform: translateY(-30px);
+        background: #fbad11f1;
         border-radius: 20px;
         animation: slideOut 1s forwards;
         pointer-events: none;
@@ -27,6 +28,12 @@
     color: $secondary-color;
     .circle{
         background: $primary-semilight-bg;
+    }
+}
+.primary{
+    color: white;
+    .circle{
+        background: $primary-color;
     }
 }
 .black{

@@ -10,7 +10,7 @@ const Cursor = () => {
 
     useEffect(() => {
         addEventListeners();
-        handleLinkHoverEvents();
+       /*  handleLinkHoverEvents(); */
         return () => removeEventListeners();
     }, []);
 

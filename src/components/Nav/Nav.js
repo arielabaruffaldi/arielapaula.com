@@ -51,7 +51,7 @@ const Nav = () => {
                 <header className={`${styles.Nav} ${!scrollingUp && scrollPosition > 50 ? styles.hiddenNav : ""} ${scrollingUp && scrollPosition > 50 ? styles.ScrolledNav : ""} ${blackNav}`}>
                     <nav>
                         <Link key={"logo"} href={"/"} classes={styles.Logo}>
-                            ab.
+                            <span>/</span>ab
                            {/*  <Logo/> */}
                         </Link>
                         <ul className={styles.LinksContainer}>
@@ -63,7 +63,7 @@ const Nav = () => {
             {isMobile && (
                 <header className={`${!scrollingUp && scrollPosition > 50 && !isOpen ? "hiddenNav" : ""} ${"isMobile"} ${scrollingUp && scrollPosition > 50 ? "ScrolledNav" : ""} ${isOpen ? "navOpen" : ""} ${location.pathname === "/contacto" || location.pathname === "/servicios" ? "blackNav" : ""}`}>
                     <div className={"NavWrapper"}>
-                        <Link key={"logo"} href={"/"} classes={"Logo"} onClick={()=>setIsOpen(false)}>
+                        <Link key={"logo"} href={"/"} classes={"Logo"} onClick={() => setIsOpen(false)}>
                             ab.
                         </Link>
                         <div className={`burger ${isOpen ? "burgerOpen" : ""}`} onClick={toggleMenu}>

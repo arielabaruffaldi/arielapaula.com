@@ -16,15 +16,15 @@
     justify-content: space-around;
     align-items: center;
     min-height: 100%;
-    margin: 15% 0;
+    margin: 9rem 0;
+    &:first-child{
+        margin-bottom: 18rem;
+    }
 }
 
 .servicios-separador .dash {
     margin-bottom: 2em;   
     width: 60px
-}
-.servicios-descripcion{
-    font-size: 0.8em;
 }
 
 .mobile {
@@ -36,8 +36,8 @@
     flex-direction: column;
     justify-content: center;
     align-content: center;
-    width: 45%;
-    margin-right: 2rem;
+    margin-right: 4rem;
+    width: 70%;
 }
 
 .footer-container {
@@ -46,11 +46,11 @@
 
 .rotated-letter {
     z-index: 1001;
-    -webkit-text-stroke: 1px white;
+    -webkit-text-stroke: 2px white;
     color: transparent;
     position: absolute;
-    font-size: 11em;
-    font-weight: 700;
+    font-size: 14rem;
+    font-weight: 900;
     margin: 0
 }
 
@@ -205,7 +205,6 @@
         justify-content: center;
         align-items: flex-start;
         padding: 10% 0;
-        width: 90% !important
     }
     .servicios-separador {
         align-items: flex-start;
@@ -243,18 +242,25 @@
 } */
 .servicios{
     background-color: white;
-    padding: 3rem 6rem;
+    padding: 3rem 10rem;
     @include respond(phone){
         padding: 0;
     }
 }
 .flex-reverse .text-service{
     margin-right: 0;
-    margin-left: 2rem;
+    margin-left: 4rem;
 }
 
 .servicios-descripcion, .servicios-items li{
     line-height: 1.5;
+}
+
+.servicios-items, .servicios-descripcion {
+    font-size: 1.2rem;
+}
+.serviceWrapper{
+    width: 80%;
 }
 
 @media (max-width:350px) {

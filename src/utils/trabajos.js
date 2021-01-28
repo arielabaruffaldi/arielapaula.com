@@ -1,5 +1,11 @@
 export const ultimosTrabajos = [
     {
+        title: "ariela",
+        type: "diseño y desarrollo web",
+        thumb: "assets/portfolio/carruselHome/ariela.png",
+        url: "/proyectos/7",
+    },
+    {
         title: "ensamble",
         type: "diseño y desarrollo web",
         thumb: "assets/portfolio/carruselHome/ensamble.png",
@@ -28,12 +34,6 @@ export const ultimosTrabajos = [
         type: "diseño y desarrollo web",
         thumb: "assets/portfolio/carruselHome/cipriani.png",
         url: "/proyectos/6",
-    },
-    {
-        title: "ariela",
-        type: "diseño y desarrollo web",
-        thumb: "assets/portfolio/carruselHome/ariela.png",
-        url: "/proyectos/7",
     }
 ]
 
@@ -95,7 +95,9 @@ export const trabajos = [
             {
                 src: "ensamble.png",
                 isFullScreen: true,
-                noParallax: true
+                noParallax: true,
+                noPadding: false
+
             },
             {
                 src: "portada.png",

@@ -31,7 +31,7 @@
                 justify-content: center;
                 .PortfolioTitle {
                     font-size: 3rem;
-                    margin-top: 1rem;
+                    margin-top: 1remN;
                 }
             }
         }
@@ -73,6 +73,9 @@
     .noParallax {
         grid-column-start: 1;
         grid-column-end: 3;
+    }
+    .noParallax:not(.noPadding){
+        padding: 0 5rem;
     }
     .noPadding {
         margin: 0;

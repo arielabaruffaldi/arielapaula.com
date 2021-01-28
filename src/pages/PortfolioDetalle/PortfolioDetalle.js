@@ -27,7 +27,7 @@ const PortfolioDetalle = () => {
             {!isMobile ?
                 <>
                     <Parallax y={["-50px", "50px"]} className={styles.Container}>
-                        <Subtitle hasPadding text={trabajo[0].title} secondaryText={trabajo[0].type} priority={1}></Subtitle>
+                        <Subtitle separator hasPadding text={trabajo[0].title} secondaryText={trabajo[0].type} priority={1}></Subtitle>
                     </Parallax>
 
                     <Parallax y={["-50px", "70px"]} className={styles.Container}>
@@ -36,7 +36,7 @@ const PortfolioDetalle = () => {
                 </>
                 :
                 <>
-                    <Subtitle hasPadding text={trabajo[0].title} secondaryText={trabajo[0].type} priority={1}></Subtitle>
+                    <Subtitle separator hasPadding text={trabajo[0].title} secondaryText={trabajo[0].type} priority={1}></Subtitle>
                     <ParagraphSection width={"60%"} size={1} hasPadding className={styles.Paragraph} color={"gray"}>{trabajo[0].paragraph}</ParagraphSection>
                 </>
             }
@@ -89,7 +89,7 @@ const PortfolioDetalle = () => {
                                         }
                                     </>
                                     :
-                                    <div className={`${styles.noParallax} ${styles.noPadding}`}>
+                                    <div className={`${styles.noParallax} ${trabajo[0].noPadding && styles.noPadding}`}>
                                         <img key={index} alt={"fotos portfolio"} src={`../${trabajo[0].path}/${foto.src}`} />
                                     </div>
                             }

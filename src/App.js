@@ -13,11 +13,15 @@ import Footer from './components/Footer/Footer';
 import Cursor from './components/Cursor/Cursor';
 import ScrollTop from './components/ScrollTop/ScrollTop';
 import Container from './components/Container/Container';
+import { useMediaQuery } from 'react-responsive'
 
 function App() {
+  const isMobile = useMediaQuery({
+    query: '(max-width: 660px)'
+  })
   return (
     <BrowserRouter>
-      {/* <Cursor/> */}
+      {!isMobile && <Cursor />}
       <Nav />
       <ScrollTop></ScrollTop>
       <Switch>

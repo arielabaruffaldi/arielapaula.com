@@ -11,6 +11,9 @@
     transition: all 0.5s;
     z-index: 999;
     .Logo {
+        span{
+            color: $primary-color;
+        }
         font-weight: 900;
         font-size: 1.4em;
     }
@@ -24,9 +27,9 @@
         li {
             font-weight: 300;
             padding-right: 2rem;
-            a {
+          /*   a {
                 font-size: 0.9rem;
-            }
+            } */
         }
     }
     &.blackNav {

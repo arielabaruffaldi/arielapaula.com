@@ -14,7 +14,7 @@ const Servicios = () => {
         <>
             <section className={styles.Servicios}>
                 <Parallax y={[-40, 10]}>
-                    <Subtitle hasPadding text="Servicios" secondaryText="Ariela Baruffaldi" priority={1}></Subtitle>
+                    <Subtitle separator hasPadding text="Servicios" secondaryText="Ariela Baruffaldi" priority={1}></Subtitle>
                 </Parallax>
                 <Parallax y={[140, -100]}>
                     <ParagraphSection color="black" hasPadding customClass={styles.ServiciosParagraph}>Maquetado, diseño y desarrollo de sitios web desde cero enfocados en una interfaz cómoda de navegar e intuitiva. </ParagraphSection>

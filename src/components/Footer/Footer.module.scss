@@ -27,7 +27,10 @@
             font-weight: 100;
             //border-bottom: 2px solid white;
             @include respond(phone) {
-                font-size: 1.5rem;
+                font-size: 1.3rem;
+            }
+            @include respond(sm) {
+                font-size: 1.2rem;
             }
         }
     }
@@ -41,15 +44,31 @@
         .footerSocial {
             margin-top: 3em;
             padding: 3em 0;
+            width: 60%;
             ul {
                 display: flex;
                 color: $secondary-color;
-                li a {
-                    padding: 0;
-                    padding-right: 2em;
+                @include respond(phone) {
+                    justify-content: center;
+                }
+                li {
+                    margin-right: 2rem;
+                    a {
+                        padding: 0;
+                        @include respond(phone) {
+                            font-size: 0.8rem;
+                        }
+                        @include respond(sm) {
+                            font-size: 0.7rem;
+                        }
+                    }
+                    &:last-child {
+                        margin-right: 0;
+                    }
                 }
             }
             @include respond(phone) {
+                width: 100%;
                 margin-top: 0;
             }
         }
@@ -61,15 +80,22 @@
             h5 {
                 margin: 0;
             }
+            > a {
+                font-size: 1rem;
+            }
             @include respond(phone) {
                 margin-top: 0;
+                font-size: 0.8rem;
+                > a {
+                    font-size: 0.8rem;
+                }
             }
         }
     }
     @include respond(phone) {
         min-height: 50vh;
         flex-direction: column;
-        .endFooter{
+        .endFooter {
             flex-direction: column;
             position: initial;
             align-items: center;

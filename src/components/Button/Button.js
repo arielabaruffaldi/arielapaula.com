@@ -10,7 +10,6 @@ const Button = ({ href, text, color = "white", children, classes, onClick, size 
             className={
                 `${styles.Button} ${classes ? classes : ""} ${styles[color]}`
             }
-            style={{ fontSize: `${size}em`, fontWeight: weight }}
             onClick={onClick}
             {...props}
         >

@@ -3,7 +3,7 @@
 
 body {
     font-family: $primary-font;
-    //cursor: none;
+    cursor: none;
     background: $primary-bg;
     width: 100%;
     overflow-x: hidden;
@@ -15,12 +15,10 @@ body {
 }
 
 html {
-    font-size: 125%;
+    font-size: 95%;
     box-sizing: border-box;
     @include respond(phone) {
-        font-size: 120%; /* 
-        width: 100vw;
-        overflow: hidden; */
+        font-size: 120%; 
     }
 }
 

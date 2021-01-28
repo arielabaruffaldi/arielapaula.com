@@ -15,7 +15,7 @@ const ParagraphSection = ({
         <p className={
             `${styles.ParagraphSection} ${hasPadding ? styles.hasPadding : ""} ${classes ? classes : ""} ${styles[color]} ${customClass ? customClass : ""}`
         }
-            style={{ fontSize: `${size}rem`, textAlign: align, width: width }}>
+            style={{ fontSize: `${size}rem`, textAlign: align}}>
             {children}
         </p>
     )
