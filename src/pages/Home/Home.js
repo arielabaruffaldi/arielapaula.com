@@ -33,8 +33,6 @@ const Home = () => {
 
         const buble1 = bubles.children[0]
         const buble2 = bubles.children[1]
-
-
         const bublesArray = [
             buble1,
             buble2
@@ -62,7 +60,6 @@ const Home = () => {
                 <Bubble width={300} x={700} y={250} opacity={.2} color={"#FFC926"}></Bubble>
                 <Bubble width={200} x={500} y={450} opacity={.2}></Bubble>
             </div>
-         {/*    <div className={style.homeBg}> </div> */}
             <SectionWrapper hasPadding className={style.Home}>
                 <div>
                     {!isMobile ? <Parallax y={["-20px", "20px"]}>
