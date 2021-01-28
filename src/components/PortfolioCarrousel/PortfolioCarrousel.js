@@ -4,6 +4,8 @@ import React, { useRef, useEffect, useState } from 'react';
 import styles from './PortfolioCarrousel.module.scss'
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/swiper.scss';
+import 'swiper/components/pagination/pagination.scss';
+
 import { TimelineLite, TweenMax, Power3, Sine } from "gsap"
 import Bubble from '../../components/Bubble/Bubble'
 
@@ -23,17 +25,12 @@ const PortfolioCarrousel = ({ trabajos, color }) => {
     let tl = new TimelineLite({ delay: 0.3 })
 
     useEffect(() => {
-
         const buble1 = bubles.children[0]
         const buble2 = bubles.children[1]
-
-
         const bublesArray = [
             buble1,
             buble2
         ]
-
-
         tl.staggerFrom(
             bublesArray,
             1,
@@ -47,6 +44,16 @@ const PortfolioCarrousel = ({ trabajos, color }) => {
         tweenItem(bublesArray)
 
     }, [tl])
+
+    const onMouseEnter = (e) => {
+        console.log(e)
+    };
+
+    useEffect(() => {
+        window.addEventListener('mouseenter', onMouseEnter);
+        return () => document.removeEventListener("mouseenter", onMouseEnter);
+    }, [])
+
     const [itemId, setItemId] = useState(0)
     return (
         <>
@@ -64,6 +71,7 @@ const PortfolioCarrousel = ({ trabajos, color }) => {
                     mousewheel={{ forceToAxis: true, sensitivity: 0.5 }}
                     forceToAxis={true}
                     centeredSlides={true}
+                    pagination={{ clickable: true }}
                     breakpoints={{
                         768: {
                             slidesPerView: 3,
@@ -71,7 +79,7 @@ const PortfolioCarrousel = ({ trabajos, color }) => {
 
                         }
                     }}
-                /* onSwiper={(swiper) => console.log(swiper)} */
+                onSwiper={(swiper) => console.log(swiper)}
                 >
                     {trabajos.map((trabajo, index) => {
                         return (
@@ -79,7 +87,7 @@ const PortfolioCarrousel = ({ trabajos, color }) => {
                                 <SwiperSlide key={index}>
                                     {({ isActive }) => (
                                         <>
-                                            <a href={`${trabajo.url}`}>
+                                            <a href={`${trabajo.url}`} onMouseEnter = {(e)=>onMouseEnter(e)}>
                                                 <div className={styles.swiperContainer}>
                                                     {isActive ?
                                                         <>

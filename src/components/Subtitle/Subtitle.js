@@ -1,8 +1,8 @@
 import React from "react";
 import styles from "./Subtitle.module.scss"
 
-const Subtitle = ({ text, secondaryText, priority, hasPadding, separator }) => {
-    const classes = `${styles.Subtitle} ${hasPadding ? styles.hasPadding : ""}`;
+const Subtitle = ({ text, secondaryText, priority, hasPadding, separator, customClass }) => {
+    const classes = `${styles.Subtitle} ${hasPadding ? styles.hasPadding : ""} ${customClass && customClass}`;
     const CustomTag = `h${priority}`
     return (
         

@@ -4,16 +4,18 @@ import styles from "./Form.module.scss";
 import FormItem from "./../FormItem/FormItem"
 import Typed from 'react-typed';
 import Button from '../../components/Button/Button';
-
+import axios from 'axios'
 
 const Form = () => {
     const { register, handleSubmit, watch, errors } = useForm();
-    const onSubmit = data => console.log(data);
+    const onSubmit = data => {
+        console.log(data)
+    };
     const [valueTextarea, setValueTextarea] = useState("");
     const strings = ['Buenas noches,', 'Buenos días,'];
     return (
         <>
-            <form onSubmit={handleSubmit(onSubmit)} className={styles.Form}>
+            <form onSubmit={handleSubmit(onSubmit)} className={styles.Form} method="POST">
                 <FormItem label={"Escribí tu mensaje"}>
                     <Typed
                         strings={strings}
@@ -47,12 +49,12 @@ const Form = () => {
                             },
                         })}
                         label={"Dejanos tu email"}
-                   >
-                    {errors.email && (
-                        <p role="alert" className={styles.errorMessage}>
-                            {errors.email.message}
-                        </p>
-                    )}
+                    >
+                        {errors.email && (
+                            <p role="alert" className={styles.errorMessage}>
+                                {errors.email.message}
+                            </p>
+                        )}
                     </FormItem>
                     <FormItem
                         tag="input"
