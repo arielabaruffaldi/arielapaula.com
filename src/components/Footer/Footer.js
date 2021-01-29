@@ -27,7 +27,7 @@ const Footer = () => {
             <div className={styles.endFooter}>
                 <nav className={styles.footerSocial}>
                     <ul className={styles.LinksContainer}>
-                        {links.map((link, index) => (<li key={index}><Link size={.8} text={link.text} href={link.href}></Link></li>))}
+                        {links.map((link, index) => (<li key={index}><a href={link.href} target="_blank">{link.text}</a></li>))}
                     </ul>
                 </nav>
                 <div className={styles.footerLegales}>
