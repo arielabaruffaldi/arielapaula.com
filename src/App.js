@@ -8,6 +8,7 @@ import Home from "./pages/Home/Home";
 import Servicios from "./pages/Servicios/Servicios";
 import Contacto from "./pages/Contacto/Contacto";
 import Portfolio from "./pages/Portfolio/Portfolio";
+import Error from "./pages/Error/Error";
 import PortfolioDetalle from "./pages/PortfolioDetalle/PortfolioDetalle";
 import Footer from './components/Footer/Footer';
 import Cursor from './components/Cursor/Cursor';
@@ -24,8 +25,9 @@ function App() {
       {!isMobile && <Cursor />}
       <Nav />
       <ScrollTop></ScrollTop>
-      <Switch>
-        <Container>
+      <Container>
+
+        <Switch>
           <Route exact path="/">
             <Home />
           </Route>
@@ -41,8 +43,12 @@ function App() {
           <Route exact path="/contacto">
             <Contacto />
           </Route>
-        </Container>
-      </Switch>
+          <Route>
+            <Error />
+          </Route>
+        </Switch>
+      </Container>
+
       <Footer></Footer>
     </BrowserRouter>
   );

@@ -1,0 +1,34 @@
+@import "./../../utils/variables.scss";
+@import "./../../utils/media.scss";
+
+.Error{
+    min-height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    h1{
+        color: $primary-color;
+        font-size: 7rem
+    }
+    .irInicioBtn{
+        button{
+            font-size: 1.4rem
+        }
+    }
+    @include respond(phone){
+        h1{
+            font-size: 3rem;
+        }
+    }
+    @include respond(sm){
+        h1{
+            font-size: 2.5rem;
+        }
+        .irInicioBtn{
+            button{
+                font-size: 1rem
+            }
+        }
+    }
+}
