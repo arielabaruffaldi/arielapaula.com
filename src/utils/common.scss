@@ -16,7 +16,11 @@ body {
 
 .portfolioCarrousel .swiper-container{
     .swiper-button-prev, .swiper-button-next{
-        color:white
+        display: none;
+        @include respond(phone){
+            display: flex;
+            color:white;
+        }
     }
     @include respond(phone){
         overflow: visible;

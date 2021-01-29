@@ -4,21 +4,24 @@
 
 .Portfolio {
     padding: 0;
-    min-height: 90vh;
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     background: $primary-bg;
     h1 {
         @include container();
-        padding-top: 2em;
-        margin-bottom: 3em;
+        /* padding-top: 2em;
+        margin-bottom: 3em; */
+        padding-top:0;
+        padding-bottom:0;
         @include respond(phone){
             margin-bottom: 0
         }
     }
     .Paragraph {
         font-size: 3rem;
+        padding-bottom: 0;
         @include respond (phone){
             font-size: 1.7rem;
         }

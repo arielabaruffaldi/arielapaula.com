@@ -1,4 +1,4 @@
-import React, {useRef, useEffect} from 'react';
+import React, { useRef, useEffect } from 'react';
 import Subtitle from "./../../components/Subtitle/Subtitle"
 import styles from "./Portfolio.module.scss";
 import 'swiper/swiper.scss';
@@ -8,6 +8,7 @@ import { trabajos } from "./../../utils/trabajos";
 import { Parallax } from 'react-scroll-parallax';
 import Bubble from '../../components/Bubble/Bubble'
 import { TimelineLite, TweenMax, Power3, Sine } from "gsap"
+import { useMediaQuery } from 'react-responsive'
 
 function tweenItem(array) {
     TweenMax.to(array, 2, {
@@ -20,6 +21,9 @@ function tweenItem(array) {
 
 
 const Portfolio = () => {
+    const isMobile = useMediaQuery({
+        query: '(max-width: 660px)'
+    })
     let bubles = useRef(null)
     let tl = new TimelineLite({ delay: 0.1 })
 
@@ -54,12 +58,20 @@ const Portfolio = () => {
     }, [tl])
     return (
         <>
-            <div ref={el => (bubles = el)}>
-                <Bubble width={100} x={800} y={250} opacity={.2} ></Bubble>
-                <Bubble width={50} x={900} y={150} opacity={.2} ></Bubble>
-                <Bubble width={30} x={900} y={350} opacity={.2} ></Bubble>
-                <Bubble width={500} x={1000} y={250} opacity={.2} color={"#FFC926"}></Bubble>
-            </div>
+            {!isMobile ?
+                <div ref={el => (bubles = el)}>
+                    <Bubble width={100} x={800} y={250} opacity={.2} ></Bubble>
+                    <Bubble width={50} x={900} y={150} opacity={.2} ></Bubble>
+                    <Bubble width={30} x={900} y={350} opacity={.2} ></Bubble>
+                    <Bubble width={500} x={1000} y={250} opacity={.2} color={"#FFC926"}></Bubble>
+                </div>
+                :
+                <div ref={el => (bubles = el)}>
+                    <Bubble width={80} x={300} y={100} opacity={.2} ></Bubble>
+                    <Bubble width={40} x={330} y={150} opacity={.5} color={"#FFC926"}></Bubble>
+                    <Bubble width={80} x={-10} y={650} opacity={.2} color={"#FFC926"}></Bubble>
+                </div>
+            }
             <section className={styles.Portfolio}>
                 <Parallax y={[-10, 10]}>
                     <Subtitle separator text="Proyectos" secondaryText="Ariela Baruffaldi" priority={1}></Subtitle>

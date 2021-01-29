@@ -28,6 +28,10 @@ const PortfolioGaleria = ({ trabajos }) => {
         const buble6 = bubles.children[5]
         const buble7 = bubles.children[6]
         const buble8 = bubles.children[7]
+        const buble9 = bubles.children[8]
+        const buble10 = bubles.children[9]
+        const buble11 = bubles.children[10]
+        const buble12 = bubles.children[11]
 
 
         const bublesArray = [
@@ -38,7 +42,11 @@ const PortfolioGaleria = ({ trabajos }) => {
             buble5,
             buble6,
             buble7,
-            buble8
+            buble8,
+            buble9,
+            buble10,
+            buble11,
+            buble12,
         ]
 
 
@@ -66,6 +74,10 @@ const PortfolioGaleria = ({ trabajos }) => {
                 <Bubble width={350} x={-50} y={1800} opacity={.2} ></Bubble>
                 <Bubble width={150} x={800} y={1800} opacity={.5} color={"#FFC926"}></Bubble>
                 <Bubble width={350} x={300} y={2800} opacity={.5} color={"#FFC926"}></Bubble>
+                <Bubble width={50} x={-20} y={400} opacity={.4} color={"#FFC926"} ></Bubble>
+                <Bubble width={60} x={300} y={800} opacity={.4} color={"#FFC926"} ></Bubble>
+                <Bubble width={100} x={-10} y={1200} opacity={.4} color={"#FFC926"} ></Bubble>
+                <Bubble width={60} x={380} y={1700} opacity={.4} color={"#FFC926"} ></Bubble>
             </div>
             <section className={styles.PortfolioGaleria}>
                 {

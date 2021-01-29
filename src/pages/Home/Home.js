@@ -34,9 +34,11 @@ const Home = () => {
 
         const buble1 = bubles.children[0]
         const buble2 = bubles.children[1]
+        const buble3 = bubles.children[2]
         const bublesArray = [
             buble1,
-            buble2
+            buble2,
+            buble3
         ]
 
 
@@ -57,29 +59,37 @@ const Home = () => {
 
     return (
         <>
-            <div ref={el => (bubles = el)}>
-                <Bubble width={300} x={700} y={250} opacity={.2} color={"#FFC926"}></Bubble>
-                <Bubble width={200} x={500} y={450} opacity={.2}></Bubble>
-            </div>
+            {!isMobile ?
+                <div ref={el => (bubles = el)}>
+                    <Bubble width={300} x={700} y={250} opacity={.2} color={"#FFC926"}></Bubble>
+                    <Bubble width={200} x={500} y={450} opacity={.2}></Bubble>
+                </div>
+                :
+                <div ref={el => (bubles = el)}>
+                    <Bubble width={100} x={200} y={100} opacity={.2} color={"#FFC926"}></Bubble>
+                    <Bubble width={50} x={280} y={180} opacity={.2}></Bubble>
+                    <Bubble width={150} x={-80} y={480} opacity={.2}></Bubble>
+                </div>
+            }
             <SectionWrapper hasPadding className={style.Home}>
                 <div>
                     {!isMobile ? <Parallax y={["-20px", "20px"]}>
-                       
-                            <h1>
-                                {`desarrollo de `}
-                                <Typed
-                                    strings={[
-                                        'aplicaciones',
-                                        'páginas web',
-                                        'e-commerce']}
-                                    typeSpeed={110}
-                                    backSpeed={60}
-                                    backDelay={800}
-                                    showCursor={false}
-                                    tagInner="div"
-                                    loop >
-                                </Typed>
-                            </h1>
+
+                        <h1>
+                            {`desarrollo de `}
+                            <Typed
+                                strings={[
+                                    'aplicaciones',
+                                    'páginas web',
+                                    'e-commerce']}
+                                typeSpeed={110}
+                                backSpeed={60}
+                                backDelay={800}
+                                showCursor={false}
+                                tagInner="div"
+                                loop >
+                            </Typed>
+                        </h1>
                     </Parallax>
                         :
                         <h1>
@@ -111,23 +121,23 @@ const Home = () => {
                 </div>
             </SectionWrapper>
 
-                <SectionWrapper color="dark" className={style.SectionWrapperCarrousel}>
-                    {!isMobile ?
-                        <>
-                                <Parallax y={["40px", "-40px"]} slowerScrollRate>
-                                    <Subtitle hasPadding separator text="ultimos proyectos" secondaryText="Desarrollo web" priority={2} ></Subtitle>
-                                </Parallax>
-                                <Parallax y={["-80px", "50px"]} slowerScrollRate>
-                                    <PortfolioCarrousel trabajos={ultimosTrabajos} color="dark" />
-                                </Parallax>
-                        </>
-                        :
-                        <>
+            <SectionWrapper color="dark" className={style.SectionWrapperCarrousel}>
+                {!isMobile ?
+                    <>
+                        <Parallax y={["40px", "-40px"]} slowerScrollRate>
                             <Subtitle hasPadding separator text="ultimos proyectos" secondaryText="Desarrollo web" priority={2} ></Subtitle>
+                        </Parallax>
+                        <Parallax y={["-80px", "50px"]} slowerScrollRate>
                             <PortfolioCarrousel trabajos={ultimosTrabajos} color="dark" />
-                        </>
-                    }
-                </SectionWrapper>
+                        </Parallax>
+                    </>
+                    :
+                    <>
+                        <Subtitle hasPadding separator text="ultimos proyectos" secondaryText="Desarrollo web" priority={2} ></Subtitle>
+                        <PortfolioCarrousel trabajos={ultimosTrabajos} color="dark" />
+                    </>
+                }
+            </SectionWrapper>
 
         </>
 
