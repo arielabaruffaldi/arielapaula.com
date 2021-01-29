@@ -22,7 +22,7 @@ const Footer = () => {
     return (
         <footer className={styles.Footer} id="footer">
             <div className={styles.footerMail}>
-                <a href="">baruffaldiariela@gmail.com</a>
+                <a href="mailto:baruffaldiariela@gmail.com">baruffaldiariela@gmail.com</a>
             </div>
             <div className={styles.endFooter}>
                 <nav className={styles.footerSocial}>

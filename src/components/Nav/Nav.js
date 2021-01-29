@@ -64,7 +64,7 @@ const Nav = () => {
                 <header className={`${!scrollingUp && scrollPosition > 50 && !isOpen ? "hiddenNav" : ""} ${"isMobile"} ${scrollingUp && scrollPosition > 50 ? "ScrolledNav" : ""} ${isOpen ? "navOpen" : ""} ${location.pathname === "/contacto" || location.pathname === "/servicios" ? "blackNav" : ""}`}>
                     <div className={"NavWrapper"}>
                         <Link key={"logo"} href={"/"} classes={"Logo"} onClick={() => setIsOpen(false)}>
-                            ab.
+                            <span>/</span>ab
                         </Link>
                         <div className={`burger ${isOpen ? "burgerOpen" : ""}`} onClick={toggleMenu}>
                             <span></span>
@@ -73,11 +73,11 @@ const Nav = () => {
                         </div>
                     </div>
 
-                    <nav className={`NavLinks navbar ${isOpen ? "navOpen" : ""}`}>
+                    {isOpen && <nav className={`NavLinks navbar ${isOpen ? "navOpen" : ""}`}>
                         <ul className={"navLinks"}>
                             {links.map((link, index) => (<li key={index} className={`${isOpen ? "navLinkOpen" : ""}`}><Link text={link.text} href={link.href} onClick={toggleMenu}></Link></li>))}
                         </ul>
-                    </nav>
+                    </nav>}
                 </header>
             )
             }
