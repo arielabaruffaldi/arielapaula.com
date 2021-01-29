@@ -93,7 +93,7 @@
         }
     }
     @include respond(phone) {
-        min-height: 50vh;
+        min-height: 60vh;
         flex-direction: column;
         .endFooter {
             flex-direction: column;

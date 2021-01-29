@@ -19,6 +19,9 @@
     margin: 9rem 0;
     &:first-child{
         margin-bottom: 18rem;
+        @include respond(phone){
+            margin-bottom: 4rem
+        }
     }
 }
 
@@ -38,6 +41,9 @@
     align-content: center;
     margin-right: 4rem;
     width: 70%;
+    @include respond(phone){
+        padding: 1.5rem
+    }
 }
 
 .footer-container {
@@ -204,7 +210,6 @@
         display: flex;
         justify-content: center;
         align-items: flex-start;
-        padding: 10% 0;
     }
     .servicios-separador {
         align-items: flex-start;
@@ -250,6 +255,9 @@
 .flex-reverse .text-service{
     margin-right: 0;
     margin-left: 4rem;
+    @include respond(phone){
+        margin-left:0
+    }
 }
 
 .servicios-descripcion, .servicios-items li{
@@ -257,7 +265,7 @@
 }
 
 .servicios-items, .servicios-descripcion {
-    font-size: 1.2rem;
+    font-size: 1rem;
 }
 .serviceWrapper{
     width: 80%;
@@ -265,7 +273,7 @@
 
 @media (max-width:350px) {
     .servicios-item-wrapper div p {
-        font-size: 0.8em;
+        font-size: 1em;
     }
     .servicios-item-wrapper div h5 {
         font-size: 1.8em;

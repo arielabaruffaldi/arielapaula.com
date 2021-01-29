@@ -1,4 +1,5 @@
 @import "./../../utils/variables.scss";
+@import "./../../utils/media.scss";
 
 .Container{
     background: $primary-bg;
@@ -6,4 +7,7 @@
     position: relative;
     z-index: 1;
     overflow: hidden;
+   /*  @include respond(phone){
+        padding-top: 3rem
+    } */
 }

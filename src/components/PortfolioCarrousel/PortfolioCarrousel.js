@@ -5,6 +5,7 @@ import styles from './PortfolioCarrousel.module.scss'
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/swiper.scss';
 import 'swiper/components/pagination/pagination.scss';
+import 'swiper/components/navigation/navigation.scss';
 
 import { TimelineLite, TweenMax, Power3, Sine } from "gsap"
 import Bubble from '../../components/Bubble/Bubble'
@@ -46,7 +47,7 @@ const PortfolioCarrousel = ({ trabajos, color }) => {
     }, [tl])
 
     const onMouseEnter = (e) => {
-        console.log(e)
+        //console.log(e)
     };
 
     useEffect(() => {
@@ -62,7 +63,7 @@ const PortfolioCarrousel = ({ trabajos, color }) => {
                 <Bubble width={300} x={800} y={450} opacity={.2}></Bubble>
             </div>
             <div className={
-                `${styles.PortfolioCarrousel} ${color ? styles[color] : ""}`
+                `${styles.PortfolioCarrousel} portfolioCarrousel ${color ? styles[color] : ""}`
             }>
                 <Swiper
                     spaceBetween={30}
@@ -72,14 +73,15 @@ const PortfolioCarrousel = ({ trabajos, color }) => {
                     forceToAxis={true}
                     centeredSlides={true}
                     pagination={{ clickable: true }}
+                    navigation
                     breakpoints={{
                         768: {
                             slidesPerView: 3,
-                            spaceBetween: 50
-
+                            spaceBetween: 50,
+                            navigation: false
                         }
                     }}
-                onSwiper={(swiper) => console.log(swiper)}
+                /* onSwiper={(swiper) => console.log(swiper)} */
                 >
                     {trabajos.map((trabajo, index) => {
                         return (

@@ -89,7 +89,7 @@ const PortfolioDetalle = () => {
                                         }
                                     </>
                                     :
-                                    <div className={`${styles.noParallax} ${trabajo[0].noPadding && styles.noPadding}`}>
+                                    <div className={`${styles.noParallax} ${foto.noPadding && styles.noPadding}`}>
                                         <img key={index} alt={"fotos portfolio"} src={`../${trabajo[0].path}/${foto.src}`} />
                                     </div>
                             }

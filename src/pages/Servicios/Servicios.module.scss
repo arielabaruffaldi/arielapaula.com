@@ -10,9 +10,9 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    @include respond(phone){
+    /* @include respond(phone){
         min-height: 80vh;
-    }
+    } */
     div {
         h1.title {
             font-weight: 900;
@@ -30,15 +30,18 @@
         width: 40%;
     }
     .ServiciosParagraph{
-        font-size: 3rem;
+        //font-size: 3rem;
         width: 85%;
         padding-top: 0 !important;
         @include respond(phone){
-            font-size: 1.8rem;
-            width: 100%
+            width: 100%;
+            margin-bottom: 4rem;
         }
     }
     .ServiciosSubtitle{
         padding-bottom: 0;
+        @include respond(phone){
+        padding-bottom: 1.5rem
+        }
     }
 }

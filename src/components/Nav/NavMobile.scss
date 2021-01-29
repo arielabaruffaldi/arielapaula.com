@@ -127,6 +127,7 @@
             left: 50%;
             transform: translate(-50%, -50%);
             li {
+                text-align: center;
                 list-style-type: none;
                 margin: 3rem 0;
                 &:nth-of-type(1) {

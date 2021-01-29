@@ -10,7 +10,8 @@ import { Parallax } from 'react-scroll-parallax';
 import Link from '../../components/Link/Link'
 import { useMediaQuery } from 'react-responsive';
 import Bubble from '../../components/Bubble/Bubble'
-import { TimelineLite, TweenMax, Power3, Sine } from "gsap"
+import { TimelineLite, TweenMax, Power3, Sine } from "gsap";
+
 
 function tweenItem(array) {
     TweenMax.to(array, 2, {
@@ -37,8 +38,8 @@ const Home = () => {
             buble1,
             buble2
         ]
-        
-        
+
+
         tl.staggerFrom(
             bublesArray,
             1,
@@ -63,22 +64,24 @@ const Home = () => {
             <SectionWrapper hasPadding className={style.Home}>
                 <div>
                     {!isMobile ? <Parallax y={["-20px", "20px"]}>
-                        <h1>
-                            {`desarrollo de `}
-                            <Typed
-                                strings={[
-                                    'aplicaciones',
-                                    'páginas web',
-                                    'e-commerce']}
-                                typeSpeed={110}
-                                backSpeed={60}
-                                backDelay={800}
-                                showCursor={false}
-                                tagInner="div"
-                                loop >
-                            </Typed>
-                        </h1>
-                    </Parallax> :
+                       
+                            <h1>
+                                {`desarrollo de `}
+                                <Typed
+                                    strings={[
+                                        'aplicaciones',
+                                        'páginas web',
+                                        'e-commerce']}
+                                    typeSpeed={110}
+                                    backSpeed={60}
+                                    backDelay={800}
+                                    showCursor={false}
+                                    tagInner="div"
+                                    loop >
+                                </Typed>
+                            </h1>
+                    </Parallax>
+                        :
                         <h1>
                             {`desarrollo de `}
                             <Typed
@@ -107,21 +110,25 @@ const Home = () => {
                     }
                 </div>
             </SectionWrapper>
-            <SectionWrapper color="dark" className={style.SectionWrapperCarrousel}>
-                {!isMobile ?
-                    <><Parallax y={["40px", "-40px"]} slowerScrollRate>
-                        <Subtitle hasPadding separator text="ultimos proyectos" secondaryText="Desarrollo web" priority={2} ></Subtitle>
-                    </Parallax>
-                        <Parallax y={["-80px", "50px"]} slowerScrollRate>
+
+                <SectionWrapper color="dark" className={style.SectionWrapperCarrousel}>
+                    {!isMobile ?
+                        <>
+                                <Parallax y={["40px", "-40px"]} slowerScrollRate>
+                                    <Subtitle hasPadding separator text="ultimos proyectos" secondaryText="Desarrollo web" priority={2} ></Subtitle>
+                                </Parallax>
+                                <Parallax y={["-80px", "50px"]} slowerScrollRate>
+                                    <PortfolioCarrousel trabajos={ultimosTrabajos} color="dark" />
+                                </Parallax>
+                        </>
+                        :
+                        <>
+                            <Subtitle hasPadding separator text="ultimos proyectos" secondaryText="Desarrollo web" priority={2} ></Subtitle>
                             <PortfolioCarrousel trabajos={ultimosTrabajos} color="dark" />
-                        </Parallax>
-                    </> :
-                    <>
-                        <Subtitle hasPadding separator text="ultimos proyectos" secondaryText="Desarrollo web" priority={2} ></Subtitle>
-                        <PortfolioCarrousel trabajos={ultimosTrabajos} color="dark" />
-                    </>
-                }
-            </SectionWrapper>
+                        </>
+                    }
+                </SectionWrapper>
+
         </>
 
     )

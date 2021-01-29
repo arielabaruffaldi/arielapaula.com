@@ -5,10 +5,10 @@ import Button from '../../components/Button/Button';
 
 const links = [
     /* { text: "Facebook", href: "/" }, */
-   /*  { text: "Instagram", href: "/" }, */
+    /*  { text: "Instagram", href: "/" }, */
     { text: "Linkedin", href: "https://www.linkedin.com/in/arielabaruffaldi/" },
-    { text: "Behance", href: "https://www.behance.net/arielapaula"},
-    { text: "GitHub", href: "https://github.com/arielapaula"}
+    { text: "Behance", href: "https://www.behance.net/arielapaula" },
+    { text: "GitHub", href: "https://github.com/arielapaula" }
 ]
 const Footer = () => {
     const onScroll = () => {
@@ -21,10 +21,9 @@ const Footer = () => {
     })
     return (
         <footer className={styles.Footer} id="footer">
-                <div className={styles.footerMail}>
-                    {/* <h3>Contactanos</h3> */}
-                    <a href="">baruffaldiariela@gmail.com</a>
-                </div>
+            <div className={styles.footerMail}>
+                <a href="">baruffaldiariela@gmail.com</a>
+            </div>
             <div className={styles.endFooter}>
                 <nav className={styles.footerSocial}>
                     <ul className={styles.LinksContainer}>

@@ -10,7 +10,29 @@ body {
     padding-bottom: 100vh;
     color: #3e3d3d;
     @include respond(phone) {
-        padding-bottom: 49vh;
+        padding-bottom: 58vh;
+    }
+}
+
+.portfolioCarrousel .swiper-container{
+    .swiper-button-prev, .swiper-button-next{
+        color:white
+    }
+    @include respond(phone){
+        overflow: visible;
+        .swiper-button-prev, .swiper-button-next{
+            top: auto;
+            bottom: -15%
+        }
+        .swiper-button-next{
+            right: 40%
+        }
+        .swiper-button-prev{
+            left: 40%
+        }
+        .swiper-button-prev:after, .swiper-button-next:after{
+            font-size: 1.2rem
+        }
     }
 }
 

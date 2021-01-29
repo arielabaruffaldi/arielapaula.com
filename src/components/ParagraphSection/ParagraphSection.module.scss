@@ -7,6 +7,16 @@
   font-size: 1.6em;
   margin: 0;
   line-height: 1.5;
+  @include respond(sm){
+    line-height: 1.2;
+    font-size: 1.2rem;
+  }
+  @include respond(phone){
+    line-height: 1.2;
+    font-size: 1.7rem;
+    width: 100%
+
+  }
   &.primary {
     color: $primary-color;
   }
