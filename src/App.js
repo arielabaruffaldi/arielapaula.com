@@ -1,7 +1,7 @@
 import React from 'react';
 import './App.css';
 import './utils/common.scss';
-import { BrowserRouter, Switch, Route } from "react-router-dom";
+import { HashRouter, Switch, Route } from "react-router-dom";
 
 import Nav from "./components/Nav/Nav"
 import Home from "./pages/Home/Home";
@@ -21,12 +21,11 @@ function App() {
     query: '(max-width: 660px)'
   })
   return (
-    <BrowserRouter>
+    <HashRouter>
       {!isMobile && <Cursor />}
       <Nav />
       <ScrollTop></ScrollTop>
       <Container>
-
         <Switch>
           <Route exact path="/">
             <Home />
@@ -48,9 +47,8 @@ function App() {
           </Route>
         </Switch>
       </Container>
-
       <Footer></Footer>
-    </BrowserRouter>
+    </HashRouter>
   );
 }
 

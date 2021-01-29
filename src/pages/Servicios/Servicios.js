@@ -90,13 +90,13 @@ const Servicios = () => {
                             <Subtitle customClass={styles.ServiciosSubtitle} separator hasPadding text="Servicios" secondaryText="Ariela Baruffaldi" priority={1}></Subtitle>
                         </Parallax>
                         <Parallax y={[140, -100]}>
-                            <ParagraphSection color="black" hasPadding customClass={styles.ServiciosParagraph}>Maquetado, diseño y desarrollo de sitios web desde cero enfocados en una interfaz cómoda de navegar e intuitiva. </ParagraphSection>
+                            <ParagraphSection color="black" hasPadding customClass={styles.ServiciosParagraph}>Diseño y desarrollo de sitios web desde cero enfocados en una interfaz cómoda de navegar e intuitiva. </ParagraphSection>
                         </Parallax>
                     </>
                     :
                     <>
                         <Subtitle customClass={styles.ServiciosSubtitle} separator hasPadding text="Servicios" secondaryText="Ariela Baruffaldi" priority={1}></Subtitle>
-                        <ParagraphSection color="black" hasPadding customClass={styles.ServiciosParagraph}>Maquetado, diseño y desarrollo de sitios web desde cero enfocados en una interfaz cómoda de navegar e intuitiva. </ParagraphSection>
+                        <ParagraphSection color="black" hasPadding customClass={styles.ServiciosParagraph}>Diseño y desarrollo de sitios web desde cero enfocados en una interfaz cómoda de navegar e intuitiva. </ParagraphSection>
                     </>
                 }
             </section>

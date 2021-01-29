@@ -73,12 +73,21 @@ const Portfolio = () => {
                 </div>
             }
             <section className={styles.Portfolio}>
-                <Parallax y={[-10, 10]}>
-                    <Subtitle separator text="Proyectos" secondaryText="Ariela Baruffaldi" priority={1}></Subtitle>
-                </Parallax>
-                <Parallax y={[40, -40]}>
-                    <ParagraphSection hasPadding customClass={styles.Paragraph}>Algunos de los últimos proyectos. Abarcando en la gran mayoría tanto el desarrollo como el diseño de la interfaz.</ParagraphSection>
-                </Parallax>
+                {!isMobile ?
+                    <>
+                        <Parallax y={[-10, 10]}>
+                            <Subtitle separator text="Proyectos" secondaryText="Ariela Baruffaldi" priority={1}></Subtitle>
+                        </Parallax>
+                        <Parallax y={[40, -40]}>
+                            <ParagraphSection hasPadding customClass={styles.Paragraph}>Algunos de los últimos proyectos. Abarcando en la gran mayoría tanto el desarrollo como el diseño de la interfaz.</ParagraphSection>
+                        </Parallax>
+                    </>
+                    :
+                    <>
+                        <Subtitle separator text="Proyectos" secondaryText="Ariela Baruffaldi" priority={1}></Subtitle>
+                        <ParagraphSection hasPadding customClass={styles.Paragraph}>Algunos de los últimos proyectos. Abarcando en la gran mayoría tanto el desarrollo como el diseño de la interfaz.</ParagraphSection>
+                    </>
+                }
             </section>
 
             <PortfolioGaleria trabajos={trabajos}></PortfolioGaleria>
