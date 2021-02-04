@@ -15,7 +15,7 @@ function tweenItem(array) {
 
 
 const PortfolioGaleria = ({ trabajos }) => {
-    let bubles = useRef(null)
+   /*  let bubles = useRef(null)
     let tl = new TimelineLite({ delay: 0.1 })
 
     useEffect(() => {
@@ -62,10 +62,10 @@ const PortfolioGaleria = ({ trabajos }) => {
         )
         tweenItem(bublesArray)
 
-    }, [tl])
+    }, [tl]) */
     return (
         <>
-            <div ref={el => (bubles = el)}>
+           {/*  <div ref={el => (bubles = el)}>
                 <Bubble width={500} x={-100} y={250} opacity={.2} ></Bubble>
                 <Bubble width={350} x={800} y={450} opacity={.2} ></Bubble>
                 <Bubble width={500} x={300} y={950} opacity={.2} ></Bubble>
@@ -78,7 +78,7 @@ const PortfolioGaleria = ({ trabajos }) => {
                 <Bubble width={60} x={300} y={800} opacity={.4} color={"#FFC926"} ></Bubble>
                 <Bubble width={100} x={-10} y={1200} opacity={.4} color={"#FFC926"} ></Bubble>
                 <Bubble width={60} x={380} y={1700} opacity={.4} color={"#FFC926"} ></Bubble>
-            </div>
+            </div> */}
             <section className={styles.PortfolioGaleria}>
                 {
                     trabajos.map((trabajo, index) => {

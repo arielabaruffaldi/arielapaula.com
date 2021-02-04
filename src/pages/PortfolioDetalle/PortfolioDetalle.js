@@ -53,7 +53,7 @@ const PortfolioDetalle = () => {
           <Parallax y={["-50px", "70px"]} className={styles.Container}>
             <ParagraphSection
               width={"60%"}
-              size={1}
+              size={1.5}
               hasPadding
               className={styles.Paragraph}
               color={"gray"}

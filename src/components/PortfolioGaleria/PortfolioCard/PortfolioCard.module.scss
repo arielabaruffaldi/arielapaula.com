@@ -27,73 +27,13 @@
             font-size: 0.9em;
         }
     }
-    &:nth-child(2) {
-        width: 70%;
-        justify-self: flex-end;
-        img {
-            transform: rotate(100deg);
-            width: 100%;
-        }
-        @include respond(phone){
-            width: 100%;
-            img{
-                transform: rotate(0)
-            }
+    @include respond(phone) {
+        img{
+            padding: 1rem;
         }
     }
-    &:nth-child(3) {
-        width: 80%;
-        justify-self: flex-start;
-        img {
-            transform: rotate(90deg);
-        }
-        @include respond(phone){
-            width: 100%;
-            img{
-                transform: rotate(0)
-            }
-        }
-    }
-    &:nth-child(4) {
-        width: 80%;
-        justify-self: flex-end;
-        img {
-            transform: rotate(50deg);
-        }
-        @include respond(phone){
-            width: 100%;
-            img{
-                transform: rotate(0)
-            }
-        }
-    }
-    &:nth-child(5) {
-        width: 70%;
-        justify-self: flex-start;
-        img {
-            transform: rotate(0deg);
-        }
-        @include respond(phone){
-            width: 100%;
-            img{
-                transform: rotate(0)
-            }
-        }
-    }
-    &:nth-child(6) {
-        width: 80%;
-        justify-self: flex-end;
-        img {
-            transform: rotate(50deg);
-        }
-        @include respond(phone){
-            width: 100%;
-            img{
-                transform: rotate(0)
-            }
-        }
-    }
-    /* 
+   
+    
     &:nth-child(4n - 3) {
         background: rgb(223, 183, 135); 
         justify-self: start;
@@ -126,5 +66,5 @@
         @include respond(phone) {
             width: 100%;
         }
-    } */
+    }
 }
