@@ -9,32 +9,43 @@ body {
     overflow-x: hidden;
     padding-bottom: 100vh;
     color: #3e3d3d;
+
     @include respond(phone) {
         padding-bottom: 58vh;
     }
 }
 
-.portfolioCarrousel .swiper-container{
-    .swiper-button-prev, .swiper-button-next{
+.portfolioCarrousel .swiper-container {
+
+    .swiper-button-prev,
+    .swiper-button-next {
         display: none;
-        @include respond(phone){
+
+        @include respond(phone) {
             display: flex;
-            color:white;
+            color: white;
         }
     }
-    @include respond(phone){
+
+    @include respond(phone) {
         overflow: visible;
-        .swiper-button-prev, .swiper-button-next{
+
+        .swiper-button-prev,
+        .swiper-button-next {
             top: auto;
             bottom: -15%
         }
-        .swiper-button-next{
+
+        .swiper-button-next {
             right: 40%
         }
-        .swiper-button-prev{
+
+        .swiper-button-prev {
             left: 40%
         }
-        .swiper-button-prev:after, .swiper-button-next:after{
+
+        .swiper-button-prev:after,
+        .swiper-button-next:after {
             font-size: 1.2rem
         }
     }
@@ -43,8 +54,9 @@ body {
 html {
     font-size: 95%;
     box-sizing: border-box;
+
     @include respond(phone) {
-        font-size: 120%; 
+        font-size: 120%;
     }
 }
 
@@ -57,11 +69,13 @@ html {
 img {
     width: 100%;
 }
+
 button {
     font-family: inherit;
     background: transparent;
     border: none;
     color: inherit;
+
     &:focus {
         outline: 0;
     }
@@ -71,6 +85,12 @@ button {
     font-weight: 900;
 }
 
-.swiper-container-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet{
+.swiper-container-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet {
     background: white
+}
+
+
+.content-container{
+    display: block;
+    overflow: hidden;
 }

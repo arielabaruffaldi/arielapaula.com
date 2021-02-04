@@ -1,12 +1,8 @@
 import React, { useRef, useEffect, useState } from 'react';
 import Typed from 'react-typed';
 import style from "./Error.module.scss"
-import Subtitle from "./../../components/Subtitle/Subtitle"
-import PortfolioCarrousel from './../../components/PortfolioCarrousel/PortfolioCarrousel';
-import { ultimosTrabajos } from "./../../utils/trabajos";
 import SectionWrapper from '../../components/SectionWrapper/SectionWrapper';
 import Button from '../../components/Button/Button';
-import { Parallax } from 'react-scroll-parallax';
 import Link from '../../components/Link/Link'
 import { useMediaQuery } from 'react-responsive';
 import Bubble from '../../components/Bubble/Bubble'

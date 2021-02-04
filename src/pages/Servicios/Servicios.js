@@ -1,6 +1,5 @@
 import React, { useRef, useEffect } from 'react';
 import ServiceWhatWeDo from '../../components/ServiceWhatWeDo/ServiceWhatWeDo';
-import Text from "./../../components/Text/Text";
 import styles from "./Servicios.module.scss";
 import { Parallax } from 'react-scroll-parallax';
 import Subtitle from "./../../components/Subtitle/Subtitle"

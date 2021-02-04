@@ -6,6 +6,7 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/swiper.scss';
 import 'swiper/components/pagination/pagination.scss';
 import 'swiper/components/navigation/navigation.scss';
+import Link from "./../Link/Link"
 
 import { TimelineLite, TweenMax, Power3, Sine } from "gsap"
 import Bubble from '../../components/Bubble/Bubble'
@@ -89,7 +90,7 @@ const PortfolioCarrousel = ({ trabajos, color }) => {
                                 <SwiperSlide key={index}>
                                     {({ isActive }) => (
                                         <>
-                                            <a href={`${trabajo.url}`} onMouseEnter = {(e)=>onMouseEnter(e)}>
+                                            <Link href={`${trabajo.url}`} onMouseEnter = {(e)=>onMouseEnter(e)}>
                                                 <div className={styles.swiperContainer}>
                                                     {isActive ?
                                                         <>
@@ -98,7 +99,7 @@ const PortfolioCarrousel = ({ trabajos, color }) => {
                                                         <h2>{trabajo.title}</h2>
                                                     }
                                                 </div>
-                                            </a>
+                                            </Link>
                                         </>
                                     )}
                                 </SwiperSlide>

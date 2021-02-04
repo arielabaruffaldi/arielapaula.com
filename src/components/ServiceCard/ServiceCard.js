@@ -9,7 +9,7 @@ const ServiceCard = ({ items }) => {
             {items.map((item, index) => {
                 console.log(item.listItems)
                 return <li key={index}>
-                    <img src={item.icon} />
+                    <img src={item.icon} alt={item.icon} />
                     <Text priority={3} color="black">{item.title}</Text>
                     <ul>
                         {item.listItems.map((element, index) => {

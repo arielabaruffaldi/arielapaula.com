@@ -9,24 +9,39 @@
     flex-direction: column;
     justify-content: center;
     background: $primary-bg;
+
     h1 {
         @include container();
         /* padding-top: 2em;
         margin-bottom: 3em; */
-        padding-top:0;
-        padding-bottom:0;
-        @include respond(phone){
+        padding-top: 0;
+        padding-bottom: 0;
+
+        @include respond(phone) {
             margin-bottom: 0;
         }
     }
+
     .Paragraph {
         font-size: 3rem;
         padding-bottom: 0;
-        @include respond (phone){
+
+        @include respond (phone) {
             font-size: 1.7rem;
         }
-        @include respond (sm){
+
+        @include respond (sm) {
             font-size: 1.3rem;
+        }
+    }
+
+    .contentContainer {
+        display: block;
+        overflow: hidden;
+        height: 2rem;
+
+        @include respond (phone) {
+            height: 3rem;
         }
     }
 }

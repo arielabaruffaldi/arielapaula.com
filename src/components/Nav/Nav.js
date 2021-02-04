@@ -3,9 +3,7 @@ import Link from '../Link/Link'
 import styles from './Nav.module.scss';
 import './NavMobile.scss';
 import { useMediaQuery } from 'react-responsive'
-import { slide as Menu } from 'react-burger-menu';
 import { useLocation } from "react-router-dom";
-import Button from '../Button/Button';
 /* import {ReactComponent as Logo} from './../../logo.svg'; */
 
 const links = [

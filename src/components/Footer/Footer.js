@@ -11,14 +11,6 @@ const links = [
     { text: "GitHub", href: "https://github.com/arielapaula" }
 ]
 const Footer = () => {
-    const onScroll = () => {
-        //console.log(document.getElementById('footer'))
-
-    }
-    useEffect(() => {
-        window.addEventListener('scroll', onScroll);
-        return () => document.removeEventListener("scroll", onScroll);
-    })
     return (
         <footer className={styles.Footer} id="footer">
             <div className={styles.footerMail}>

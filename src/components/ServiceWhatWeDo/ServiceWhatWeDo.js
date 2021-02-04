@@ -1,7 +1,6 @@
 import React from 'react';
-import ServiceCard from './../ServiceCard/ServiceCard';
 import "./ServiceWhatWeDo.scss";
-import { Parallax, ParallaxBanner } from 'react-scroll-parallax';
+import { Parallax } from 'react-scroll-parallax';
 import { useMediaQuery } from 'react-responsive'
 
 const servicios = [
