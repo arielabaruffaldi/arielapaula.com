@@ -71,8 +71,7 @@ const Error = () => {
                     <h1>
                         <Typed
                             strings={[
-                                'Oops',
-                                'Te perdiste',
+                                'Ups',
                                 '404']}
                             typeSpeed={70}
                             backSpeed={60}
