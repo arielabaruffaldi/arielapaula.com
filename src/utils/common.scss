@@ -89,6 +89,15 @@ button {
     background: white
 }
 
+.dash{
+    height: 2px;
+    width: 60px;
+    background-color: $primary-color;
+    content: "";
+    display: block;
+    margin-top: 0em;
+    margin-bottom: 2em;
+}
 
 .content-container{
     display: block;
