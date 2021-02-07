@@ -114,6 +114,7 @@ const PortfolioDetalle = () => {
                       key={index}
                       alt={"fotos portfolio"}
                       src={`../${trabajo[0].path}/${foto.src}`}
+                      className={styles.imgPortfolio}
                     />
                   )}
                 </>
