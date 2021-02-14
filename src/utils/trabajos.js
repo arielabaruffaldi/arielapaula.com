@@ -1,41 +1,3 @@
-export const ultimosTrabajos = [
-  {
-    title: "ariela",
-    type: "diseño y desarrollo web",
-    thumb: "assets/portfolio/carruselHome/ariela.png",
-    url: "/proyectos/7",
-  },
-  {
-    title: "ensamble",
-    type: "diseño y desarrollo web",
-    thumb: "assets/portfolio/carruselHome/ensamble.png",
-    url: "/proyectos/2",
-  },
-  {
-    title: "plantit",
-    type: "diseño y desarrollo web",
-    thumb: "assets/portfolio/carruselHome/plantit.png",
-    url: "/proyectos/1",
-  },
-  {
-    title: "crowdvac",
-    type: "desarrollo web",
-    thumb: "assets/portfolio/carruselHome/crowdvac.png",
-    url: "/proyectos/5",
-  },
-  {
-    title: "xborder",
-    type: "diseño y desarrollo web",
-    thumb: "assets/portfolio/carruselHome/xborderpack.png",
-    url: "/proyectos/3",
-  },
-  {
-    title: "cipriani",
-    type: "diseño y desarrollo web",
-    thumb: "assets/portfolio/carruselHome/cipriani.png",
-    url: "/proyectos/6",
-  },
-];
 
 export const trabajos = [
   {
@@ -44,6 +6,8 @@ export const trabajos = [
     thumb: "3.png",
     path: "assets/portfolio/plantit",
     portada: "portada.jpg",
+    pathUrl: "plantit",
+    thumbCarrusel: "assets/portfolio/carruselHome/plantit.png",
     fotos: [
       {
         src: "1.png",
@@ -80,6 +44,9 @@ export const trabajos = [
     path: "assets/portfolio/ensamble",
     url: "http://ensamblegrafico.com.ar/",
     portada: "portada.png",
+    pathUrl: "ensamble",
+    thumbCarrusel: "assets/portfolio/carruselHome/ensamble.png",
+
     fotos: [
       {
         src: "1.png",
@@ -97,7 +64,7 @@ export const trabajos = [
         noParallax: true,
         noPadding: false,
       },
-     
+
     ],
     id: 2,
   },
@@ -108,6 +75,8 @@ export const trabajos = [
     path: "assets/portfolio/xborderpack",
     url: "http://www.xborderpack.com/",
     portada: "portada.png",
+    pathUrl: "xborder",
+    thumbCarrusel: "assets/portfolio/carruselHome/xborderpack.png",
     fotos: [
       {
         src: "3.png",
@@ -138,6 +107,8 @@ export const trabajos = [
     thumb: "crowdvac.png",
     path: "assets/portfolio/crowdvac",
     portada: "portada.png",
+    pathUrl: "crowdvac",
+    thumbCarrusel: "assets/portfolio/carruselHome/crowdvac.png",
     fotos: [
       {
         src: "1.png",
@@ -169,6 +140,8 @@ export const trabajos = [
     path: "assets/portfolio/cipriani",
     portada: "portada.png",
     url: "http://www.soleorona.com/cipriani/",
+    pathUrl: "cipriani",
+    thumbCarrusel: "assets/portfolio/carruselHome/cipriani.png",
     fotos: [
       {
         src: "1.png",
@@ -195,6 +168,8 @@ export const trabajos = [
     path: "assets/portfolio/ariela_old",
     portada: "portada.png",
     url: "http://arielapaula.com/old_web",
+    pathUrl: "ariela",
+    thumbCarrusel: "assets/portfolio/carruselHome/ariela.png",
     paragraph:
       "Diseño y desarrollo anterior de mi página, decidí actualizarla para poder implementar nuevas tecnologías y poder actualizar el diseño también",
     fotos: [

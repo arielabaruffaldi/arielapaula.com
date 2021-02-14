@@ -10,7 +10,7 @@ import { useMediaQuery } from "react-responsive";
 
 const PortfolioDetalle = () => {
   const idToShow = useParams().id;
-  const trabajo = trabajos.filter((item) => item.id == idToShow);
+  const trabajo = trabajos.filter((item) => item.pathUrl === idToShow);
   const isMobile = useMediaQuery({
     query: "(max-width: 660px)",
   });
@@ -31,7 +31,7 @@ const PortfolioDetalle = () => {
             color="gray"
             priority={1}
             weight="light"
-            customStyle={styles.PortfolioTitle}
+            customClass={styles.PortfolioTitle}
           >
             {trabajo[0].title}
           </Text>
@@ -132,10 +132,13 @@ const PortfolioDetalle = () => {
                       style={{
                         height: "100vh",
                       }}
+                      key={index}
                     ></ParallaxBanner>
                   ) : (
                     <div
                       className={styles.ContainerFullScreenMobile}
+                      key={index}
+
                       style={{
                         backgroundImage: `url(../${trabajo[0].path}/${foto.src})`,
                       }}

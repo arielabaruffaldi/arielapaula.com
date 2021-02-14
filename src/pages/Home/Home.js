@@ -3,7 +3,7 @@ import Typed from "react-typed";
 import style from "./Home.module.scss";
 import Subtitle from "./../../components/Subtitle/Subtitle";
 import PortfolioCarrousel from "./../../components/PortfolioCarrousel/PortfolioCarrousel";
-import { ultimosTrabajos } from "./../../utils/trabajos";
+import { trabajos } from "./../../utils/trabajos";
 import SectionWrapper from "../../components/SectionWrapper/SectionWrapper";
 import Button from "../../components/Button/Button";
 import { Parallax } from "react-scroll-parallax";
@@ -36,7 +36,6 @@ const Home = () => {
     const buble2 = bubles.children[1];
     const buble3 = bubles.children[2];
     const bublesArray = [buble1, buble2, buble3];
-    console.log(headlineFirst[0].children[0].children)
     tl.from(
       headlineFirst[0].children[0].children,
       1,
@@ -45,7 +44,7 @@ const Home = () => {
         ease: Power3.easeOut,
         delay: 0.2,
       },
-      0.15,
+      0.5,
       "Start"
     )
       .from(
@@ -56,7 +55,7 @@ const Home = () => {
           ease: Power3.easeOut,
           delay: 0.5,
         },
-        0.15,
+        0.1,
         "Start"
       )
       .from(
@@ -144,7 +143,7 @@ const Home = () => {
                 priority={2}
               ></Subtitle>
            
-              <PortfolioCarrousel trabajos={ultimosTrabajos} color="dark" />
+              <PortfolioCarrousel trabajos={trabajos} color="dark" />
           
           </>
         

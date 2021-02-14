@@ -8,8 +8,4 @@
     background: $primary-light-bg;
     @include container();
     padding-top: 10rem;
-    display: flex;
-    @include respond(phone){
-        flex-direction: column;
-    }
 }

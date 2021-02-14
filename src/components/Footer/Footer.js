@@ -1,6 +1,5 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import styles from './Footer.module.scss';
-import Link from '../Link/Link';
 import Button from '../../components/Button/Button';
 
 const links = [
@@ -19,7 +18,7 @@ const Footer = () => {
             <div className={styles.endFooter}>
                 <nav className={styles.footerSocial}>
                     <ul className={styles.LinksContainer}>
-                        {links.map((link, index) => (<li key={index}><a href={link.href} target="_blank">{link.text}</a></li>))}
+                        {links.map((link, index) => (<li key={index}><a href={link.href} target="_blank" rel="noopener noreferrer">{link.text}</a></li>))}
                     </ul>
                 </nav>
                 <div className={styles.footerLegales}>

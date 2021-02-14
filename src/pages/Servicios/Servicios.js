@@ -1,7 +1,6 @@
 import React, { useRef, useEffect } from "react";
 import ServiceWhatWeDo from "../../components/ServiceWhatWeDo/ServiceWhatWeDo";
 import styles from "./Servicios.module.scss";
-import { Parallax } from "react-scroll-parallax";
 import Subtitle from "./../../components/Subtitle/Subtitle";
 import ParagraphSection from "./../../components/ParagraphSection/ParagraphSection";
 import Bubble from "../../components/Bubble/Bubble";

@@ -28,7 +28,6 @@ const Portfolio = () => {
 
   useEffect(() => {
     const headlineFirst = content.children;
-    console.log(headlineFirst[1]);
     const buble1 = bubles.children[0];
     const buble2 = bubles.children[1];
     const buble3 = bubles.children[2];
