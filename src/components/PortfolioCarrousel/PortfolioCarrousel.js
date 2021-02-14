@@ -82,31 +82,28 @@ const PortfolioCarrousel = ({ trabajos, color }) => {
                             navigation: false
                         }
                     }}
-                /* onSwiper={(swiper) => console.log(swiper)} */
                 >
                     {trabajos.map((trabajo, index) => {
                         return (
-                            <>
-                                <SwiperSlide key={index}>
+                                <SwiperSlide index={index} key={index}>
                                     {({ isActive }) => (
                                         <>
-                                            <Link href={`${trabajo.url}`} onMouseEnter = {(e)=>onMouseEnter(e)}>
+                                            <Link href={`proyectos/${trabajo.pathUrl}`} onMouseEnter = {(e)=>onMouseEnter(e)}>
                                                 <div className={styles.swiperContainer}>
                                                     {isActive ?
                                                         <>
-                                                            <h2 className={styles.titleActive}>{trabajo.title}</h2>
+                                                            <h2 className={styles.titleActive}>{trabajo.pathUrl}</h2>
                                                         </> :
-                                                        <h2>{trabajo.title}</h2>
+                                                        <h2>{trabajo.pathUrl}</h2>
                                                     }
                                                 </div>
                                             </Link>
                                         </>
                                     )}
                                 </SwiperSlide>
-                            </>
                         )
                     })}
-                    <div style={{ backgroundImage: `url(${trabajos[itemId].thumb})` }} className={styles.divBg}></div>
+                    <div style={{ backgroundImage: `url(${trabajos[itemId].thumbCarrusel})` }} className={styles.divBg}></div>
                 </Swiper>
             </div >
         </>
