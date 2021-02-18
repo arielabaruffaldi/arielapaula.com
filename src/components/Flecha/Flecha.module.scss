@@ -1,0 +1,29 @@
+.FlechaContainer {
+    display: flex;
+    align-items: center;
+    .Flecha {
+        width: fit-content;
+        border: 1px solid white;
+        padding: 0.7em;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50px;
+        svg {
+            transform: rotate(180deg);
+            transition: 400ms;
+            border-radius: 120px;
+            cursor: pointer;
+        }
+
+        &.hasHover {
+            &:hover {
+                transition: 400ms;
+                transform: rotate(360deg);
+            }
+        }
+    }
+    p{
+        margin-left: 1em;
+    }
+}

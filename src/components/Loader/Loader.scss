@@ -1,0 +1,24 @@
+@import "./../../utils/variables.scss";
+
+@keyframes slideInFromLeft {
+    0% {
+      transform: translateY(-100%);
+    }
+    50% {
+      transform: translateY(0);
+    }
+    75%{
+      transform: translateY(100%);
+    }
+    100%{
+      transform: translateY(100%);
+    }
+  }
+.Loader{
+    animation: 1500ms ease-out 0s 1 slideInFromLeft;
+    background: $primary-color;
+    padding: 30px;
+    height: 100vh;
+    width: 100vw;
+}
+

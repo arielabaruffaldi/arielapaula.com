@@ -1,0 +1,284 @@
+@import "./../../utils/variables.scss";
+@import "./../../utils/mixins.scss";
+@import "./../../utils/media.scss";
+
+.dash-portfolio {
+    background-color: white;
+    margin: 40px 0
+}
+#servicios .dash{
+    margin-top: 0.5em
+}
+.servicios-item-wrapper {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    min-height: 100%;
+    margin: 9rem 0;
+    &:first-child{
+        margin-bottom: 18rem;
+        @include respond(phone){
+            margin-bottom: 4rem
+        }
+    }
+}
+
+.servicios-separador .dash {
+    margin-bottom: 2em;   
+    width: 60px
+}
+
+.mobile {
+    display: none
+}
+
+.text-service {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    margin-right: 4rem;
+    width: 70%;
+    @include respond(phone){
+        padding: 1.5rem
+    }
+}
+
+.footer-container {
+    margin-top: 40%
+}
+
+.rotated-letter {
+    z-index: 1001;
+    -webkit-text-stroke: 2px white;
+    color: transparent;
+    position: absolute;
+    font-size: 14rem;
+    font-weight: 900;
+    margin: 0
+}
+
+.servicios-separador h5 {
+    font-size: 3em;
+    font-weight: 500;
+    line-height: 1.2em;
+    margin: 0;
+    margin-bottom: 1rem;
+}
+
+.servicios-item-wrapper div h5 {
+    margin-bottom: 1rem;
+}
+
+.servicios-separador p {
+    margin: 0;
+    font-weight: 500;
+    font-size: 0.9em
+}
+
+.left .rotated-letter {
+    right: 55%
+}
+
+.right .rotated-letter {
+    left: 55%
+}
+
+.right img {
+    right: 0px;
+}
+
+.left img {
+    left: 0px
+}
+
+.servicios-descripcion {
+    font-weight: 300;
+    margin: 0
+}
+
+.flex-reverse {
+    flex-direction: row-reverse
+}
+
+.right {
+    right: 0px;
+}
+
+.left img {
+    left: 0px;
+}
+
+.img-service img {
+    overflow: hidden;
+    width: 100%
+}
+
+@media (min-width:2000px) and (max-width:3600px) {
+    .servicios-item-wrapper div p {
+        font-size: 2em;
+    }
+    .servicios-item-wrapper div h5 {
+        font-size: 10em
+    }
+    .rotated-letter {
+        font-size: 20em
+    }
+}
+
+@media (max-width:991px) {
+    .servicios-item-wrapper div p {
+        font-size: 1rem
+    }
+    .servicios-item-wrapper div h5 {
+        font-size: 3em
+    }
+    .servicios-item-wrapper {
+        margin: 15% 0;
+        padding-top: 5%
+    }
+}
+
+@media (max-width:767px) {
+    .rotated-letter {
+        font-size: 8.5em
+    }
+    .servicios-item-wrapper div h5 {
+        font-size: 2em;
+        line-height: 1.2em;
+    }
+    .servicios-item-wrapper div p {
+        font-size: 0.8em;
+    }
+    .servicios-item-wrapper div {
+        margin-right: 0
+    }
+    .footer-container {
+        margin-top: 0
+    }
+    .img-service img {
+        width: 53%
+    }
+}
+
+@media (max-width:650px) {
+    .servicios-item-wrapper div p {
+        font-size: 0.7em;
+    }
+    .servicios-item-wrapper div h5 {
+        font-size: 2em;
+    }
+    .servicios-item-wrapper {
+        margin: 18% 0;
+    }
+}
+.servicios-item-wrapper div p{
+    margin: 0;
+}
+
+@media (max-width:570px) {
+    .servicios-item-wrapper {
+        flex-direction: column-reverse;
+        padding: 0;
+        margin: 0
+    }
+    .servicios-separador h5 {
+        margin: 0
+    }
+    .servicios-item-wrapper div {
+        width: 100%;
+    }
+    .servicios-separador .orange {
+        font-size: 0.75em
+    }
+    .footer-container {
+        margin-top: 0
+    }
+    .img-service img {
+        position: static;
+        width: 100%;
+    }
+    .servicios-separador {
+        align-items: center;
+    }
+    .rotated-letter {
+        display: none
+    }
+    .text-service {
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+    }
+    .servicios-separador {
+        align-items: flex-start;
+    }
+    .servicios-item-wrapper div h5 {
+        width: 100%;
+        font-size: 2em;
+    }
+    .servicios-descripcion {
+        margin: 4% 0;
+    }
+    .servicios-item-wrapper div p {
+        font-size: 1em;
+        width: 85%;
+    }
+    .sservicios-separador p {
+        font-size: 0.8em;
+    }
+    .servicios-item-wrapper div .orange {
+        width: 100%
+    }
+    .dash {
+        height: 2px;
+    }
+}
+
+/* @media (max-width:450px) {
+    .servicios-item-wrapper div p{
+        font-size: 0.8em;
+    }
+    .servicios-item-wrapper div h5{
+        font-size: 1.8em;
+    }
+    
+} */
+.servicios{
+    background-color: white;
+    padding: 3rem 10rem;
+    @include respond(phone){
+        padding: 0;
+    }
+}
+.flex-reverse .text-service{
+    margin-right: 0;
+    margin-left: 4rem;
+    @include respond(phone){
+        margin-left:0
+    }
+}
+
+.servicios-descripcion, .servicios-items li{
+    line-height: 1.5;
+}
+
+.servicios-items, .servicios-descripcion {
+    font-size: 1rem;
+}
+.serviceWrapper{
+    width: 80%;
+}
+
+@media (max-width:350px) {
+    .servicios-item-wrapper div p {
+        font-size: 1em;
+    }
+    .servicios-item-wrapper div h5 {
+        font-size: 1.8em;
+    }
+    .servicios-separador .dash {
+        width: 30px;
+    }
+}

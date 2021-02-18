@@ -1,0 +1,71 @@
+@import "./../../utils/variables.scss";
+@import "./../../utils/mixins.scss";
+@import "./../../utils/media.scss";
+
+.Servicios {
+    min-height: 100vh;
+    background: $primary-light-bg;
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    /* @include respond(phone){
+        min-height: 80vh;
+    } */
+    div {
+        h1.title {
+            font-weight: 900;
+            font-size: 3rem;
+            padding-bottom: 1rem;
+        }
+
+        p.subtitle {
+            line-height: 1.5;
+            font-size: 300;
+            color: $secondary-color;
+            padding-top: 1.5em;
+        }
+    }
+
+    >img {
+        width: 40%;
+    }
+
+    .ServiciosParagraph {
+        font-size: 3rem;
+        width: 85%;
+
+        @include respond(phone) {
+            width: 100%;
+            padding-bottom: 0;
+            font-size: 1.7rem;
+        }
+
+        @include respond(sm) {
+            width: 100%;
+            padding-bottom: 0;
+            font-size: 1.3rem;
+        }
+    }
+
+    .ServiciosSubtitle {
+        padding: 0 6rem;
+
+        @include respond(phone) {
+            padding: 1.5rem
+        }
+    }
+
+    .contentContainer {
+        display: block;
+        overflow: hidden;
+        height: 2rem;
+
+        @include respond (phone) {
+            height: 3rem;
+        }
+    }
+}

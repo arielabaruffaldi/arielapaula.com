@@ -1,0 +1,108 @@
+@import "./../../utils/variables.scss";
+@import "./../../utils/mixins.scss";
+@import "./../../utils/media.scss";
+
+.Footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    background: $primary-light-bg;
+    transition: all 0.5s;
+    text-align: center;
+    min-height: 100vh;
+    .footerMail{
+        display: block;
+        overflow: hidden;
+    }
+    div {
+        h3 {
+            font-size: 5em;
+            line-height: 1;
+            margin: 0;
+            margin-bottom: 0.5em;
+            color: white;
+        }
+        > a {
+            font-size: 6em;
+            font-weight: 100;
+            //border-bottom: 2px solid white;
+            @include respond(phone) {
+                font-size: 1.3rem;
+            }
+            @include respond(sm) {
+                font-size: 1.2rem;
+            }
+        }
+    }
+    .endFooter {
+        display: flex;
+        justify-content: space-between;
+        align-items: baseline;
+        position: absolute;
+        bottom: 1em;
+        width: 80%;
+        .footerSocial {
+            margin-top: 3em;
+            padding: 3em 0;
+            width: 60%;
+            ul {
+                display: flex;
+                color: $secondary-color;
+                @include respond(phone) {
+                    justify-content: center;
+                }
+                li {
+                    margin-right: 2rem;
+                    a {
+                        padding: 0;
+                        @include respond(phone) {
+                            font-size: 0.8rem;
+                        }
+                        @include respond(sm) {
+                            font-size: 0.7rem;
+                        }
+                    }
+                    &:last-child {
+                        margin-right: 0;
+                    }
+                }
+            }
+            @include respond(phone) {
+                width: 100%;
+                margin-top: 0;
+            }
+        }
+        .footerLegales {
+            display: flex;
+            justify-content: space-between;
+            color: $secondary-color;
+            margin-top: 2em;
+            h5 {
+                margin: 0;
+            }
+            > a {
+                font-size: 1rem;
+            }
+            @include respond(phone) {
+                margin-top: 0;
+                font-size: 0.8rem;
+                > a {
+                    font-size: 0.8rem;
+                }
+            }
+        }
+    }
+    @include respond(phone) {
+        min-height: 60vh;
+        flex-direction: column;
+        .endFooter {
+            flex-direction: column;
+            position: initial;
+            align-items: center;
+        }
+    }
+}

@@ -1,0 +1,41 @@
+@import "./media.scss";
+
+@mixin container(){
+    padding: 3rem 6rem;
+    @include respond(phone) {
+        padding: 1.5rem;
+    }
+}
+
+@mixin strokeColor($isDark: true) {
+    @if $isDark {
+        -webkit-text-stroke: 1.5px $primary-bg;
+        color: transparent;
+    } @else {
+        -webkit-text-stroke: 1.5px $primary-light-bg;
+        color: transparent;
+    }
+}
+
+@mixin activeLink($isDark: true) {
+    @if $isDark {
+        color: $primary-bg;
+    } @else {
+        color: $primary-light-bg;
+    }
+}
+
+@mixin background($isDark: true) {
+    position: absolute;
+    content: "";
+    height: 4px;
+    width: 0%;
+    left: 0;
+    border-radius: 2px;
+    transition: 0.3s ease all;
+    @if $isDark {
+        background-color: $primary-bg;
+    } @else {
+        background-color: $primary-light-bg;
+    }
+}

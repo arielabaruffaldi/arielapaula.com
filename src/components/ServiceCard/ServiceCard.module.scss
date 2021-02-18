@@ -1,0 +1,27 @@
+@import "./../../utils/mixins.scss";
+
+.ServiceCard {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 2em;
+    @include container();
+    li {
+        justify-self: center;
+        h3 {
+            padding: 1em 0;
+            font-weight: 500;
+            font-size: 1.5rem;
+            padding-bottom: .4rem;
+        }
+        p {
+            font-weight: 400;
+        }
+        > ul {
+            width: 80%;
+            li{
+                padding-bottom: .5em;
+                font-size: .9rem;
+            }
+        }
+    }
+}

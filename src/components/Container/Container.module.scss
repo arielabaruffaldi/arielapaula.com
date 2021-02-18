@@ -1,0 +1,13 @@
+@import "./../../utils/variables.scss";
+@import "./../../utils/media.scss";
+
+.Container{
+    background: $primary-bg;
+    box-shadow: 0 0 100px rgba(5,6,6,.09);
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+   /*  @include respond(phone){
+        padding-top: 3rem
+    } */
+}

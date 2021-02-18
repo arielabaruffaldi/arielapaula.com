@@ -1,0 +1,58 @@
+@import "./../../utils/variables.scss";
+@import "./../../utils/media.scss";
+@import "./../../utils/mixins.scss";
+
+.Nav {
+    padding: 4em 2em;
+    position: fixed;
+    width: 100%;
+    color: white;
+    top: 0;
+    transition: all 0.5s;
+    z-index: 999;
+    display: block;
+    overflow: hidden;
+    .Logo {
+        span{
+            color: $primary-color;
+        }
+        font-weight: 900;
+        font-size: 1.4em;
+    }
+    nav {
+        display: flex;
+        display: flex;
+        justify-content: space-between;
+    }
+    .LinksContainer {
+        display: flex;
+        li {
+            font-weight: 300;
+            padding-right: 2rem;
+          /*   a {
+                font-size: 0.9rem;
+            } */
+        }
+    }
+    &.blackNav {
+        color: $primary-bg;
+    }
+}
+
+.ScrolledNav {
+    background: $primary-bg;
+    transition: all 0.5s;
+    top: 0px;
+    padding: 1.5em 2em;
+    @include respond(phone) {
+        padding: 0.4em 0.7em;
+    }
+    &.blackNav {
+        background: $primary-light-bg;
+    }
+}
+
+.hiddenNav:not(.isMobile) {
+    top: -100px;
+    transition: all 0.5s;
+}

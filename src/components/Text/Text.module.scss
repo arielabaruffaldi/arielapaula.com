@@ -1,0 +1,31 @@
+@import "./../../utils/variables.scss";
+@import "./../../utils/mixins.scss";
+
+
+.TextPrimary {
+    font-weight: 500;
+    color: var(--main-white);
+    margin: 0;
+    &.bold {
+      font-weight: 700;
+    }
+    &.semibold {
+      font-weight: 600;
+    }
+    &.regular {
+      font-weight: 300;
+    }
+    &.light {
+      font-weight: 100;
+    }
+    &.white{
+        color: white;
+    }
+    &.gray{
+        color: $primary-light-bg;
+    }
+    &.hasPadding{
+      @include container()
+    }
+  }
+  

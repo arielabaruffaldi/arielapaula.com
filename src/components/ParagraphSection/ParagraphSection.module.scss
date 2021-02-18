@@ -1,0 +1,46 @@
+@import "./../../utils/variables.scss";
+@import "./../../utils/mixins.scss";
+
+.ParagraphSection {
+  color: white;
+  width: 80%;
+  font-size: 1.6em;
+  margin: 0;
+  line-height: 1.2;
+  @include respond(sm){
+    line-height: 1.2;
+    font-size: 1.2rem;
+  }
+  @include respond(phone){
+    line-height: 1.2;
+    font-size: 1.7rem;
+    width: 100%
+  }
+  &.primary {
+    color: $primary-color;
+  }
+  &.black {
+    color: #1b1b1b;
+  }
+  &.hasPadding {
+    @include container();
+  }
+  &.bold {
+    font-weight: 700;
+  }
+  &.semibold {
+    font-weight: 600;
+  }
+  &.regular {
+    font-weight: 300;
+  }
+  &.light {
+    font-weight: 100;
+  }
+  &.white {
+    color: white;
+  }
+  &.gray {
+    color: $primary-light-bg;
+  }
+}
