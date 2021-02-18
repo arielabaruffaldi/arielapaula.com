@@ -71,11 +71,11 @@ const Nav = () => {
                         </div>
                     </div>
 
-                    {isOpen && <nav className={`NavLinks navbar ${isOpen ? "navOpen" : ""}`}>
-                        <ul className={"navLinks"}>
+                    <nav className={`NavLinks navbar ${isOpen ? "navOpen" : ""}`}>
+                        {isOpen && <ul className={"navLinks"}>
                             {links.map((link, index) => (<li key={index} className={`${isOpen ? "navLinkOpen" : ""}`}><Link text={link.text} href={link.href} onClick={toggleMenu}></Link></li>))}
-                        </ul>
-                    </nav>}
+                        </ul>}
+                    </nav>
                 </header>
             )
             }
