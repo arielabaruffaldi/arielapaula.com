@@ -4,46 +4,99 @@ import styles from "./Form.module.scss";
 import FormItem from "./../FormItem/FormItem"
 import Typed from 'react-typed';
 import Button from '../../components/Button/Button';
-//import axios from 'axios'
+import axios from "axios";
 import ContactInfo from "./../../components/ContactInfo/ContactInfo";
 
 const Form = () => {
     const { register, handleSubmit, watch, errors } = useForm();
     const [success, setSuccess] = useState(false);
-    const onSubmit = data => {
-        console.log(data);
+    const API_PATH = 'http://arielapaula.com/index.php';
+
+    const onSubmit = (data) => {
         setSuccess(true)
+
+        axios({
+            method: 'post',
+            url: `${API_PATH}`,
+            headers: { 'content-type': 'application/json' },
+            data: data
+        })
+            .then(result => {
+                console.log(result)
+                window.scrollTo(0, 0);
+                setSuccess(true)
+            })
+            .catch(error => console.log(error.message));
+
     };
-    const [valueTextarea, setValueTextarea] = useState("");
-    const strings = ['Buenas noches,', 'Buenos días,'];
+
     return (
         <div className={styles.Form}>
 
             {!success ?
                 <>
-                    <form onSubmit={handleSubmit(onSubmit)} method="POST">
-                        <FormItem label={"Escribí tu mensaje"}>
-                            <Typed
-                                strings={strings}
-                                typeSpeed={70}
-                                backSpeed={60}
-                                startDelay={100}
-                                backDelay={800}
-                                smartBackspace={true}
-                                attr={'placeholder'}
-                                bindInputFocusEvents={true}
-                                showCursor={false}
-                                onComplete={() => setValueTextarea(strings[strings.length - 1])}
-                            >
-                                <textarea name="message" defaultValue={valueTextarea} />
-                            </Typed>
-                        </FormItem>
+                    <form action="#" onSubmit={handleSubmit(onSubmit)} method="POST">
+                        {/*   <Typed
+                            strings={strings}
+                            typeSpeed={70}
+                            backSpeed={60}
+                            startDelay={100}
+                            name="message"
+                            backDelay={800}
+                            smartBackspace={true}
+                            attr={'placeholder'}
+                            bindInputFocusEvents={true}
+                            showCursor={false}
+                            onComplete={() => setValueTextarea(strings[strings.length - 1])}
+                        >
+                            <textarea  name="message" defaultValue={valueTextarea} ref={register({
+                                required: {
+                                    value: true,
+                                    message: "El campo es requerido.",
+                                },
+                            })} />
+                        </Typed> */}
+                        <FormItem
+                            tag="textarea"
+                            name="message"
+                            placeholder={"Hola! Te contacto para"}
+                            registrar={register({
+                                required: {
+                                    value: true,
+                                    message: "El campo es requerido.",
+                                },
+                            })}
+                            label={"Dejanos tu mensaje"}
+                        ></FormItem>
                         <div className={styles.formRow}>
+                            <FormItem
+                                tag="input"
+                                name="name"
+                                type="text"
+                                placeholder={"Jerry Seinfeld"}
+                                registrar={register({
+                                    required: {
+                                        value: true,
+                                        message: "El campo es requerido.",
+                                    },
+                                    pattern: {
+                                        value: /^[A-Z]/i,
+                                        message: "No es un nombre válido",
+                                    },
+                                })}
+                                label={"Dejanos tu nombre"}
+                            >
+                                {errors.name && (
+                                    <p role="alert" className={styles.errorMessage}>
+                                        {errors.name.message}
+                                    </p>
+                                )}
+                            </FormItem>
                             <FormItem
                                 tag="input"
                                 name="email"
                                 type="email"
-                                defaultValue="@"
+                                placeholder="@"
                                 registrar={register({
                                     required: {
                                         value: true,
@@ -62,7 +115,8 @@ const Form = () => {
                                     </p>
                                 )}
                             </FormItem>
-                            <FormItem
+
+                            {/*  <FormItem
                                 tag="input"
                                 name="phone"
                                 type="number"
@@ -84,10 +138,10 @@ const Form = () => {
                                         {errors.phone.message}
                                     </p>
                                 )}
-                            </FormItem>
+                            </FormItem> */}
 
                         </div>
-                        <Button size={1} tag={"button"} color="grey" weight={500} onClick={handleSubmit(onSubmit)}>enviar formulario</Button>
+                        <Button type="submite" size={1} tag={"button"} color="grey" weight={500} onClick={handleSubmit(onSubmit)}>enviar formulario</Button>
                     </form>
                     <ContactInfo></ContactInfo>
                 </>
