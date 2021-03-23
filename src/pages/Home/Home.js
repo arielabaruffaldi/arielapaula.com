@@ -11,6 +11,7 @@ import Link from "../../components/Link/Link";
 import { useMediaQuery } from "react-responsive";
 import Bubble from "../../components/Bubble/Bubble";
 import { TimelineLite, TweenMax, Power3, Sine } from "gsap";
+import IsLoadingHOC from "./../../utils/IsLoadingHOC";
 
 function tweenItem(array) {
   TweenMax.to(array, 2, {
@@ -152,4 +153,4 @@ const Home = () => {
   );
 };
 
-export default Home;
+export default IsLoadingHOC(Home);

@@ -6,6 +6,7 @@ import ParagraphSection from "./../../components/ParagraphSection/ParagraphSecti
 import Bubble from "../../components/Bubble/Bubble";
 import { TimelineLite, TweenMax, Power3, Sine } from "gsap";
 import { useMediaQuery } from "react-responsive";
+import IsLoadingHOC from "./../../utils/IsLoadingHOC";
 
 function tweenItem(array) {
   TweenMax.to(array, 2, {
@@ -132,44 +133,44 @@ const Servicios = () => {
           ></Bubble>
         </div>
       ) : (
-        <div ref={(el) => (bubles = el)}>
-          <Bubble
-            width={100}
-            x={300}
-            y={580}
-            opacity={0.4}
-            color={"#cacaca"}
-          ></Bubble>
-          <Bubble
-            width={60}
-            x={300}
-            y={700}
-            opacity={0.4}
-            color={"#FFC926"}
-          ></Bubble>
-          <Bubble
-            width={30}
-            x={-30}
-            y={900}
-            opacity={0.4}
-            color={"#FFC926"}
-          ></Bubble>
-          <Bubble
-            width={120}
-            x={300}
-            y={1200}
-            opacity={0.4}
-            color={"#cacaca"}
-          ></Bubble>
-          <Bubble
-            width={50}
-            x={-20}
-            y={1700}
-            opacity={0.4}
-            color={"#FFC926"}
-          ></Bubble>
-        </div>
-      )}
+          <div ref={(el) => (bubles = el)}>
+            <Bubble
+              width={100}
+              x={300}
+              y={580}
+              opacity={0.4}
+              color={"#cacaca"}
+            ></Bubble>
+            <Bubble
+              width={60}
+              x={300}
+              y={700}
+              opacity={0.4}
+              color={"#FFC926"}
+            ></Bubble>
+            <Bubble
+              width={30}
+              x={-30}
+              y={900}
+              opacity={0.4}
+              color={"#FFC926"}
+            ></Bubble>
+            <Bubble
+              width={120}
+              x={300}
+              y={1200}
+              opacity={0.4}
+              color={"#cacaca"}
+            ></Bubble>
+            <Bubble
+              width={50}
+              x={-20}
+              y={1700}
+              opacity={0.4}
+              color={"#FFC926"}
+            ></Bubble>
+          </div>
+        )}
       <section className={styles.Servicios} ref={(el) => (content = el)}>
         <div ref={(el) => (content = el)}>
           <div className={styles.contentContainer}>
@@ -188,7 +189,7 @@ const Servicios = () => {
               customClass={styles.ServiciosParagraph}
             >
               Diseño y desarrollo de sitios web desde cero enfocados en una
-              interfaz cómoda de navegar e intuitiva.{" "}
+              interfaz cómoda de navegar e intuitiva.
             </ParagraphSection>
           </div>
         </div>
@@ -198,4 +199,4 @@ const Servicios = () => {
   );
 };
 
-export default Servicios;
+export default IsLoadingHOC(Servicios);

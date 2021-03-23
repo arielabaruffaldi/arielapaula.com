@@ -4,7 +4,7 @@ import styles from './Nav.module.scss';
 import './NavMobile.scss';
 import { useMediaQuery } from 'react-responsive'
 import { useLocation } from "react-router-dom";
-/* import {ReactComponent as Logo} from './../../logo.svg'; */
+import { useGeneralContext } from "./../../context/GeneralContext";
 
 const links = [
     { text: "servicios", href: "/servicios" },
@@ -17,6 +17,7 @@ const Nav = () => {
     const [scrollPosition, setSrollPosition] = useState(0);
     const [scrollingUp, setScrollingUp] = useState(false);
     const [isOpen, setIsOpen] = useState(false);
+    const { isLoading } = useGeneralContext();
 
     const isMobile = useMediaQuery({
         query: '(max-width: 660px)'
@@ -45,41 +46,44 @@ const Nav = () => {
 
     return (
         <>
-            {!isMobile &&
-                <header className={`${styles.Nav} ${!scrollingUp && scrollPosition > 50 ? styles.hiddenNav : ""} ${scrollingUp && scrollPosition > 50 ? styles.ScrolledNav : ""} ${blackNav}`}>
-                    <nav>
-                        <Link key={"logo"} href={"/"} classes={styles.Logo}>
-                            <span>/</span>ab
+            {!isLoading &&
+                <>
+                    {!isMobile &&
+                        <header className={`${styles.Nav} ${!scrollingUp && scrollPosition > 50 ? styles.hiddenNav : ""} ${scrollingUp && scrollPosition > 50 ? styles.ScrolledNav : ""} ${blackNav}`}>
+                            <nav>
+                                <Link key={"logo"} href={"/"} classes={styles.Logo}>
+                                    <span>/</span>ab
                            {/*  <Logo/> */}
-                        </Link>
-                        <ul className={styles.LinksContainer}>
-                            {links.map((link, index) => (<li key={index}><Link text={link.text} href={link.href}></Link></li>))}
-                        </ul>
-                    </nav>
-                </header>}
+                                </Link>
+                                <ul className={styles.LinksContainer}>
+                                    {links.map((link, index) => (<li key={index}><Link text={link.text} href={link.href}></Link></li>))}
+                                </ul>
+                            </nav>
+                        </header>}
 
-            {isMobile && (
-                <header className={`${!scrollingUp && scrollPosition > 50 && !isOpen ? "hiddenNav" : ""} ${"isMobile"} ${scrollingUp && scrollPosition > 50 ? "ScrolledNav" : ""} ${isOpen ? "navOpen" : ""} ${location.pathname === "/contacto" || location.pathname === "/servicios" ? "blackNav" : ""}`}>
-                    <div className={"NavWrapper"}>
-                        <Link key={"logo"} href={"/"} classes={"Logo"} onClick={() => setIsOpen(false)}>
-                            <span>/</span>ab
+                    {isMobile && (
+                        <header className={`${!scrollingUp && scrollPosition > 50 && !isOpen ? "hiddenNav" : ""} ${"isMobile"} ${scrollingUp && scrollPosition > 50 ? "ScrolledNav" : ""} ${isOpen ? "navOpen" : ""} ${location.pathname === "/contacto" || location.pathname === "/servicios" ? "blackNav" : ""}`}>
+                            <div className={"NavWrapper"}>
+                                <Link key={"logo"} href={"/"} classes={"Logo"} onClick={() => setIsOpen(false)}>
+                                    <span>/</span>ab
                         </Link>
-                        <div className={`burger ${isOpen ? "burgerOpen" : ""}`} onClick={toggleMenu}>
-                            <span></span>
-                            <span></span>
-                            <span></span>
-                        </div>
-                    </div>
+                                <div className={`burger ${isOpen ? "burgerOpen" : ""}`} onClick={toggleMenu}>
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                </div>
+                            </div>
 
-                    <nav className={`NavLinks navbar ${isOpen ? "navOpen" : ""}`}>
-                        {isOpen && <ul className={"navLinks"}>
-                            {links.map((link, index) => (<li key={index} className={`${isOpen ? "navLinkOpen" : ""}`}><Link text={link.text} href={link.href} onClick={toggleMenu}></Link></li>))}
-                        </ul>}
-                    </nav>
-                </header>
-            )
+                            <nav className={`NavLinks navbar ${isOpen ? "navOpen" : ""}`}>
+                                {isOpen && <ul className={"navLinks"}>
+                                    {links.map((link, index) => (<li key={index} className={`${isOpen ? "navLinkOpen" : ""}`}><Link text={link.text} href={link.href} onClick={toggleMenu}></Link></li>))}
+                                </ul>}
+                            </nav>
+                        </header>
+                    )
+                    }
+                </>
             }
-
         </>
     )
 }
