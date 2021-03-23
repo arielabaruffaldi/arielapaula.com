@@ -1,6 +1,7 @@
 import React from 'react';
 import styles from './Footer.module.scss';
 import Button from '../../components/Button/Button';
+import { useGeneralContext } from "./../../context/GeneralContext";
 
 const links = [
     /* { text: "Facebook", href: "/" }, */
@@ -10,22 +11,26 @@ const links = [
     { text: "GitHub", href: "https://github.com/arielapaula" }
 ]
 const Footer = () => {
+    const { isLoading } = useGeneralContext();
+
     return (
-        <footer className={styles.Footer} id="footer">
-            <div className={styles.footerMail}>
-                <a href="mailto:baruffaldiariela@gmail.com">baruffaldiariela@gmail.com</a>
-            </div>
-            <div className={styles.endFooter}>
-                <nav className={styles.footerSocial}>
-                    <ul className={styles.LinksContainer}>
-                        {links.map((link, index) => (<li key={index}><a href={link.href} target="_blank" rel="noopener noreferrer">{link.text}</a></li>))}
-                    </ul>
-                </nav>
-                <div className={styles.footerLegales}>
-                    <Button color="gray" size={.8} weight={500} tag={"a"} href="#">desarrollado por Ariela Baruffaldi</Button>
+        <>
+            {!isLoading && <footer className={styles.Footer} id="footer">
+                <div className={styles.footerMail}>
+                    <a href="mailto:baruffaldiariela@gmail.com">baruffaldiariela@gmail.com</a>
                 </div>
-            </div>
-        </footer>
+                <div className={styles.endFooter}>
+                    <nav className={styles.footerSocial}>
+                        <ul className={styles.LinksContainer}>
+                            {links.map((link, index) => (<li key={index}><a href={link.href} target="_blank" rel="noopener noreferrer">{link.text}</a></li>))}
+                        </ul>
+                    </nav>
+                    <div className={styles.footerLegales}>
+                        <Button color="gray" size={.8} weight={500} tag={"a"} href="#">desarrollado por Ariela Baruffaldi</Button>
+                    </div>
+                </div>
+            </footer>}
+        </>
     )
 }
 

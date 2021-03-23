@@ -7,6 +7,7 @@ import Subtitle from "./../../components/Subtitle/Subtitle";
 import ParagraphSection from "../../components/ParagraphSection/ParagraphSection";
 import { Parallax, ParallaxBanner } from "react-scroll-parallax";
 import { useMediaQuery } from "react-responsive";
+import IsLoadingHOC from "./../../utils/IsLoadingHOC";
 
 const PortfolioDetalle = () => {
   const idToShow = useParams().id;
@@ -165,4 +166,4 @@ const PortfolioDetalle = () => {
     </section>
   );
 };
-export default PortfolioDetalle;
+export default IsLoadingHOC(PortfolioDetalle);

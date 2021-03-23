@@ -8,6 +8,7 @@ import { trabajos } from "./../../utils/trabajos";
 import Bubble from "../../components/Bubble/Bubble";
 import { TimelineLite, TweenMax, Power3, Sine } from "gsap";
 import { useMediaQuery } from "react-responsive";
+import IsLoadingHOC from "./../../utils/IsLoadingHOC";
 
 function tweenItem(array) {
   TweenMax.to(array, 2, {
@@ -125,4 +126,4 @@ const Portfolio = () => {
   );
 };
 
-export default Portfolio;
+export default IsLoadingHOC(Portfolio);

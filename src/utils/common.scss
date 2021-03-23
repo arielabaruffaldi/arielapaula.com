@@ -7,12 +7,7 @@ body {
     background: $primary-bg;
     width: 100%;
     overflow-x: hidden;
-    padding-bottom: 100vh;
     color: #3e3d3d;
-
-    @include respond(phone) {
-        padding-bottom: 58vh;
-    }
 }
 
 .portfolioCarrousel .swiper-container {
