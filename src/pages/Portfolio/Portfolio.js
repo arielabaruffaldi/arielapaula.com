@@ -114,8 +114,7 @@ const Portfolio = () => {
           </div>
           <div className={"content-container"}>
             <ParagraphSection hasPadding customClass={styles.Paragraph}>
-              Algunos de los últimos proyectos. Abarcando en la gran mayoría
-              tanto el desarrollo como el diseño de la interfaz.
+              Algunos de los últimos proyectos.
             </ParagraphSection>
           </div>
         </div>

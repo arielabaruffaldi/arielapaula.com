@@ -22,7 +22,6 @@ const Form = () => {
             data: data
         })
             .then(result => {
-                console.log(result)
                 window.scrollTo(0, 0);
                 setSuccess(true)
             })

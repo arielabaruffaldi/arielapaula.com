@@ -7,7 +7,6 @@ export const useGeneralContext = () => useContext(GeneralContext);
 
 export function LoaderProvider({children, initial}) {
     const [isLoading, setLoading] = useState(initial);
-    console.log(isLoading)
     return (
         <GeneralContext.Provider
             value={{

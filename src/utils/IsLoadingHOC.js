@@ -6,7 +6,6 @@ export const IsLoadingHOC = (WrappedComponent) => {
 
     function HOC(props) {
         const { isLoading, setLoading } = useGeneralContext();
-        console.log(isLoading)
 
         useEffect(() => {
             //setLoading(true)
