@@ -22,7 +22,7 @@ const PortfolioGaleria = ({ trabajos }) => {
     return (
         <>
             <section
-                className={styles.PortfolioGaleria}
+                className={`${styles.PortfolioGaleria} portfolioGaleria`}
                 style={{ backgroundImage: `url(${trabajos[itemId].path}/${trabajos[itemId].thumb})` }}
             >
                 {/*  <img src={hoveredImg} alt={'imagen'} className = {styles.PortfolioGaleriaImg} /> */}

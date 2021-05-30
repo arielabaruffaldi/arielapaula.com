@@ -20,7 +20,7 @@ function tweenItem(array) {
 }
 
 const Portfolio = () => {
-  const isMobile = useMediaQuery({
+  /* const isMobile = useMediaQuery({
     query: "(max-width: 660px)",
   });
   let bubles = useRef(null);
@@ -67,10 +67,10 @@ const Portfolio = () => {
       0.2
     );
     tweenItem(bublesArray);
-  }, [tl]);
+  }, [tl]); */
   return (
     <>
-      {!isMobile ? (
+      {/* {!isMobile ? (
         <div ref={(el) => (bubles = el)}>
           <Bubble width={100} x={800} y={250} opacity={0.2}></Bubble>
           <Bubble width={50} x={900} y={150} opacity={0.2}></Bubble>
@@ -119,7 +119,7 @@ const Portfolio = () => {
           </div>
         </div>
       </section>
-
+ */}
       <PortfolioGaleria trabajos={trabajos}></PortfolioGaleria>
     </>
   );

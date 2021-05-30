@@ -8,14 +8,15 @@
     background-position: center center;
     background-size: cover;
     height: 100vh;
+    padding: 8rem 0;
     @include respond(phone) {
         grid-template-columns: repeat(1, 1fr);
         grid-gap: 0;
         padding: 4em 1.5em 8em 1.5em;
     }
-
+   
     .PortfolioList {
-        padding-right: 10rem;
+        padding-right: 3rem;
         z-index: 1;
         height: 100vh;
         overflow: scroll;
