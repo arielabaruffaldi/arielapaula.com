@@ -1,18 +1,30 @@
-import React from "react";
+import React, { useState } from "react";
+import Subtitle from "../../Subtitle/Subtitle";
 import Link from "./../../Link/Link";
 import styles from "./PortfolioCard.module.scss";
-const PortfolioCard = ({ title, type, foto, href, index }) => {
 
+const PortfolioCard = ({ id,
+  href,
+  type,
+  title,
+  handleHover,
+  isActive,
+  customClass
+}) => {
   return (
-    <article className={`${styles.PortfolioCard} portfolio-card`}>
-      <Link href={href}>
-        <div className={styles.PortfolioCardInfo}>
-          <h3>{type}</h3>
-          <h2>{title}</h2>
-        </div>
-        <img src={`${foto}`} alt={`${title}`} />
+    <li
+      /*  onMouseEnter={() => handleHover(id)} */
+      className={`${styles.PortfolioCard} ${isActive && styles.isActive} ${customClass || ""}`}
+    >
+      <Link href={href} classes={styles.PortfolioCardInfo}>
+        <Subtitle
+          separator
+          text={type}
+          priority={3}
+        ></Subtitle>
+        <h2>{title}</h2>
       </Link>
-    </article>
+    </li>
   );
 };
 

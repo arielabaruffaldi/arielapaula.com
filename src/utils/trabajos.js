@@ -3,7 +3,7 @@ export const trabajos = [
   {
     title: "plantit",
     type: "desarrollo web",
-    thumb: "3.png",
+    thumb: "thumb.png",
     path: "assets/portfolio/plantit",
     portada: "portada.jpg",
     pathUrl: "plantit",
@@ -40,7 +40,7 @@ export const trabajos = [
   {
     title: "Ensamble Gráfico",
     type: "diseño y desarrollo web",
-    thumb: "ensamble.png",
+    thumb: "thumb.png",
     path: "assets/portfolio/ensamble",
     url: "http://ensamblegrafico.com.ar/",
     portada: "portada.png",
@@ -71,7 +71,7 @@ export const trabajos = [
   {
     title: "xborderpack",
     type: "desarrollo web",
-    thumb: "xborderpack.png",
+    thumb: "thumb.png",
     path: "assets/portfolio/xborderpack",
     url: "http://www.xborderpack.com/",
     portada: "portada.png",
@@ -104,7 +104,7 @@ export const trabajos = [
   {
     title: "crowdvac",
     type: "desarrollo web",
-    thumb: "crowdvac.png",
+    thumb: "thumb.png",
     path: "assets/portfolio/crowdvac",
     portada: "portada.png",
     pathUrl: "crowdvac",
@@ -136,7 +136,7 @@ export const trabajos = [
   {
     title: "Cipriani",
     type: "desarrollo web",
-    thumb: "cipriani.png",
+    thumb: "thumb.png",
     path: "assets/portfolio/cipriani",
     portada: "portada.png",
     url: "http://www.soleorona.com/cipriani/",
@@ -164,7 +164,7 @@ export const trabajos = [
   {
     title: "Ariela",
     type: "desarrollo y diseño web",
-    thumb: "ariela_old.png",
+    thumb: "thumb.png",
     path: "assets/portfolio/ariela_old",
     portada: "portada.png",
     url: "http://arielapaula.com/old_web",

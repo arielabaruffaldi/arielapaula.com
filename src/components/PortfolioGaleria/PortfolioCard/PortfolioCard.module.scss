@@ -3,10 +3,13 @@
 @import "./../../../utils/media.scss";
 
 .PortfolioCard {
-    margin: 2em 0;
-    transition: transform 0.5s;
-    will-change: transform;
-    img {
+    opacity: 0.4;
+    transition: opacity 0.5s;
+
+    &.isActive{
+        opacity: 1;
+    }
+    /*   img {
         width: 100%;
         height: auto;
         transition: transform 0.5s;
@@ -14,8 +17,12 @@
         &:hover {
             transform: scale(0.9);
         }
+    } */
+    &:hover {
+        opacity: 1;
+        transition: opacity 0.5s;
     }
-    .PortfolioCardInfo {
+    &Info {
         color: white;
         margin: 1rem;
         h2,
@@ -23,48 +30,15 @@
             font-weight: 400;
             margin: 0;
         }
-        h3 {
-            font-size: 0.9em;
+        h2 {
+            font-size: 4.5rem;
+            text-transform: capitalize;
+            padding-top: 1.4rem;
         }
     }
     @include respond(phone) {
-        img{
-            padding: 1rem;
-        }
-    }
-   
-    
-    &:nth-child(4n - 3) {
-        background: rgb(223, 183, 135); 
-        justify-self: start;
-        width: 80%;
-        @include respond(phone) {
-            width: 100%;
-        }
         img {
-            width: 110%;
-            @include respond(phone) {
-                width: 100%;
-            }
-        }
-    }
-    &:nth-child(4n + 2) {
-        background: rgb(135, 210, 223);
-        width: 110%;
-        @include respond(phone) {
-            width: 100%;
-        }
-    }
-    &:nth-child(4n + 3) {
-        background: rgb(223, 210, 135);
-        width: 100%;
-    }
-    &:nth-child(4n + 4) {
-        background: rgb(150, 223, 135);
-        justify-self: end;
-        width: 80%;
-        @include respond(phone) {
-            width: 100%;
+            padding: 1rem;
         }
     }
 }
