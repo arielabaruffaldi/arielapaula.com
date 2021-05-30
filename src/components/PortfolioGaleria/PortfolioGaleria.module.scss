@@ -4,17 +4,33 @@
 
 .PortfolioGaleria {
     display: flex;
-    justify-content: flex-end;
-    background-position: center center;
-    background-size: cover;
     height: 100vh;
     padding: 8rem 0;
+    justify-content: flex-end;
     @include respond(phone) {
         grid-template-columns: repeat(1, 1fr);
         grid-gap: 0;
         padding: 4em 1.5em 8em 1.5em;
     }
-   
+
+    .bgImg {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        transition: 500ms;
+        transform: scale(1.1);
+        animation: all 700ms ease-in;
+        justify-content: flex-end;
+        background-position: center center;
+        background-size: cover;
+        @include respond(phone) {
+            background-position: top left;
+            background-size: cover;
+        }
+    }
+
     .PortfolioList {
         padding-right: 3rem;
         z-index: 1;

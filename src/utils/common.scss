@@ -10,10 +10,21 @@ body {
     color: #3e3d3d;
 }
 
-.portfolioGaleria .swiper-container{
+.portfolioGaleria .swiper-container {
     margin: 0;
     margin-right: 4rem;
     width: 55%;
+    @include respond(phone) {
+        width: 100%;
+        margin: 0;
+    }
+    .swiper-slide {
+        @include respond(phone) {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    }
 }
 
 .portfolioCarrousel .swiper-container {
@@ -33,20 +44,20 @@ body {
         .swiper-button-prev,
         .swiper-button-next {
             top: auto;
-            bottom: -15%
+            bottom: -15%;
         }
 
         .swiper-button-next {
-            right: 40%
+            right: 40%;
         }
 
         .swiper-button-prev {
-            left: 40%
+            left: 40%;
         }
 
         .swiper-button-prev:after,
         .swiper-button-next:after {
-            font-size: 1.2rem
+            font-size: 1.2rem;
         }
     }
 }
@@ -86,10 +97,10 @@ button {
 }
 
 .swiper-pagination-bullets .swiper-pagination-bullet {
-    background: white
+    background: white;
 }
 
-.dash{
+.dash {
     height: 2px;
     width: 60px;
     background-color: $primary-color;
@@ -99,7 +110,7 @@ button {
     margin-bottom: 2em;
 }
 
-.content-container{
+.content-container {
     display: block;
     overflow: hidden;
 }

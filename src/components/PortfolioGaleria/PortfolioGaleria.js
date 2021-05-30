@@ -11,23 +11,16 @@ SwiperCore.use([Pagination, Scrollbar, Mousewheel]);
 
 const PortfolioGaleria = ({ trabajos }) => {
     const [itemId, setItemId] = useState(0);
-    const [img, setImg] = useState(`${trabajos[0].path}/${trabajos[0].thumb}`);
 
-    /*     const handleHover = (id) => {
-            const hoveredItem = trabajos.find((trabajo) => trabajo.id === id);
-            setImg(`${hoveredItem.path}/${hoveredItem.thumb}`)
-        }
-     */
-    console.log(itemId)
     return (
         <>
             <section
-                className={`${styles.PortfolioGaleria} portfolioGaleria`}
-                style={{ backgroundImage: `url(${trabajos[itemId].path}/${trabajos[itemId].thumb})` }}
-            >
-                {/*  <img src={hoveredImg} alt={'imagen'} className = {styles.PortfolioGaleriaImg} /> */}
+                className={`${styles.PortfolioGaleria} portfolioGaleria`}>
+                <div style={{ backgroundImage: `url(${trabajos[itemId].path}/${trabajos[itemId].thumb})` }} className={styles.bgImg}>
+
+                </div>
                 <Swiper
-                    direction="vertical"
+                    direction="horizontal"
                     slidesPerView={1}
                     onSlideChange={(slide) => setItemId(slide.activeIndex)}
                     mousewheel={{ forceToAxis: true, sensitivity: 1.5 }}
@@ -37,7 +30,9 @@ const PortfolioGaleria = ({ trabajos }) => {
                         768: {
                             slidesPerView: 3,
                             spaceBetween: 50,
-                            navigation: false
+                            navigation: false,
+                            direction:"vertical"
+
                         }
                     }}
 
@@ -48,13 +43,12 @@ const PortfolioGaleria = ({ trabajos }) => {
                             <SwiperSlide index={index} key={index}>
                                 {({ isActive }) => (
                                     <>
-                                        {/* {
-                                            console.log("isActive", trabajo)
-                                        } */}
+                                        {console.log(trabajo)}
                                         <PortfolioCard
                                             title={trabajo.title}
                                             id={trabajo.id}
                                             key={trabajo.id}
+                                            href={`proyectos/${trabajo.pathUrl}`}
                                             /*  handleHover={handleHover} */
                                             type={trabajo.type}
                                             isActive={isActive}
