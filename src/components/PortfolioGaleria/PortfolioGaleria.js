@@ -31,7 +31,7 @@ const PortfolioGaleria = ({ trabajos }) => {
                             slidesPerView: 3,
                             spaceBetween: 50,
                             navigation: false,
-                            direction:"vertical"
+                            direction: "vertical"
 
                         }
                     }}
@@ -49,7 +49,6 @@ const PortfolioGaleria = ({ trabajos }) => {
                                             id={trabajo.id}
                                             key={trabajo.id}
                                             href={`proyectos/${trabajo.pathUrl}`}
-                                            /*  handleHover={handleHover} */
                                             type={trabajo.type}
                                             isActive={isActive}
                                         >

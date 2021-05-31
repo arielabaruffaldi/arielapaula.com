@@ -10,11 +10,11 @@
     }
     &.isActive {
         opacity: 1;
-    }
+    }/* 
     &:hover {
         opacity: 1;
         transition: opacity 0.5s;
-    }
+    } */
     &Info {
         color: white;
         margin: 1rem;
@@ -22,7 +22,7 @@
         h3 {
             font-weight: 700;
             margin: 0;
-            font-size: 0.5rem;
+            font-size: 0.7rem;
             @include respond(phone) {
                 text-align: center;
                 align-items: center;
