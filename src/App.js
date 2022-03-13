@@ -15,6 +15,7 @@ import ScrollTop from "./components/ScrollTop/ScrollTop";
 import Container from "./components/Container/Container";
 import { useMediaQuery } from "react-responsive";
 import { LoaderProvider } from "./context/GeneralContext";
+import { BrowserRouter } from "react-router-dom";
 
 function App() {
   const isMobile = useMediaQuery({
@@ -23,7 +24,7 @@ function App() {
 
   return (
     <LoaderProvider initial={true}>
-      <HashRouter>
+      <BrowserRouter>
         {!isMobile && <Cursor />}
         <Nav />
         <ScrollTop></ScrollTop>
@@ -50,7 +51,7 @@ function App() {
           </Switch>
         </Container>
         <Footer></Footer>
-      </HashRouter>
+      </BrowserRouter>
     </LoaderProvider>
 
   );

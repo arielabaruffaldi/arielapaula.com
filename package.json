@@ -13,7 +13,6 @@
     "dotenv": "^8.2.0",
     "express": "^4.17.1",
     "gsap": "^3.6.0",
-    "node-sass": "^4.14.1",
     "nodemailer": "^6.5.0",
     "prop-types": "^15.7.2",
     "react": "^17.0.1",
@@ -26,6 +25,7 @@
     "react-scripts": "3.4.4",
     "react-scroll-parallax": "^2.3.4",
     "react-typed": "^1.2.0",
+    "sass": "^1.49.9",
     "swiper": "^6.3.4"
   },
   "scripts": {
